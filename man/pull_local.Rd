@@ -4,9 +4,8 @@
 \alias{pull_local}
 \title{pull_local}
 \usage{
-pull_local(briefcase = system.file("java",
-  "ODK Briefcase v1.8.0 Production.jar", package = "odkr"), id, to = getwd(),
-  from)
+pull_local(briefcase = system.file("java", "odkBriefcase_v1.8.0.jar", package
+  = "odkr"), id, to = getwd(), from)
 }
 \arguments{
 \item{briefcase}{Path to ODK Briefcase jar file; default is jar file
@@ -28,9 +27,11 @@ Pull ODK forms from a local ODK folder (\code{/odk}) collected from
 ODK Collect mobile clients
 }
 \examples{
-  # Use pre-installed ODK Briefcase (version 1.8,0) and pull data from a
-  # local ODK folder to current working directory
-  pull_remote(id = "stakeholders",
-              from = system.file("odk", package = "odkr"))
+# Use pre-installed ODK Briefcase (version 1.8.0) and pull forms from a
+# local ODK folder found in Desktop to current working directory
+\dontrun{
+  pull_local(id = "stakeholders",
+             from = ~/Desktop/odk)
+}
 
 }
