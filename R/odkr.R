@@ -5,8 +5,7 @@
 #' ODK Briefcase R API
 #'
 #' @docType package
-#' @export
-#' @importFrom
+#' @export pull_remote
 #'
 #'
 "NULL"
