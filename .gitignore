@@ -38,3 +38,5 @@ vignettes/*.pdf
 .github
 
 .DS_Store
+
+/inst/.gitignore
