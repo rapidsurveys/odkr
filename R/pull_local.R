@@ -14,13 +14,15 @@
 #' @return Folder in destination directory named "ODK Briefcase Storage"
 #' containing forms pulled from local ODK folder
 #' @examples
-#'   # Use pre-installed ODK Briefcase (version 1.8,0) and pull data from a
-#'   # local ODK folder to current working directory
-#'   pull_remote(id = "stakeholders",
-#'               from = system.file("odk", package = "odkr"))
+#' # Use pre-installed ODK Briefcase (version 1.8.0) and pull forms from a
+#' # local ODK folder found in Desktop to current working directory
+#' \dontrun{
+#'   pull_local(id = "stakeholders",
+#'              from = ~/Desktop/odk)
+#' }
 #'
 pull_local <- function(briefcase = system.file("java",
-                                               "ODK Briefcase v1.8.0 Production.jar",
+                                               "odkBriefcase_v1.8.0.jar",
                                                package = "odkr"),
                        id, to = getwd(), from) {
   z <- paste("java -jar '", briefcase,
