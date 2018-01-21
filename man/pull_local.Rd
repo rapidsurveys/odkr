@@ -5,7 +5,7 @@
 \title{pull_local}
 \usage{
 pull_local(briefcase = system.file("java", "odkBriefcase_v1.8.0.jar", package
-  = "odkr"), id, to = getwd(), from)
+  = "odkr"), id, to = getwd(), from, pem = NULL)
 }
 \arguments{
 \item{briefcase}{Path to ODK Briefcase jar file; default is jar file
@@ -17,6 +17,10 @@ installed with package (ODK Briefcase v1.8.0)}
 is at current working directory}
 
 \item{from}{Source ODK directory (\code{/odk}) from ODK Collect mobile client}
+
+\item{pem}{If form to be pulled is encrypted, a PEM private key file would be
+required to pull forms; default is NULL; if form is encrypted, provide path
+to PEM file}
 }
 \value{
 Folder in destination directory named "ODK Briefcase Storage"
