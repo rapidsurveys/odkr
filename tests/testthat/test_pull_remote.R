@@ -1,8 +1,8 @@
 library(odkr)
-context("Pull forms from remote server")
+context("Check pull_remote output")
 
 pull_remote(id = "stakeholders",
-            from = "https://ona.io/validmeasures",
+            from = "https://ona.io/validtrial",
             username = "validtrial",
             password = "zEF-STN-5ze-qom")
 
