@@ -26,7 +26,7 @@
 #'               password = "zEF-STN-5ze-qom")
 #'
 pull_remote <- function(briefcase = system.file("java",
-                                                "ODK Briefcase v1.8.0 Production.jar",
+                                                "odkBriefcase_v1.8.0.jar",
                                                 package = "odkr"),
                         id, to = getwd(), from, username, password) {
   z <- paste("java -jar '", briefcase,

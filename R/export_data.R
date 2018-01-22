@@ -8,7 +8,8 @@
 #' @param briefcase Path to ODK Briefcase jar file; default is jar file
 #' installed with package (ODK Briefcase v1.8.0)
 #' @param id Form ID of form to be pulled
-#' @param from Source ODK Briefcase Storage from which to extract data
+#' @param from Path to source ODK Briefcase Storage from which to extract data;
+#' default is \code{getwd()}
 #' @param to Destination directory to save output data file; default is
 #' \code{getwd()}
 #' @param filename Filename of output CSV data; default is
@@ -35,10 +36,11 @@
 export_data <- function(briefcase = system.file("java",
                                                 "odkBriefcase_v1.8.0.jar",
                                                 package = "odkr"),
-                        id, from, to = getwd(),
+                        id, from = getwd(), to = getwd(),
                         filename = paste(id, "_data.csv", sep = ""),
                         start = NULL, end = NULL,
                         overwrite = FALSE, exclude = TRUE) {
+
   z <- paste("java -jar '", briefcase,
              "' --form_id ", id,
              " --storage_directory ", from,
