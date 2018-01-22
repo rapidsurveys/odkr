@@ -5,8 +5,9 @@
 \title{export_data}
 \usage{
 export_data(briefcase = system.file("java", "odkBriefcase_v1.8.0.jar", package
-  = "odkr"), id, from, to = getwd(), filename = paste(id, "_data.csv", sep =
-  ""), start = NULL, end = NULL, overwrite = FALSE, exclude = TRUE)
+  = "odkr"), id, from = getwd(), to = getwd(), filename = paste(id,
+  "_data.csv", sep = ""), start = NULL, end = NULL, overwrite = FALSE,
+  exclude = TRUE)
 }
 \arguments{
 \item{briefcase}{Path to ODK Briefcase jar file; default is jar file
@@ -14,7 +15,8 @@ installed with package (ODK Briefcase v1.8.0)}
 
 \item{id}{Form ID of form to be pulled}
 
-\item{from}{Source ODK Briefcase Storage from which to extract data}
+\item{from}{Path to source ODK Briefcase Storage from which to extract data;
+default is \code{getwd()}}
 
 \item{to}{Destination directory to save output data file; default is
 \code{getwd()}}

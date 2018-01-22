@@ -4,9 +4,8 @@
 \alias{pull_remote}
 \title{pull_remote}
 \usage{
-pull_remote(briefcase = system.file("java",
-  "ODK Briefcase v1.8.0 Production.jar", package = "odkr"), id, to = getwd(),
-  from, username, password)
+pull_remote(briefcase = system.file("java", "odkBriefcase_v1.8.0.jar", package
+  = "odkr"), id, to = getwd(), from, username, password)
 }
 \arguments{
 \item{briefcase}{Path to ODK Briefcase jar file; default is jar file
