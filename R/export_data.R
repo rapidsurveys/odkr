@@ -24,11 +24,10 @@
 #' @return CSV file in destination directory containing data from the pulled
 #' forms
 #' @examples
-#' # Export data from a specified ODK Briefcase Storage to current working
-#' # directory with a filename called "test.csv"
+#' # Export data from a specified ODK Briefcase Storage directory to current
+#' # working directory with a filename called "test.csv"
 #' \dontrun{
 #'   export_data(id = "stakeholders",
-#'               from = ~/ODK Briefcase Storage,
 #'               filename = "test.csv",
 #'               overwrite = TRUE)
 #' }
