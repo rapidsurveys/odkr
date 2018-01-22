@@ -8,3 +8,4 @@
 ^cran-comments\.md$
 ^_config\.yml$
 ^\.github$
+^inst/odk/\.cache$
