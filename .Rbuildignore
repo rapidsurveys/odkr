@@ -1,3 +1,10 @@
+^\ODK Briefcase Storage$
+^\.Rprofile$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^\ODK Briefcase Storage$
+^appveyor\.yml$
+^data-raw$
+^\.travis\.yml$
+^cran-comments\.md$
+^_config\.yml$
+^\.github$
