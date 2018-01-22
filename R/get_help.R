@@ -12,7 +12,7 @@
 #'
 get_help <- function(briefcase = system.file("java",
                                              "odkBriefcase_v1.8.0.jar",
-                                              package = "odkr")) {
-  z <- paste("java -jar '", briefcase, "' --help", sep = "")
+                                             package = "odkr")) {
+  z <- paste("java -jar ", briefcase, " --help", sep = "")
   system(z)
 }

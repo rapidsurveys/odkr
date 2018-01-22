@@ -28,8 +28,8 @@ pull_local <- function(briefcase = system.file("java",
                                                "odkBriefcase_v1.8.0.jar",
                                                package = "odkr"),
                        id, to = getwd(), from, pem = NULL) {
-  z <- paste("java -jar '", briefcase,
-             "' --form_id ", id,
+  z <- paste("java -jar ", briefcase,
+             " --form_id ", id,
              " --storage_directory ", to,
              " --odk_directory ", from, sep = "")
 

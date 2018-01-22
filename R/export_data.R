@@ -40,8 +40,8 @@ export_data <- function(briefcase = system.file("java",
                         start = NULL, end = NULL,
                         overwrite = FALSE, exclude = TRUE) {
 
-  z <- paste("java -jar '", briefcase,
-             "' --form_id ", id,
+  z <- paste("java -jar ", briefcase,
+             " --form_id ", id,
              " --storage_directory ", from,
              " --export_directory ", to,
              " --export_filename ", filename, sep = "")
