@@ -9,3 +9,5 @@
 ^_config\.yml$
 ^\.github$
 ^inst/odk/\.cache$
+^test/testthat/ODK Briefcase Storage/$
+^test/testthat/test\.csv$
