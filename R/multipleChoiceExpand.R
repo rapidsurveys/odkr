@@ -27,6 +27,11 @@
 #' \code{NA} - instead, the \code{NA} code will be output as an extra answer
 #' column (if \code{choices} parameter is not given))
 #'
+#' @examples
+#' # Expand responses in variable w7 of sampleData2
+#' sampleData2 <- renameODK(sampleData2)
+#' temp <- expandMultChoice(sampleData2$ws7)
+#'
 expandMultChoice <- function(answers,
                              choices = NULL,
                              naCode = NULL,

@@ -28,3 +28,10 @@ Merged dataframe
 Retrieve parent data, matching to a nested (child) dataset by keys of a
 nested dataset exported from an ODK Aggregate Server.
 }
+\examples{
+# marge sampleData2 and sampleData3
+x <- renameODK(sampleData2)
+y <- renameODK(sampleData3)
+temp <- mergeNestedODK(parent = x, child = y, byPARENT_KEY = FALSE)
+
+}

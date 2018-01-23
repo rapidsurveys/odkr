@@ -21,7 +21,7 @@
 #'   # remote ODK Aggregate server from ONA (https://ona.io); pulled forms to
 #'   # be saved in default location at current working directory
 #'   pull_remote(id = "stakeholders",
-#'               from = "https://ona.io/validmeasures",
+#'               from = "https://ona.io/validtrial",
 #'               username = "validtrial",
 #'               password = "zEF-STN-5ze-qom")
 #'

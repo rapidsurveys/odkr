@@ -7,15 +7,29 @@
 #'
 #' @param data Dataframe object of dataset exported from ODK Aggregate Server
 #' @return Data frame object with renamed variables
+#' @examples
+#' # Rename sampleData1 dataset to remove '.' from variable names
+#' names(sampleData1)
+#' renameODK(sampleData1)
+#' names(sampleData1)
+#'
+#' # Rename sampleData2 dataset
+#' names(sampleData2)
+#' renameODK(sampleData2)
+#' names(sampleData2)
+#'
+#' # Rename sampleData3 dataset
+#' names(sampleData3)
+#' renameODK(sampleData3)
+#' names(sampleData3)
 #'
 renameODK <- function(data) {
   #
   # take column names and split strings around "."
   #
-  colNames <- str_split(names(data), "\\.")
+  colNames <- stringr::str_split(names(data), "\\.")
   temp <- vector(length = length(names(data)))
-  for (i in 1:length(colNames))
-  {
+  for (i in 1:length(colNames)) {
     #
     # take only the last element from each split and write to vector
     #

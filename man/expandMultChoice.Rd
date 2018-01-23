@@ -40,3 +40,9 @@ ab  ac  ad  ef  eg  eh
 [1,]  1   1   1   0   0   0
 [2,]  0   0   0   1   1   1
 }
+\examples{
+# Expand responses in variable w7 of sampleData2
+sampleData2 <- renameODK(sampleData2)
+temp <- expandMultChoice(sampleData2$ws7)
+
+}
