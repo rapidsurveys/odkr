@@ -1,4 +1,4 @@
-# odkr: ODK Briefcase R API
+# odkr: ODK R API
 
 [![CRAN](https://img.shields.io/cran/v/odkr.svg)](https://cran.r-project.org/package=odkr)
 [![CRAN](https://img.shields.io/cran/l/odkr.svg)](https://CRAN.R-project.org/package=odkr)
@@ -23,20 +23,20 @@ Java application. This package requires Java 8 installed. Jave 8 can be download
 from [here](https://java.com/en/download/).
 
 ## Requirements
-* Java 8
-* There are known [issues](https://forum.opendatakit.org/t/odk-briefcase-not-running-with-jdk-9/10201) 
-using ODK Briefcase with Java 9). If you have Java 9 installed, uninstall 
-(on [Windows](https://www.java.com/en/download/help/uninstall_java.xml); on [macOS](https://www.java.com/en/download/help/mac_uninstall_java.xml)) and
-then [install](https://java.com/en/download/) Java 8.
-* If issues persist even with Java 8, you may need to reconfigure Java. On 
-Terminal, execute the following command:
+This package requires **Java 8** to be installed in your computer. There are 
+known [issues](https://forum.opendatakit.org/t/odk-briefcase-not-running-with-jdk-9/10201) 
+when using ODK Briefcase with **Java 9**. If you have **Java 9** installed, 
+uninstall (on [Windows](https://www.java.com/en/download/help/uninstall_java.xml); on [macOS](https://www.java.com/en/download/help/mac_uninstall_java.xml)) and
+then [install](https://java.com/en/download/) **Java 8**. If issues persist even
+with Java 8, you may need to reconfigure **Java**. On the terminal, execute the
+following command:
 
 ```shell
 R CMD javareconf
 ```
 
-* If reconfiguring java still doesn't solve the issue, you may need to specify
-`JAVA_HOME` by executing the following command in Terminal:
+If reconfiguring **Java** still doesn't solve the issue, you may need to specify
+`JAVA_HOME` by executing the following command in terminal:
 
 ```shell
 sudo R CMD javareconf JAVA_HOME=/usr/java/default
@@ -111,4 +111,3 @@ export_data(id = "stakeholders",
             to = `~/Desktop`,
             filename = "test.csv")
 ```
-
