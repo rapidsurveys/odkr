@@ -13,11 +13,13 @@ Description: Utility functions for working with datasets gathered using
     names for ODK datasets, a merge function to create a single dataframe from a
     nested ODK dataset and an expand function to disaggregate multiple choice
     answers that have been collapsed into single code by ODK.
+Imports: stringr,
+    Hmisc
+Depends: R (>= 2.10)
+Suggests: testthat
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 SystemRequirements: Java
 RoxygenNote: 6.0.1
-Suggests: testthat
-Imports: stringr,
-    Hmisc
+
