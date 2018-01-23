@@ -24,6 +24,11 @@
 #' @export pull_local
 #' @export export_data
 #' @export get_help
+#' @export expandMultChoice
+#' @export renameODK
+#' @export mergeNestedODK
+#' @importFrom stringr str_split str_length
+#' @importFrom Hmisc %nin%
 #'
 NULL
 
