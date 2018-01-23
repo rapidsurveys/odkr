@@ -1,14 +1,23 @@
 Package: odkr
 Type: Package
-Title: ODK Briefcase R API
+Title: OpenDataKit (ODK) R API
 Version: 0.1.0.9000
-Authors@R: person("Ernest", "Guevarra", email = "ernestgmd@gmail.com",
-                  role = c("aut", "cre"))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Authors@R: c(
+    person("Ernest", "Guevarra", email = "ernestgmd@gmail.com", role = c("aut", "cre")),
+    person("Laura", "Bramley", email = "laura@validinternational.org", role = "aut"))
+Description: Utility functions for working with datasets gathered using
+    OpenDataKit (ODK). These includes an API to interface with ODK Briefcase,
+    a Java application for fetching and pushing ODK forms and their contents,
+    that allows pulling of data from either a remote ODK Aggregate Server or a
+    local ODK folder, a rename function to give more human readable variable
+    names for ODK datasets, a merge function to create a single dataframe from a
+    nested ODK dataset and an expand function to disaggregate multiple choice
+    answers that have been collapsed into single code by ODK.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 SystemRequirements: Java
 RoxygenNote: 6.0.1
 Suggests: testthat
+Imports: stringr,
+    Hmisc
