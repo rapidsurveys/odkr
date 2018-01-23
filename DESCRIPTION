@@ -1,7 +1,7 @@
 Package: odkr
 Type: Package
 Title: ODK Briefcase R API
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: person("Ernest", "Guevarra", email = "ernestgmd@gmail.com",
                   role = c("aut", "cre"))
 Description: More about what it does (maybe more than one line)
