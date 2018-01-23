@@ -32,8 +32,8 @@ expandMultChoice <- function(answers,
                              naCode = NULL,
                              naQuestion = NULL) {
   if(is.null(choices)) {
-    strings <- unique(answers[which(str_length(answers) > 0)])
-    strings <- sort(unique(unlist(str_split(strings, " "))))
+    strings <- unique(answers[which(stringr::str_length(answers) > 0)])
+    strings <- sort(unique(unlist(stringr::str_split(strings, " "))))
   } else strings <- choices
 
   targetDF <- data.frame(matrix(nrow = length(answers), ncol = length(strings)))
@@ -46,7 +46,7 @@ expandMultChoice <- function(answers,
   }
 
   indices <- which(names(targetDF) %in% strings)
-  if(!is_null("naCode")) {
+  if(!is.null("naCode")) {
     targetDF[which(answers == naCode), indices] <- NA
   }
   if(!is.null("naQuestion")) targetDF[naQuestion, indices] <- NA
