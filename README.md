@@ -3,9 +3,9 @@
 [![CRAN](https://img.shields.io/cran/v/odkr.svg)](https://cran.r-project.org/package=odkr)
 [![CRAN](https://img.shields.io/cran/l/odkr.svg)](https://CRAN.R-project.org/package=odkr)
 [![CRAN](http://cranlogs.r-pkg.org/badges/odkr)](https://CRAN.R-project.org/package=odkr)
-[![Travis](https://img.shields.io/travis/ernestguevarra/odkr.svg?branch=master)](https://travis-ci.org/ernestguevarra/odkr)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ernestguevarra/odkr?branch=master&svg=true)](https://ci.appveyor.com/project/ernestguevarra/odkr)
-[![codecov](https://codecov.io/gh/ernestguevarra/odkr/branch/master/graph/badge.svg)](https://codecov.io/gh/ernestguevarra/odkr)
+[![Travis](https://img.shields.io/travis/validmeasures/odkr.svg?branch=master)](https://travis-ci.org/validmeasures/odkr)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/validmeasures/odkr?branch=master&svg=true)](https://ci.appveyor.com/project/validmeasures/odkr)
+[![codecov](https://codecov.io/gh/validmeasures/odkr/branch/master/graph/badge.svg)](https://codecov.io/gh/validmeasures/odkr)
 
 **ODK Briefcase** is a Java application for fetching and pushing OpenDataKit 
 (ODK) forms and their contents. It can be used to gather and aggregate data 
