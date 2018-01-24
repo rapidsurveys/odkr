@@ -11,3 +11,5 @@
 ^inst/odk/\.cache$
 ^test/testthat/ODK Briefcase Storage/$
 ^test/testthat/test\.csv$
+^README\.Rmd$
+^README-.*\.png$
