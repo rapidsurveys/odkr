@@ -4,7 +4,8 @@ Title: OpenDataKit (ODK) R API
 Version: 0.1.0.9000
 Authors@R: c(
     person("Ernest", "Guevarra", email = "ernestgmd@gmail.com", role = c("aut", "cre")),
-    person("Laura", "Bramley", email = "laura@validinternational.org", role = "aut"))
+    person("Laura", "Bramley", email = "laura@validinternational.org", role = "aut"),
+    person("Valid", "International", email = "office@validinternational", role = "cph"))
 Description: Utility functions for working with datasets gathered using
     OpenDataKit (ODK). These includes an API to interface with ODK Briefcase,
     a Java application for fetching and pushing ODK forms and their contents,
