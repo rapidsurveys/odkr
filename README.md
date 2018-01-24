@@ -75,7 +75,8 @@ library("odkr")
 
 ### Data processing functions
 
-**Rename variables of an ODK-collected dataset**
+**1. Rename variables of an ODK-collected dataset**
+
 Depending on how you have designed and structured your ODK form, the standard 
 naming of variables of the output dataset isn't always desirable for eventual
 data processing and analysis. For example, for ODK forms that groups questions
@@ -90,7 +91,8 @@ simply applying the `renameODK()` to the data.frame as follows:
 renameODK(sampleData1)
 ```
 
-**Expand multiple answer responses**
+**2. Expand multiple answer responses**
+
 For survey questions that allow for multiple answers to be provided, the
 `expandMultChoice()` function recodes this into multiple columns with `0/1` coding
 the number of which is equivalent to the number choices that were selected by
@@ -101,7 +103,7 @@ respondents. This function can be called as follows:
 expandMultChoice(answers = renameODK(sampleData2)$ws7)
 ```
 
-**Merge nested datasets**
+**3. Merge nested datasets**
 For ODK forms with a `repeat` argument, the resulting dataset splits the data
 into each of the repeats. Often, these multiple datasets need to be merged to a
 parent dataset (usually data containing common identifiers such as cluster, household).
@@ -115,7 +117,7 @@ mergeNestedODK(parent = renameODK(sampleData1),
 
 ### ODK-R interface functions
 
-**Pull forms from a remote ODK Aggregate Server**
+**1. Pull forms from a remote ODK Aggregate Server**
 If you have an **ODK Aggregate Server** already setup receiving form submissions
 from your survey, you can use `odkr` to pull these forms (not the data) into
 a local directory.
@@ -140,7 +142,7 @@ named **ODK Briefcase Storage** on your desktop containing the forms and
 instances from the stakholders form on the **ODK Aggregate Server**.
 
 
-**Pull forms from a local `/odk` folder extracted from ODK Collect**
+**2. Pull forms from a local `/odk` folder extracted from ODK Collect**
 If you do not have an **ODK Aggregate Server** setup and plan to use **ODK
 Briefcase** as your form aggregator, you will have to extract/copy the `/odk` 
 folder in your mobile client to a location in your computer (e.g., `~/Desktop`) 
@@ -158,7 +160,7 @@ named **ODK Briefcase Storage** on your desktop containing the forms and
 instances from the stakholders form on the **ODK Aggregate Server**.
 
 
-**Export data from an ODK Briefcase Storage into a CSV file**
+**3. Export data from an ODK Briefcase Storage into a CSV file**
 If you have pulled your forms from either a remote **ODK Aggregate Server** or
 a local `/odk` folder and now have an **ODK Briefcase Storage** in one of your
 local directories, you will probably want to extract the data found in these
