@@ -1,4 +1,4 @@
-# odkr: ODK R API
+# odkr: OpenDataKit R API
 
 [![CRAN](https://img.shields.io/cran/v/odkr.svg)](https://cran.r-project.org/package=odkr)
 [![CRAN](https://img.shields.io/cran/l/odkr.svg)](https://CRAN.R-project.org/package=odkr)
