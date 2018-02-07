@@ -13,3 +13,5 @@
 ^test/testthat/test\.csv$
 ^README\.Rmd$
 ^README-.*\.png$
+^odkBriefcase_latest\.jar$
+^test\.csv$
