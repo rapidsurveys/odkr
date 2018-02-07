@@ -6,7 +6,9 @@
 #' ODK Briefcase into more usable and human readable variable names.
 #'
 #' @param data Dataframe object of dataset exported from ODK Aggregate Server
+#'
 #' @return Data frame object with renamed variables
+#'
 #' @examples
 #' # Rename sampleData1 dataset to remove '.' from variable names
 #' names(sampleData1)
@@ -23,6 +25,11 @@
 #' renameODK(sampleData3)
 #' names(sampleData3)
 #'
+#' @export
+#'
+#
+################################################################################
+
 renameODK <- function(data) {
   #
   # take column names and split strings around "."

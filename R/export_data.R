@@ -5,8 +5,11 @@
 #' Export data in CSV format from local ODK Briefcase Storage directory to a
 #' specified destination directory and a specified file name
 #'
-#' @param briefcase Path to ODK Briefcase jar file; default is jar file
-#' installed with package (ODK Briefcase v1.8.0)
+#' @param briefcase Path to pre-installed ODK Briefcase \code{jar} file. Default
+#'     is \code{jar} file (currently ODK Briefcase v1.8.0) installed with the
+#'     current version of the package accessed via \code{system.file()}. Path
+#'     can be set to access an ODK Briefcase \code{jar} file downloaded locally
+#'     in user's machine
 #' @param id Form ID of form to be pulled
 #' @param from Path to source ODK Briefcase Storage from which to extract data;
 #' default is \code{getwd()}
@@ -21,8 +24,10 @@
 #' @param overwrite Overwrite existing output data in destination
 #' directory with the same filename; default is FALSE
 #' @param exclude Exclude media files on export; default is TRUE
+#'
 #' @return CSV file in destination directory containing data from the pulled
 #' forms
+#'
 #' @examples
 #' # Export data from a specified ODK Briefcase Storage directory to current
 #' # working directory with a filename called "test.csv"
@@ -32,8 +37,13 @@
 #'               overwrite = TRUE)
 #' }
 #'
+#' @export
+#'
+#
+################################################################################
+
 export_data <- function(briefcase = system.file("java",
-                                                "odkBriefcase_v1.8.0.jar",
+                                                "odkBriefcase_latest.jar",
                                                 package = "odkr"),
                         id, from = getwd(), to = getwd(),
                         filename = paste(id, "_data.csv", sep = ""),

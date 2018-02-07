@@ -20,9 +20,10 @@
 #' equates to \code{NA}
 #' @param naQuestion (optional) TRUE/FALSE vector of the same length as answers;
 #' in rows where this is false, all columns will be coded as \code{NA}
+#'
 #' @return a data frame with multiple separate 0/1 columns
 #'
-#' NOTE: \code{naCode} must exist as the only answer in a column (an answer that
+#' @section NOTE: \code{naCode} must exist as the only answer in a column (an answer that
 #' contains both a valid answer and the \code{NA} code will not be recognized as
 #' \code{NA} - instead, the \code{NA} code will be output as an extra answer
 #' column (if \code{choices} parameter is not given))
@@ -32,6 +33,10 @@
 #' sampleData2 <- renameODK(sampleData2)
 #' temp <- expandMultChoice(sampleData2$ws7)
 #'
+#' @export
+#'
+#
+################################################################################
 expandMultChoice <- function(answers,
                              choices = NULL,
                              naCode = NULL,

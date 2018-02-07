@@ -13,13 +13,20 @@
 #' data frame (optional)
 #' @param removeRows Index of which rows should be removed from child data frame
 #' (optional)
+#'
 #' @return Merged dataframe
+#'
 #' @examples
 #' # marge sampleData2 and sampleData3
 #' x <- renameODK(sampleData2)
 #' y <- renameODK(sampleData3)
 #' temp <- mergeNestedODK(parent = x, child = y, byPARENT_KEY = FALSE)
 #'
+#' @export
+#'
+#
+################################################################################
+
 mergeNestedODK <- function(parent,
                            child,
                            byPARENT_KEY = TRUE,
