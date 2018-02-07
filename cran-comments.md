@@ -7,13 +7,9 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 3 notes
+0 errors | 0 warnings | 1 note
 
 * This is a new release.
-
-* Installed package size is 7.5Mb; sub-directories of 1Mb or more (`inst/java/`)
-
-
 
 ## Reverse dependencies
 This is a new release, so there are no reverse/downstream dependencies.
