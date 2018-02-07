@@ -21,7 +21,8 @@ Help notes on usage of ODK Briefcase via command line interface
 Get help with command line interface for ODK Briefcase
 }
 \examples{
-get_briefcase()
-get_help()
-
+\dontrun{
+  get_briefcase()
+  get_help()
+}
 }
