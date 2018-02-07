@@ -15,7 +15,8 @@ Description: Utility functions for working with datasets gathered using
     nested ODK dataset and an expand function to disaggregate multiple choice
     answers that have been collapsed into single code by ODK.
 Imports: stringr,
-    Hmisc
+    Hmisc,
+    downloader
 Depends: R (>= 2.10)
 Suggests: testthat
 License: MIT + file LICENSE
