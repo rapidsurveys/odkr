@@ -37,6 +37,8 @@ ODK Collect mobile clients
 # Use pre-installed ODK Briefcase (version 1.8.0) and pull forms from a
 # local ODK folder found in Desktop to current working directory
 \dontrun{
+  get_briefcase()
+
   pull_local(id = "stakeholders",
              from = ~/Desktop/odk)
 }

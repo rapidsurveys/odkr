@@ -14,7 +14,8 @@
 #' @return NULL
 #'
 #' @examples
-#'   #
+#'   # Get latest version of ODK Briefcase and save in default location
+#'   get_briefcase()
 #'
 #' @export
 #'

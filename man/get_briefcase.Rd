@@ -20,6 +20,7 @@ Updates pre-installed ODK Briefcase \code{jar} file to the latest version
 downloaded from \url{https://opendatakit.org}.
 }
 \examples{
-  #
+  # Get latest version of ODK Briefcase and save in default location
+  get_briefcase()
 
 }

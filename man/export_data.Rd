@@ -50,6 +50,7 @@ specified destination directory and a specified file name
 # Export data from a specified ODK Briefcase Storage directory to current
 # working directory with a filename called "test.csv"
 \dontrun{
+  get_briefcase()
   export_data(id = "stakeholders",
               filename = "test.csv",
               overwrite = TRUE)

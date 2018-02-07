@@ -26,6 +26,8 @@
 #'   # remote ODK Aggregate server from ONA (https://ona.io); pulled forms to
 #'   # be saved in default location at current working directory
 #'   \dontrun{
+#'   get_briefcase()
+#'
 #'   pull_remote(id = "stakeholders",
 #'               from = "https://ona.io/validtrial",
 #'               username = "validtrial",
