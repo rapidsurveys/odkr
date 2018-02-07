@@ -14,8 +14,9 @@
 #'
 #' @examples
 #'   # Get latest version of ODK Briefcase and save in default location
-#'   get_briefcase()
-#'
+#'   \dontrun{
+#'     get_briefcase()
+#'   }
 #' @export
 #'
 #
