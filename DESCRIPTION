@@ -1,7 +1,7 @@
 Package: odkr
 Type: Package
 Title: OpenDataKit (ODK) R API
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("Ernest", "Guevarra", email = "ernestgmd@gmail.com", role = c("aut", "cre")),
     person("Laura", "Bramley", email = "laura@validinternational.org", role = "aut"),
@@ -15,8 +15,7 @@ Description: Utility functions for working with datasets gathered using
     nested ODK dataset and an expand function to disaggregate multiple choice
     answers that have been collapsed into single code by ODK.
 Imports: stringr,
-    Hmisc,
-    downloader
+    Hmisc
 Depends: R (>= 2.10)
 Suggests: testthat
 License: MIT + file LICENSE
