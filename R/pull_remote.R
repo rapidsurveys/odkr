@@ -25,11 +25,12 @@
 #'   # Use pre-installed ODK Briefcase (version 1.8,0) and connect to a test
 #'   # remote ODK Aggregate server from ONA (https://ona.io); pulled forms to
 #'   # be saved in default location at current working directory
+#'   \dontrun{
 #'   pull_remote(id = "stakeholders",
 #'               from = "https://ona.io/validtrial",
 #'               username = "validtrial",
 #'               password = "zEF-STN-5ze-qom")
-#'
+#'   }
 #' @export
 #'
 #
