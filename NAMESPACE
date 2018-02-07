@@ -2,12 +2,12 @@
 
 export(expandMultChoice)
 export(export_data)
+export(get_briefcase)
 export(get_help)
 export(mergeNestedODK)
 export(pull_local)
 export(pull_remote)
 export(renameODK)
-export(update_briefcase)
 importFrom(Hmisc,"%nin%")
 importFrom(stringr,str_length)
 importFrom(stringr,str_split)
