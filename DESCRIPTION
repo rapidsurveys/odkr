@@ -1,13 +1,13 @@
 Package: odkr
 Type: Package
 Title: OpenDataKit (ODK) R API
-Version: 0.1.0.9000
+Version: 0.1.0
 Authors@R: c(
     person("Ernest", "Guevarra", email = "ernestgmd@gmail.com", role = c("aut", "cre")),
     person("Laura", "Bramley", email = "laura@validinternational.org", role = "aut"),
     person("Valid", "International", email = "office@validinternational", role = "cph"))
 Description: Utility functions for working with datasets gathered using
-    OpenDataKit (ODK). These includes an API to interface with ODK Briefcase,
+    OpenDataKit (ODK). These include an API to interface with ODK Briefcase,
     a Java application for fetching and pushing ODK forms and their contents,
     that allows pulling of data from either a remote ODK Aggregate Server or a
     local ODK folder, a rename function to give more human readable variable
@@ -23,4 +23,5 @@ Encoding: UTF-8
 LazyData: true
 SystemRequirements: Java
 RoxygenNote: 6.0.1
-
+URL: https://github.com/validmeasures/odkr
+BugReports: https://github.com/validmeasures/odkr/issues
