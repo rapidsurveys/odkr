@@ -13,7 +13,7 @@
 
 * Installed package size is 7.5Mb; sub-directories of 1Mb or more (`inst/java/`)
 
-* `pull_remote` example with elapsed time > 5s
+
 
 ## Reverse dependencies
 This is a new release, so there are no reverse/downstream dependencies.
