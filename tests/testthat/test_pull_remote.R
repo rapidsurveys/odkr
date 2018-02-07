@@ -1,6 +1,8 @@
 library(odkr)
 context("Check pull_remote output")
 
+get_briefcase()
+
 pull_remote(id = "stakeholders",
             from = "https://ona.io/validtrial",
             username = "validtrial",

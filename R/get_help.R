@@ -13,6 +13,7 @@
 #' @return Help notes on usage of ODK Briefcase via command line interface
 #'
 #' @examples
+#' get_briefcase()
 #' get_help()
 #'
 #' @export
