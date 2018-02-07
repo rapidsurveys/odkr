@@ -24,5 +24,6 @@
 get_briefcase <- function(destination = getwd(),
                           briefcase = "odkBriefcase_latest") {
   download.file(url = "https://opendatakit.org/download/4476/",
-                destfile = paste(destination, "/", briefcase, ".jar", sep = ""))
+                destfile = paste(destination, "/", briefcase, ".jar", sep = ""),
+                mode = "wb")
 }
