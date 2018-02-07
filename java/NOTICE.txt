@@ -1,1 +1,0 @@
-ODK Briefcase licensing information can be found in res/ODK_LICENSE.txt
