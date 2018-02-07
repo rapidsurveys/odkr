@@ -4,12 +4,15 @@
 \alias{get_help}
 \title{get_help}
 \usage{
-get_help(briefcase = system.file("java", "odkBriefcase_v1.8.0.jar", package =
+get_help(briefcase = system.file("java", "odkBriefcase_latest.jar", package =
   "odkr"))
 }
 \arguments{
-\item{briefcase}{Path to ODK Briefcase jar file; default is jar file
-installed with package (ODK Briefcase v1.8.0)}
+\item{briefcase}{Path to pre-installed ODK Briefcase \code{jar} file. Default
+is \code{jar} file (currently ODK Briefcase v1.8.0) installed with the
+current version of the package accessed via \code{system.file()}. Path
+can be set to access an ODK Briefcase \code{jar} file downloaded locally
+in user's machine}
 }
 \value{
 Help notes on usage of ODK Briefcase via command line interface

@@ -4,14 +4,17 @@
 \alias{export_data}
 \title{export_data}
 \usage{
-export_data(briefcase = system.file("java", "odkBriefcase_v1.8.0.jar", package
+export_data(briefcase = system.file("java", "odkBriefcase_latest.jar", package
   = "odkr"), id, from = getwd(), to = getwd(), filename = paste(id,
   "_data.csv", sep = ""), start = NULL, end = NULL, overwrite = FALSE,
   exclude = TRUE)
 }
 \arguments{
-\item{briefcase}{Path to ODK Briefcase jar file; default is jar file
-installed with package (ODK Briefcase v1.8.0)}
+\item{briefcase}{Path to pre-installed ODK Briefcase \code{jar} file. Default
+is \code{jar} file (currently ODK Briefcase v1.8.0) installed with the
+current version of the package accessed via \code{system.file()}. Path
+can be set to access an ODK Briefcase \code{jar} file downloaded locally
+in user's machine}
 
 \item{id}{Form ID of form to be pulled}
 
