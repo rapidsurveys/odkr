@@ -16,7 +16,7 @@
 #' ODK Aggregate Server or from a local ODK folder \code{/odk} collected from
 #' mobile clients. This package includes the latest version of ODK Briefcase
 #' (v1.8.0) as an installed Java application. This package requires Java 8
-#' installed. Jave 8 can be downloaded from \href{https://java.com/en/download/}{here}.
+#' installed. Java 8 can be downloaded from \href{https://java.com/en/download/}{here}.
 #'
 #' @docType package
 #' @name odkr
