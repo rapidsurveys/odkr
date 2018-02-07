@@ -1,5 +1,6 @@
 # odkr: Open Data Kit (ODK) R API
 
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 [![CRAN](https://img.shields.io/cran/v/odkr.svg)](https://cran.r-project.org/package=odkr)
 [![CRAN](https://img.shields.io/cran/l/odkr.svg)](https://CRAN.R-project.org/package=odkr)
 [![CRAN](http://cranlogs.r-pkg.org/badges/odkr)](https://CRAN.R-project.org/package=odkr)
