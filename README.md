@@ -39,9 +39,10 @@ As of **ODK Briefcase** version 1.4.4, a scriptable command line interface (CLI)
 to the Java application has been available. This package provides an R interface
 to **ODK Briefcase** via the available CLI to pull forms from a remote **ODK Aggregate 
 Server** or from a local ODK folder `/odk` collected from mobile clients. This 
-package includes the latest version of **ODK Briefcase** (v1.8.0) as an installed 
-Java application. This package requires Java 8 installed. Jave 8 can be downloaded 
-from [here](https://java.com/en/download/).
+package has a function that downloads the lastest version of **ODK Briefcase** 
+(currently v1.8.0) and additional functions that use the CLI of **ODK Briefcase**
+to perform data extraction and data export. This package requires Java 8 installed. 
+Jave 8 can be downloaded from [here](https://java.com/en/download/).
 
 ## Requirements
 The ODK-R interface component of this package requires **Java 8** to be installed 
@@ -49,7 +50,7 @@ in your computer. There are known [issues](https://forum.opendatakit.org/t/odk-b
 when using ODK Briefcase with **Java 9**. If you have **Java 9** installed, 
 uninstall (on [Windows](https://www.java.com/en/download/help/uninstall_java.xml); on [macOS](https://www.java.com/en/download/help/mac_uninstall_java.xml)) and
 then [install](https://java.com/en/download/) **Java 8**. If issues persist even
-with Java 8, you may need to reconfigure **Java**. On the terminal, execute the
+with **Java 8**, you may need to reconfigure **Java**. On the terminal, execute the
 following command:
 
 ```shell
@@ -118,6 +119,38 @@ mergeNestedODK(parent = renameODK(sampleData1),
 
 ### ODK-R interface functions
 
+Following are the ODK interface functions in the `odkr` package. However, before
+these functions can be utilised, a local copy of **ODK Briefcase** needs to be
+downloaded and it would be through this local copy of **ODK Briefcase** that the 
+other functions will integrate wit ODK databases.
+
+To download the latest version of **ODK Briefcase**, the `get_briefcase()`
+function can be utilised as follows:
+
+```R
+get_briefcase()
+```
+
+will download the latest version of **ODK Briefcase** in the current working
+directory and rename it as `odkBriefcase_latest`. These are the default settings.
+
+If it is preferred to save the **ODK Briefcase** in a different local directory
+and with a different filename, the following command can be issued in R:
+
+```R
+get_briefcase(destination = "~/Desktop", briefcase = "odkTool")
+```
+
+This will save a local copy of **ODK Briefcase** in the Desktop and name it as
+`odkTool.jar`.
+
+Downloading **ODK Briefcase** can be done only once unless you want to update to
+the latest version of **ODK Briefcase** from a previously downloaded older version.
+
+Once you have downloaded **ODK Briefcase**, the following functions can be 
+utilised to integrate with ODK databases.
+
+
 **1. Pull forms from a remote ODK Aggregate Server**
 If you have an **ODK Aggregate Server** already setup receiving form submissions
 from your survey, you can use `odkr` to pull these forms (not the data) into
@@ -140,8 +173,22 @@ pull_remote(id = "stakeholders",
 
 After the operation has been completed, you would now be able to see a folder
 named **ODK Briefcase Storage** on your desktop containing the forms and
-instances from the stakholders form on the **ODK Aggregate Server**.
+instances from the stakholders form on the **ODK Aggregate Server**. This assumes
+that your **ODK Briefcase** is saved in the default location (current working
+directory named `odkBriefcase_latest.jar`).
 
+If you saved **ODK Briefcase** in a different location and with a different
+filename, use the following command in R:
+
+```R
+pull_remote(destination = "~/Desktop",
+            briefcase = "odkTool",
+            id = "stakeholders",
+            to = "~/Desktop",
+            from = "https://ona.io/validtrial/"
+            username = "validtrial",
+            password = "zEF-STN-5ze-qom")
+```
 
 **2. Pull forms from a local `/odk` folder extracted from ODK Collect**
 If you do not have an **ODK Aggregate Server** setup and plan to use **ODK
