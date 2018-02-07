@@ -13,5 +13,5 @@ export_data(id = "stakeholders",
             overwrite = TRUE)
 
 test_that("Output CSV data exists", {
-  expect_true(file.exists("test.csv"))
+  expect_true(file.exists(paste(getwd(), "/test.csv", sep = "")))
 })

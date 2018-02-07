@@ -9,5 +9,5 @@ pull_remote(id = "stakeholders",
             password = "zEF-STN-5ze-qom")
 
 test_that("ODK Briefcase Storage exists", {
-  expect_true(file.exists("ODK Briefcase Storage"))
+  expect_true(file.exists(paste(getwd(), "/ODK Briefcase Storage", sep = "")))
 })
