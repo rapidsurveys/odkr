@@ -29,6 +29,6 @@
 ################################################################################
 
 get_help <- function(target = getwd(), briefcase = "odkBriefcase_latest") {
-  z <- paste("java -jar ", target, "/", briefcase, " --help", sep = "")
+  z <- paste("java -jar ", target, "/", briefcase, ".jar", " --help", sep = "")
   system(z)
 }

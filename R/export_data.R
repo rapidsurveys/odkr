@@ -55,7 +55,7 @@ export_data <- function(target = getwd(), briefcase = "odkBriefcase_latest",
                         start = NULL, end = NULL,
                         overwrite = FALSE, exclude = TRUE) {
 
-  z <- paste("java -jar ", target, "/", briefcase,
+  z <- paste("java -jar ", target, "/", briefcase, ".jar",
              " --form_id ", id,
              " --storage_directory ", from,
              " --export_directory ", to,

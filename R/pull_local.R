@@ -43,7 +43,7 @@
 
 pull_local <- function(target = getwd(), briefcase = "odkBriefcase_latest",
                        id, to = getwd(), from, pem = NULL) {
-  z <- paste("java -jar ", target, "/", filename,
+  z <- paste("java -jar ", target, "/", briefcase, ".jar",
              " --form_id ", id,
              " --storage_directory ", to,
              " --odk_directory ", from, sep = "")

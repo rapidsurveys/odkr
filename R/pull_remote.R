@@ -45,7 +45,7 @@
 
 pull_remote <- function(target = getwd(), briefcase = "odkBriefcase_latest",
                         id, to = getwd(), from, username, password) {
-  z <- paste("java -jar ", target, "/", briefcase,
+  z <- paste("java -jar ", target, "/", briefcase, ".jar",
              " --form_id ", id,
              " --storage_directory ", to,
              " --aggregate_url ", from,
