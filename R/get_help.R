@@ -4,11 +4,17 @@
 #'
 #' Get help with command line interface for ODK Briefcase
 #'
-#' @param briefcase Path to pre-installed ODK Briefcase \code{jar} file. Default
-#'     is \code{jar} file (currently ODK Briefcase v1.8.0) installed with the
-#'     current version of the package accessed via \code{system.file()}. Path
-#'     can be set to access an ODK Briefcase \code{jar} file downloaded locally
-#'     in user's machine
+#' @param target Path to directory of ODK Briefcase \code{.jar} file. Default
+#'     is current working directory matching the default directory path used by
+#'     \code{get_briefcase()}. If ODK Briefcase \code{.jar} file was downloaded
+#'     manually from \url{https://opendatakit.org}, \code{target} should match
+#'     the directory path where \code{.jar} file has been downloaded.
+#' @param briefcase Filename of the downloaded ODK Briefcase \code{.jar} file.
+#'     Default is \code{odkBriefcase_latest} to match the default filename used
+#'     by \code{get_briefcase()}. If ODK Briefcase \code{.jar} file was
+#'     downloaded manually from \url{https://opendatakit.org}, filename should
+#'     match the default filename used by Open Data Kit which is usually
+#'     "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number
 #'
 #' @return Help notes on usage of ODK Briefcase via command line interface
 #'
@@ -22,9 +28,7 @@
 #
 ################################################################################
 
-get_help <- function(briefcase = system.file("java",
-                                             "odkBriefcase_latest.jar",
-                                             package = "odkr")) {
-  z <- paste("java -jar ", briefcase, " --help", sep = "")
+get_help <- function(target = getwd(), briefcase = "odkBriefcase_latest") {
+  z <- paste("java -jar ", target, "/", briefcase, " --help", sep = "")
   system(z)
 }

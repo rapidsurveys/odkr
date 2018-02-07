@@ -6,9 +6,8 @@
 #' downloaded from \url{https://opendatakit.org}.
 #'
 #' @param destination Path to directory where ODK Briefcase \code{.jar} file
-#'     will be downloaded into. Default is the \code{java} directory in the
-#'     \code{odkr} package installation
-#' @param filename Filename of the downloaded ODK Briefcase \code{.jar} file.
+#'     will be downloaded into. Default is the current working directory.
+#' @param briefcase Filename of the downloaded ODK Briefcase \code{.jar} file.
 #'     Default is \code{"odkBriefcase_latest"}
 #'
 #' @return NULL
@@ -22,8 +21,8 @@
 #
 ################################################################################
 
-get_briefcase <- function(destination = system.file("java", package = "odkr"),
-                          filename = "odkBriefcase_latest") {
+get_briefcase <- function(destination = getwd(),
+                          briefcase = "odkBriefcase_latest") {
   download.file(url = "https://opendatakit.org/download/4476/",
-                destfile = paste(destination, "/", filename, ".jar", sep = ""))
+                destfile = paste(destination, "/", briefcase, ".jar", sep = ""))
 }

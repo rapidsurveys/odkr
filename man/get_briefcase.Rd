@@ -4,15 +4,13 @@
 \alias{get_briefcase}
 \title{get_briefcase}
 \usage{
-get_briefcase(destination = system.file("java", package = "odkr"),
-  filename = "odkBriefcase_latest")
+get_briefcase(destination = getwd(), briefcase = "odkBriefcase_latest")
 }
 \arguments{
 \item{destination}{Path to directory where ODK Briefcase \code{.jar} file
-will be downloaded into. Default is the \code{java} directory in the
-\code{odkr} package installation}
+will be downloaded into. Default is the current working directory.}
 
-\item{filename}{Filename of the downloaded ODK Briefcase \code{.jar} file.
+\item{briefcase}{Filename of the downloaded ODK Briefcase \code{.jar} file.
 Default is \code{"odkBriefcase_latest"}}
 }
 \description{
