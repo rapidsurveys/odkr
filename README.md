@@ -68,8 +68,8 @@ sudo R CMD javareconf JAVA_HOME=/usr/java/default
 # Install development version of odkr by installing devtools and then installing
 # odkr package via git
 install.packages("devtools")
-devtools::install_github("ernestguevarra/odkr")
-library("odkr")
+devtools::install_github("validmeasures/odkr")
+library(odkr)
 ```
 
 ## Usage
