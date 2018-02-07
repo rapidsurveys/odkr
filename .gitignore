@@ -35,10 +35,10 @@ vignettes/*.pdf
 *.knit.md
 .Rproj.user
 
+
 .github
-
 .DS_Store
-
-/inst/.gitignore
-
 ODK Briefcase Storage/
+/*.csv
+/*.jar
+
