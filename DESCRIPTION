@@ -1,7 +1,7 @@
 Package: odkr
 Type: Package
 Title: OpenDataKit (ODK) R API
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
     person("Ernest", "Guevarra", email = "ernestgmd@gmail.com", role = c("aut", "cre")),
     person("Laura", "Bramley", email = "laura@validinternational.org", role = "aut"),
