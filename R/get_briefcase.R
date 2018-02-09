@@ -14,8 +14,10 @@
 #'
 #' @examples
 #'   # Get latest version of ODK Briefcase and save in a temporary directory
-#'     dirPath <- tempdir()
-#'     get_briefcase(destination = dirPath)
+#'     \dontrun{
+#'       dirPath <- tempdir()
+#'       get_briefcase(destination = dirPath)
+#'     }
 #' @export
 #'
 #
