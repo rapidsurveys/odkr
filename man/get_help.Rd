@@ -27,9 +27,9 @@ Help notes on usage of ODK Briefcase via command line interface
 Get help with command line interface for ODK Briefcase
 }
 \examples{
-#\dontrun{
+\dontrun{
   dirPath <- tempdir()
   get_briefcase(destination = dirPath)
   get_help(target = dirPath)
-#}
+}
 }
