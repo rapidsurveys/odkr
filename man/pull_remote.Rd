@@ -4,15 +4,15 @@
 \alias{pull_remote}
 \title{pull_remote}
 \usage{
-pull_remote(target = getwd(), briefcase = "odkBriefcase_latest", id,
-  to = getwd(), from, username, password)
+pull_remote(target = "", briefcase = "odkBriefcase_latest", id, to = "",
+  from = "", username, password)
 }
 \arguments{
-\item{target}{Path to directory of ODK Briefcase \code{.jar} file. Default
-is current working directory matching the default directory path used by
-\code{get_briefcase()}. If ODK Briefcase \code{.jar} file was downloaded
-manually from \url{https://opendatakit.org}, \code{target} should match
-the directory path where \code{.jar} file has been downloaded.}
+\item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
+path should match directory path used when calling \code{get_briefcase()}.
+If ODK Briefcase \code{.jar} file was downloaded manually from \url{https://opendatakit.org},
+\code{target} should match the directory path where \code{.jar} file has
+been downloaded into.}
 
 \item{briefcase}{Filename of the downloaded ODK Briefcase \code{.jar} file.
 Default is \code{odkBriefcase_latest} to match the default filename used
@@ -23,8 +23,7 @@ match the default filename used by Open Data Kit which is usually
 
 \item{id}{Form ID of form to be pulled}
 
-\item{to}{Destination directory for pulled ODK forms; default destination
-is at current working directory}
+\item{to}{Destination directory for pulled ODK forms}
 
 \item{from}{URL of remote ODK Aggregate server}
 
@@ -45,11 +44,13 @@ Pull ODK forms from remote ODK Aggregate via ODK Briefcase
   # Use pre-installed ODK Briefcase (version 1.8,0) and connect to a test
   # remote ODK Aggregate server from ONA (https://ona.io); pulled forms to
   # be saved in default location at current working directory
-  \dontrun{
-  get_briefcase()
+  #\dontrun{
+  dir <- tempdir()
+  get_briefcase(dir)
   pull_remote(id = "stakeholders",
               from = "https://ona.io/validtrial",
+              to = dir,
               username = "validtrial",
               password = "zEF-STN-5ze-qom")
-  }
+  #}
 }
