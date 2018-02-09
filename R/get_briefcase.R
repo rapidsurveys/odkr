@@ -14,8 +14,8 @@
 #'
 #' @examples
 #'   # Get latest version of ODK Briefcase and save in a temporary directory
-#'     dir <- tempdir()
-#'     get_briefcase(destination = dir)
+#'     dirPath <- tempdir()
+#'     get_briefcase(destination = dirPath)
 #' @export
 #'
 #

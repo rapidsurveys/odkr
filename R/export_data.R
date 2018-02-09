@@ -38,11 +38,11 @@
 #' # Export data from a specified ODK Briefcase Storage directory to current
 #' # working directory with a filename called "test.csv"
 #' #\dontrun{
-#'   dir <- tempdir()
-#'   get_briefcase(destination = dir)
-#'   export_data(target = dir,
-#'               from = dir,
-#'               to = dir,
+#'   dirPath <- tempdir()
+#'   get_briefcase(destination = dirPath)
+#'   export_data(target = dirPath,
+#'               from = dirPath,
+#'               to = dirPath,
 #'               id = "stakeholders",
 #'               filename = "test.csv",
 #'               overwrite = TRUE)
