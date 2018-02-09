@@ -4,11 +4,11 @@
 \alias{get_briefcase}
 \title{get_briefcase}
 \usage{
-get_briefcase(destination = getwd(), briefcase = "odkBriefcase_latest")
+get_briefcase(destination = "", briefcase = "odkBriefcase_latest")
 }
 \arguments{
 \item{destination}{Path to directory where ODK Briefcase \code{.jar} file
-will be downloaded into. Default is the current working directory.}
+will be downloaded into}
 
 \item{briefcase}{Filename of the downloaded ODK Briefcase \code{.jar} file.
 Default is \code{"odkBriefcase_latest"}}
@@ -18,8 +18,7 @@ Updates pre-installed ODK Briefcase \code{jar} file to the latest version
 downloaded from \url{https://opendatakit.org}.
 }
 \examples{
-  # Get latest version of ODK Briefcase and save in default location
-  \dontrun{
-    get_briefcase()
-  }
+  # Get latest version of ODK Briefcase and save in a temporary directory
+    dirPath <- tempdir()
+    get_briefcase(destination = dirPath)
 }

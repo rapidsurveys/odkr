@@ -4,16 +4,16 @@
 \alias{export_data}
 \title{export_data}
 \usage{
-export_data(target = getwd(), briefcase = "odkBriefcase_latest", id,
-  from = getwd(), to = getwd(), filename = paste(id, "_data.csv", sep =
-  ""), start = NULL, end = NULL, overwrite = FALSE, exclude = TRUE)
+export_data(target = "", briefcase = "odkBriefcase_latest", id, from = "",
+  to = "", filename = paste(id, "_data.csv", sep = ""), start = NULL,
+  end = NULL, overwrite = FALSE, exclude = TRUE)
 }
 \arguments{
-\item{target}{Path to directory of ODK Briefcase \code{.jar} file. Default
-is current working directory matching the default directory path used by
-\code{get_briefcase()}. If ODK Briefcase \code{.jar} file was downloaded
-manually from \url{https://opendatakit.org}, \code{target} should match
-the directory path where \code{.jar} file has been downloaded.}
+\item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
+path should match directory path used when calling \code{get_briefcase()}.
+If ODK Briefcase \code{.jar} file was downloaded manually from \url{https://opendatakit.org},
+\code{target} should match the directory path where \code{.jar} file has
+been downloaded into.}
 
 \item{briefcase}{Filename of the downloaded ODK Briefcase \code{.jar} file.
 Default is \code{odkBriefcase_latest} to match the default filename used
@@ -24,11 +24,11 @@ match the default filename used by Open Data Kit which is usually
 
 \item{id}{Form ID of form to be pulled}
 
-\item{from}{Path to source ODK Briefcase Storage from which to extract data;
-default is \code{getwd()}}
+\item{from}{Path to source ODK Briefcase Storage from which to extract data.
+This should match directory path specified when making a call to \code{pull_remote()}
+or \code{pull_local()}}
 
-\item{to}{Destination directory to save output data file; default is
-\code{getwd()}}
+\item{to}{Destination directory to save output data file}
 
 \item{filename}{Filename of output CSV data; default is
 \code{paste(id, "_data.csv", sep = "")}}
@@ -56,10 +56,13 @@ specified destination directory and a specified file name
 # Export data from a specified ODK Briefcase Storage directory to current
 # working directory with a filename called "test.csv"
 \dontrun{
-  get_briefcase()
-  export_data(id = "stakeholders",
+  dirPath <- tempdir()
+  get_briefcase(destination = dirPath)
+  export_data(target = dirPath,
+              from = dirPath,
+              to = dirPath,
+              id = "stakeholders",
               filename = "test.csv",
               overwrite = TRUE)
 }
-
 }

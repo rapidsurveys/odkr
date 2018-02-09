@@ -4,15 +4,15 @@
 \alias{pull_local}
 \title{pull_local}
 \usage{
-pull_local(target = getwd(), briefcase = "odkBriefcase_latest", id,
-  to = getwd(), from, pem = NULL)
+pull_local(target = "", briefcase = "odkBriefcase_latest", id, to = "",
+  from = "", pem = NULL)
 }
 \arguments{
-\item{target}{Path to directory of ODK Briefcase \code{.jar} file. Default
-is current working directory matching the default directory path used by
-\code{get_briefcase()}. If ODK Briefcase \code{.jar} file was downloaded
-manually from \url{https://opendatakit.org}, \code{target} should match
-the directory path where \code{.jar} file has been downloaded.}
+\item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
+path should match directory path used when calling \code{get_briefcase()}.
+If ODK Briefcase \code{.jar} file was downloaded manually from \url{https://opendatakit.org},
+\code{target} should match the directory path where \code{.jar} file has
+been downloaded into.}
 
 \item{briefcase}{Filename of the downloaded ODK Briefcase \code{.jar} file.
 Default is \code{odkBriefcase_latest} to match the default filename used
@@ -23,8 +23,7 @@ match the default filename used by Open Data Kit which is usually
 
 \item{id}{Form ID of form to be pulled}
 
-\item{to}{Destination directory for pulled ODK forms; default destination
-is at current working directory}
+\item{to}{Destination directory for pulled ODK forms}
 
 \item{from}{Source ODK directory (\code{/odk}) from ODK Collect mobile client}
 
@@ -44,9 +43,11 @@ ODK Collect mobile clients
 # Use pre-installed ODK Briefcase (version 1.8.0) and pull forms from a
 # local ODK folder found in Desktop to current working directory
 \dontrun{
-  get_briefcase()
-  pull_local(id = "stakeholders",
-             from = ~/Desktop/odk)
+  dirPath <- tempdir()
+  get_briefcase(destination = dirPath)
+  pull_local(target = dirPath,
+             id = "stakeholders",
+             from = system.file("odk", package = "odkr"),
+             to = dirPath)
 }
-
 }
