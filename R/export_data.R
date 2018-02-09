@@ -37,7 +37,7 @@
 #' @examples
 #' # Export data from a specified ODK Briefcase Storage directory to current
 #' # working directory with a filename called "test.csv"
-#' #\dontrun{
+#' \dontrun{
 #'   dirPath <- tempdir()
 #'   get_briefcase(destination = dirPath)
 #'   export_data(target = dirPath,
@@ -46,8 +46,7 @@
 #'               id = "stakeholders",
 #'               filename = "test.csv",
 #'               overwrite = TRUE)
-#' #}
-#'
+#' }
 #' @export
 #'
 #

@@ -29,15 +29,14 @@
 #' @examples
 #' # Use pre-installed ODK Briefcase (version 1.8.0) and pull forms from a
 #' # local ODK folder found in Desktop to current working directory
-#' #\dontrun{
+#' \dontrun{
 #'   dirPath <- tempdir()
 #'   get_briefcase(destination = dirPath)
 #'   pull_local(target = dirPath,
 #'              id = "stakeholders",
 #'              from = system.file("odk", package = "odkr"),
 #'              to = dirPath)
-#' #}
-#'
+#' }
 #' @export
 #'
 #
