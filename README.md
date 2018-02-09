@@ -66,10 +66,19 @@ sudo R CMD javareconf JAVA_HOME=/usr/java/default
 ```
 
 ## Installation
+
+Install `odkr` from CRAN:
+
 ```R
-# Install development version of odkr by installing devtools and then installing
-# odkr package via git
-install.packages("devtools")
+install.packages("odkr")
+library(odkr)
+```
+
+Install development version of `odkr` by installing devtools and then installing
+`odkr` package via git
+
+```R
+# install.packages("devtools")
 devtools::install_github("validmeasures/odkr")
 library(odkr)
 ```
