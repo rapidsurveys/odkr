@@ -128,20 +128,21 @@ To download the latest version of **ODK Briefcase**, the `get_briefcase()`
 function can be utilised as follows:
 
 ```R
-get_briefcase()
+get_briefcase(destination = "~/Desktop")
 ```
 
-will download the latest version of **ODK Briefcase** in the current working
-directory and rename it as `odkBriefcase_latest`. These are the default settings.
+will download the latest version of **ODK Briefcase** in your `Desktop` and rename 
+it as `odkBriefcase_latest`. Specifying the destination directory for **ODK Briefcase**
+is required.
 
-If it is preferred to save the **ODK Briefcase** in a different local directory
-and with a different filename, the following command can be issued in R:
+If it is preferred to save the **ODK Briefcase** with a different filename, the 
+following command can be issued in R:
 
 ```R
 get_briefcase(destination = "~/Desktop", briefcase = "odkTool")
 ```
 
-This will save a local copy of **ODK Briefcase** in the Desktop and name it as
+This will save a local copy of **ODK Briefcase** in the `Desktop` and name it as
 `odkTool.jar`.
 
 Downloading **ODK Briefcase** can be done only once unless you want to update to
@@ -164,31 +165,22 @@ local directory `~/Desktop` using your **ODK Aggregate Server** account with
 used as follows:
 
 ```R
-pull_remote(id = "stakeholders",
-            to = "~/Desktop",
-            from = "https://ona.io/validtrial/"
-            username = "validtrial",
-            password = "zEF-STN-5ze-qom")
-```
-
-After the operation has been completed, you would now be able to see a folder
-named **ODK Briefcase Storage** on your desktop containing the forms and
-instances from the stakholders form on the **ODK Aggregate Server**. This assumes
-that your **ODK Briefcase** is saved in the default location (current working
-directory named `odkBriefcase_latest.jar`).
-
-If you saved **ODK Briefcase** in a different location and with a different
-filename, use the following command in R:
-
-```R
-pull_remote(destination = "~/Desktop",
-            briefcase = "odkTool",
+pull_remote(target = "~Desktop",
             id = "stakeholders",
             to = "~/Desktop",
             from = "https://ona.io/validtrial/"
             username = "validtrial",
             password = "zEF-STN-5ze-qom")
 ```
+
+In this example, you will note that we are using a previously downloaded
+**ODK Briefcase** saved in the `Desktop`. The `target` specification can be
+changed to the directory where you have previously saved **ODK Briefcase**.
+
+After the operation has been completed, you would now be able to see a folder
+named **ODK Briefcase Storage** on your `Desktop` containing the forms and
+instances from the stakholders form on the **ODK Aggregate Server**.
+
 
 **2. Pull forms from a local `/odk` folder extracted from ODK Collect**
 If you do not have an **ODK Aggregate Server** setup and plan to use **ODK
@@ -198,10 +190,15 @@ to which you can apply the `pull_local` function to pull out the forms and
 instances to a local directory (e.g., `~/Desktop`) as follows:
 
 ```R
-pull_local(id = "stakeholders",
+pull_local(target = "~/Desktop",
+           id = "stakeholders",
            to = "~/Desktop",
            from = "~/Desktop")
 ```
+
+In this example, you will note that we are using a previously downloaded
+**ODK Briefcase** saved in the `Desktop`. The `target` specification can be
+changed to the directory where you have previously saved **ODK Briefcase**.
 
 After the operation has been completed, you would now be able to see a folder
 named **ODK Briefcase Storage** on your desktop containing the forms and
@@ -220,7 +217,8 @@ Briefcase Storage** (e.g., found in your `~/Desktop`) containing a form
 file named `test.csv` as follows:
 
 ```R
-export_data(id = "stakeholders",
+export_data(target = "~/Desktop",
+            id = "stakeholders",
             from = "~/Desktop",
             to = "~/Desktop",
             filename = "test.csv")
