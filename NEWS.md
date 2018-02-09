@@ -1,3 +1,27 @@
+# odkr v0.1.3
+In this version, I have implemented the following changes:
+
+* In the DESCRIPTION, all mention of Open Data Kit or ODK I have put in single quotes. In addition,
+I put in single quotes mentions of ODK software derivatives such as ODK Briefcase
+and ODK Aggregate to be consistent with format.
+
+* In the DESCRIPTION, all mention of Java has been put in single quotes consistent
+with format for software names.
+
+* In the DESCRIPTION, added URL of Open Data Kit in angle brackets for auto-linking
+
+* In the various functions, I have corrected mistake of specifying a default
+write/save directory path. Instead, as advised, I have kept these as empty arguments
+that user need to specify and placed check statements when user forgets to input
+directory paths needed.
+
+* As consequence of previous, I have re-coded the examples to use `tempdir()` as
+suggested to specify a test location for arguments needing directory path inputs
+
+* As consequence of previous, I have re-coded tests such that they use the new
+specified syntax of no default write/save directories.
+
+
 # odkr v0.1.2
 * Resolve issue in testing specifically the test to check whether the function 
 `export_data()` produces the output `test.cscv`. Upon checking, logs show that 
