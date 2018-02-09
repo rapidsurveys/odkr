@@ -43,12 +43,12 @@ ODK Collect mobile clients
 # Use pre-installed ODK Briefcase (version 1.8.0) and pull forms from a
 # local ODK folder found in Desktop to current working directory
 #\dontrun{
-  dir <- tempdir()
-  get_briefcase(dir)
-  pull_local(target = dir,
+  dirPath <- tempdir()
+  get_briefcase(destination = dirPath)
+  pull_local(target = dirPath,
              id = "stakeholders",
              from = system.file("odk", package = "odkr"),
-             to = dir)
+             to = dirPath)
 #}
 
 }

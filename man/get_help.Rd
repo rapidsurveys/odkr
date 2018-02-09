@@ -4,14 +4,14 @@
 \alias{get_help}
 \title{get_help}
 \usage{
-get_help(target = getwd(), briefcase = "odkBriefcase_latest")
+get_help(target = "", briefcase = "odkBriefcase_latest")
 }
 \arguments{
-\item{target}{Path to directory of ODK Briefcase \code{.jar} file. Default
-is current working directory matching the default directory path used by
-\code{get_briefcase()}. If ODK Briefcase \code{.jar} file was downloaded
-manually from \url{https://opendatakit.org}, \code{target} should match
-the directory path where \code{.jar} file has been downloaded.}
+\item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
+path should match directory path used when calling \code{get_briefcase()}.
+If ODK Briefcase \code{.jar} file was downloaded manually from \url{https://opendatakit.org},
+\code{target} should match the directory path where \code{.jar} file has
+been downloaded into.}
 
 \item{briefcase}{Filename of the downloaded ODK Briefcase \code{.jar} file.
 Default is \code{odkBriefcase_latest} to match the default filename used
@@ -27,8 +27,9 @@ Help notes on usage of ODK Briefcase via command line interface
 Get help with command line interface for ODK Briefcase
 }
 \examples{
-\dontrun{
-  get_briefcase()
-  get_help()
-}
+#\dontrun{
+  dirPath <- tempdir()
+  get_briefcase(destination = dirPath)
+  get_help(target = dirPath)
+#}
 }
