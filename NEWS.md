@@ -43,4 +43,4 @@ invalid or corrupted hence producing the errors noted on testing. Now, the
 `mode` argument has been set to `"wb"` in the `get_briefcase()` function.
 
 # odkr v0.1.0
-Iniial release of `odkr`
+Initial release of `odkr`
