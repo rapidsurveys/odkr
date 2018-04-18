@@ -17,7 +17,7 @@ init:
         $ErrorActionPreference = "Stop"
 install:
   ps: |
-        Import-Module '.\scripts\appveyor-tool.ps1'
+        Import-Module '..\appveyor-tool.ps1'
         Bootstrap
 
 cache:
