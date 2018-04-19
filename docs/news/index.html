@@ -97,12 +97,54 @@
       <small>Source: <a href='https://github.com/validmeasures/odkr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="odkr-0-1-3" class="section level1">
+<h1 class="page-header">
+<a href="#odkr-0-1-3" class="anchor"></a>odkr 0.1.3<small> 2018-02-09 </small>
+</h1>
+<p>In this version, I have implemented the following changes:</p>
+<ul>
+<li>In the DESCRIPTION, all mention of Open Data Kit or ODK I have put in single quotes. In addition, I put in single quotes mentions of ODK software derivatives such as ODK Briefcase and ODK Aggregate to be consistent with format.</li>
+<li>In the DESCRIPTION, all mention of Java has been put in single quotes consistent with format for software names.</li>
+<li>In the DESCRIPTION, added URL of Open Data Kit in angle brackets for auto-linking</li>
+<li>In the various functions, I have corrected mistake of specifying a default write/save directory path. Instead, as advised, I have kept these as empty arguments that user need to specify and placed check statements when user forgets to input directory paths needed.</li>
+<li>As consequence of previous, I have re-coded the examples to use <code>tempdir()</code> as suggested to specify a test location for arguments needing directory path inputs</li>
+<li>As consequence of previous, I have re-coded tests such that they use the new specified syntax of no default write/save directories.</li>
+</ul>
+</div>
+    <div id="odkr-0-1-2" class="section level1">
+<h1 class="page-header">
+<a href="#odkr-0-1-2" class="anchor"></a>odkr 0.1.2<small> Unreleased </small>
+</h1>
+<ul>
+<li>Resolve issue in testing specifically the test to check whether the function <code><a href="../reference/export_data.html">export_data()</a></code> produces the output <code>test.cscv</code>. Upon checking, logs show that indeed <code>test.csv</code> is produced but the way the test is structured is that depending on build parameters, the test doesn’t look for the <code>test.csv</code> file in the appropriate location. For this, I re-worked both the test call to the function to specify clearly where the output goes and then worked on the actual test to check in the correct directory for <code>test.csv</code>.</li>
+</ul>
+</div>
+    <div id="odkr-0-1-1" class="section level1">
+<h1 class="page-header">
+<a href="#odkr-0-1-1" class="anchor"></a>odkr 0.1.1<small> Unreleased </small>
+</h1>
+<ul>
+<li>Resolve issues with how <code>download.file()</code> handles downloads under the Windows platform.</li>
+<li>In previous version, the <code>mode</code> argument in download file was not specified. This was fine for Linux and macOS as downloaded file worked accordingly.</li>
+<li>For Windows, without specifying mode, downloaded file is recognised as either invalid or corrupted hence producing the errors noted on testing. Now, the <code>mode</code> argument has been set to <code>"wb"</code> in the <code><a href="../reference/get_briefcase.html">get_briefcase()</a></code> function.</li>
+</ul>
+</div>
+    <div id="odkr-0-1-0" class="section level1">
+<h1 class="page-header">
+<a href="#odkr-0-1-0" class="anchor"></a>odkr 0.1.0<small> Unreleased </small>
+</h1>
+<p>Initial release of <code>odkr</code></p>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#odkr-0-1-3">0.1.3</a></li>
+        <li><a href="#odkr-0-1-2">0.1.2</a></li>
+        <li><a href="#odkr-0-1-1">0.1.1</a></li>
+        <li><a href="#odkr-0-1-0">0.1.0</a></li>
       </ul>
     </div>
   </div>
