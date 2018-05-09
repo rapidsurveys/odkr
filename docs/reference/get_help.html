@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="get_help — get_help" />
 
 <meta property="og:description" content="Get help with command line interface for ODK Briefcase" />
@@ -40,7 +43,15 @@
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102485058-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-102485058-5');
+</script>
 
   </head>
 
@@ -97,13 +108,15 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>get_help</h1>
-    <small>Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/get_help.R'><code>R/get_help.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/get_help.R'><code>R/get_help.R</code></a></small>
     <div class="hidden name"><code>get_help.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Get help with command line interface for ODK Briefcase</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>get_help</span>(<span class='kw'>target</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>briefcase</span> <span class='kw'>=</span> <span class='st'>"odkBriefcase_latest"</span>)</pre>
     
@@ -113,7 +126,7 @@
     <tr>
       <th>target</th>
       <td><p>Path to directory of ODK Briefcase <code>.jar</code> file. Directory
-path should match directory path used when calling <code><a href='get_briefcase.html'>get_briefcase()</a></code>.
+path should match directory path used when calling <code>get_briefcase()</code>.
 If ODK Briefcase <code>.jar</code> file was downloaded manually from <a href='https://opendatakit.org'>https://opendatakit.org</a>,
 <code>target</code> should match the directory path where <code>.jar</code> file has
 been downloaded into.</p></td>
@@ -122,7 +135,7 @@ been downloaded into.</p></td>
       <th>briefcase</th>
       <td><p>Filename of the downloaded ODK Briefcase <code>.jar</code> file.
 Default is <code>odkBriefcase_latest</code> to match the default filename used
-by <code><a href='get_briefcase.html'>get_briefcase()</a></code>. If ODK Briefcase <code>.jar</code> file was
+by <code>get_briefcase()</code>. If ODK Briefcase <code>.jar</code> file was
 downloaded manually from <a href='https://opendatakit.org'>https://opendatakit.org</a>, filename should
 match the default filename used by Open Data Kit which is usually
 "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number</p></td>
@@ -137,7 +150,7 @@ match the default filename used by Open Data Kit which is usually
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
   <span class='no'>dirPath</span> <span class='kw'>&lt;-</span> <span class='fu'>tempdir</span>()
-  <span class='fu'><a href='get_briefcase.html'>get_briefcase</a></span>(<span class='kw'>destination</span> <span class='kw'>=</span> <span class='no'>dirPath</span>)
+  <span class='fu'>get_briefcase</span>(<span class='kw'>destination</span> <span class='kw'>=</span> <span class='no'>dirPath</span>)
   <span class='fu'>get_help</span>(<span class='kw'>target</span> <span class='kw'>=</span> <span class='no'>dirPath</span>)
 <span class='co'># }</span></pre>
   </div>

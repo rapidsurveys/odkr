@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="export_data — export_data" />
 
 <meta property="og:description" content="Export data in CSV format from local ODK Briefcase Storage directory to a
@@ -41,7 +44,15 @@ specified destination directory and a specified file name" />
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102485058-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-102485058-5');
+</script>
 
   </head>
 
@@ -98,14 +109,16 @@ specified destination directory and a specified file name" />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>export_data</h1>
-    <small>Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/export_data.R'><code>R/export_data.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/export_data.R'><code>R/export_data.R</code></a></small>
     <div class="hidden name"><code>export_data.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Export data in CSV format from local ODK Briefcase Storage directory to a
 specified destination directory and a specified file name</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>export_data</span>(<span class='kw'>target</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>briefcase</span> <span class='kw'>=</span> <span class='st'>"odkBriefcase_latest"</span>, <span class='no'>id</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>""</span>,
   <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>filename</span> <span class='kw'>=</span> <span class='fu'>paste</span>(<span class='no'>id</span>, <span class='st'>"_data.csv"</span>, <span class='kw'>sep</span> <span class='kw'>=</span> <span class='st'>""</span>), <span class='kw'>start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
@@ -117,7 +130,7 @@ specified destination directory and a specified file name</p>
     <tr>
       <th>target</th>
       <td><p>Path to directory of ODK Briefcase <code>.jar</code> file. Directory
-path should match directory path used when calling <code><a href='get_briefcase.html'>get_briefcase()</a></code>.
+path should match directory path used when calling <code>get_briefcase()</code>.
 If ODK Briefcase <code>.jar</code> file was downloaded manually from <a href='https://opendatakit.org'>https://opendatakit.org</a>,
 <code>target</code> should match the directory path where <code>.jar</code> file has
 been downloaded into.</p></td>
@@ -126,7 +139,7 @@ been downloaded into.</p></td>
       <th>briefcase</th>
       <td><p>Filename of the downloaded ODK Briefcase <code>.jar</code> file.
 Default is <code>odkBriefcase_latest</code> to match the default filename used
-by <code><a href='get_briefcase.html'>get_briefcase()</a></code>. If ODK Briefcase <code>.jar</code> file was
+by <code>get_briefcase()</code>. If ODK Briefcase <code>.jar</code> file was
 downloaded manually from <a href='https://opendatakit.org'>https://opendatakit.org</a>, filename should
 match the default filename used by Open Data Kit which is usually
 "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number</p></td>
@@ -138,8 +151,8 @@ match the default filename used by Open Data Kit which is usually
     <tr>
       <th>from</th>
       <td><p>Path to source ODK Briefcase Storage from which to extract data.
-This should match directory path specified when making a call to <code><a href='pull_remote.html'>pull_remote()</a></code>
-or <code><a href='pull_local.html'>pull_local()</a></code></p></td>
+This should match directory path specified when making a call to <code>pull_remote()</code>
+or <code>pull_local()</code></p></td>
     </tr>
     <tr>
       <th>to</th>
@@ -182,7 +195,7 @@ forms</p>
 # working directory with a filename called "test.csv"
 </div><span class='co'># NOT RUN {</span>
   <span class='no'>dirPath</span> <span class='kw'>&lt;-</span> <span class='fu'>tempdir</span>()
-  <span class='fu'><a href='get_briefcase.html'>get_briefcase</a></span>(<span class='kw'>destination</span> <span class='kw'>=</span> <span class='no'>dirPath</span>)
+  <span class='fu'>get_briefcase</span>(<span class='kw'>destination</span> <span class='kw'>=</span> <span class='no'>dirPath</span>)
   <span class='fu'>export_data</span>(<span class='kw'>target</span> <span class='kw'>=</span> <span class='no'>dirPath</span>,
               <span class='kw'>from</span> <span class='kw'>=</span> <span class='no'>dirPath</span>,
               <span class='kw'>to</span> <span class='kw'>=</span> <span class='no'>dirPath</span>,

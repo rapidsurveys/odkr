@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="expandMultChoice — expandMultChoice" />
 
 <meta property="og:description" content="Function to recode a choose-multiple column where multiple answers are
@@ -42,7 +45,15 @@ with multiple separate 0/1 columns e.g.:" />
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102485058-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-102485058-5');
+</script>
 
   </head>
 
@@ -99,15 +110,17 @@ with multiple separate 0/1 columns e.g.:" />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>expandMultChoice</h1>
-    <small>Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/multipleChoiceExpand.R'><code>R/multipleChoiceExpand.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/multipleChoiceExpand.R'><code>R/multipleChoiceExpand.R</code></a></small>
     <div class="hidden name"><code>expandMultChoice.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Function to recode a choose-multiple column where multiple answers are
 recorded in the same element (e.g. "ab ac ad", "ef eg eh") to a data frame
 with multiple separate 0/1 columns e.g.:</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>expandMultChoice</span>(<span class='no'>answers</span>, <span class='kw'>choices</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>naCode</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>naQuestion</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
@@ -159,9 +172,8 @@ column (if <code>choices</code> parameter is not given))</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Expand responses in variable w7 of sampleData2</span>
-<span class='no'>sampleData2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span>(<span class='no'>sampleData2</span>)
-<span class='no'>temp</span> <span class='kw'>&lt;-</span> <span class='fu'>expandMultChoice</span>(<span class='no'>sampleData2</span>$<span class='no'>ws7</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: is.na() applied to non-(list or vector) of type 'NULL'</span></div><div class='input'>
-</div></pre>
+<span class='no'>sampleData2</span> <span class='kw'>&lt;-</span> <span class='fu'>renameODK</span>(<span class='no'>sampleData2</span>)
+<span class='no'>temp</span> <span class='kw'>&lt;-</span> <span class='fu'>expandMultChoice</span>(<span class='no'>sampleData2</span>$<span class='no'>ws7</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

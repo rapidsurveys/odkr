@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="get_briefcase — get_briefcase" />
 
 <meta property="og:description" content="Updates pre-installed ODK Briefcase jar file to the latest version
@@ -41,7 +44,15 @@ downloaded from https://opendatakit.org." />
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102485058-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-102485058-5');
+</script>
 
   </head>
 
@@ -98,14 +109,16 @@ downloaded from https://opendatakit.org." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>get_briefcase</h1>
-    <small>Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/get_briefcase.R'><code>R/get_briefcase.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/get_briefcase.R'><code>R/get_briefcase.R</code></a></small>
     <div class="hidden name"><code>get_briefcase.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Updates pre-installed ODK Briefcase <code>jar</code> file to the latest version
 downloaded from <a href='https://opendatakit.org'>https://opendatakit.org</a>.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>get_briefcase</span>(<span class='kw'>destination</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>briefcase</span> <span class='kw'>=</span> <span class='st'>"odkBriefcase_latest"</span>)</pre>
     

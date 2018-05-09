@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Changelog" />
 
 
@@ -37,7 +40,15 @@
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102485058-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-102485058-5');
+</script>
 
   </head>
 
@@ -116,7 +127,7 @@
 <a href="#odkr-0-1-2" class="anchor"></a>odkr 0.1.2<small> Unreleased </small>
 </h1>
 <ul>
-<li>Resolve issue in testing specifically the test to check whether the function <code><a href="../reference/export_data.html">export_data()</a></code> produces the output <code>test.cscv</code>. Upon checking, logs show that indeed <code>test.csv</code> is produced but the way the test is structured is that depending on build parameters, the test doesn’t look for the <code>test.csv</code> file in the appropriate location. For this, I re-worked both the test call to the function to specify clearly where the output goes and then worked on the actual test to check in the correct directory for <code>test.csv</code>.</li>
+<li>Resolve issue in testing specifically the test to check whether the function <code>export_data()</code> produces the output <code>test.cscv</code>. Upon checking, logs show that indeed <code>test.csv</code> is produced but the way the test is structured is that depending on build parameters, the test doesn’t look for the <code>test.csv</code> file in the appropriate location. For this, I re-worked both the test call to the function to specify clearly where the output goes and then worked on the actual test to check in the correct directory for <code>test.csv</code>.</li>
 </ul>
 </div>
     <div id="odkr-0-1-1" class="section level1">
@@ -126,7 +137,7 @@
 <ul>
 <li>Resolve issues with how <code>download.file()</code> handles downloads under the Windows platform.</li>
 <li>In previous version, the <code>mode</code> argument in download file was not specified. This was fine for Linux and macOS as downloaded file worked accordingly.</li>
-<li>For Windows, without specifying mode, downloaded file is recognised as either invalid or corrupted hence producing the errors noted on testing. Now, the <code>mode</code> argument has been set to <code>"wb"</code> in the <code><a href="../reference/get_briefcase.html">get_briefcase()</a></code> function.</li>
+<li>For Windows, without specifying mode, downloaded file is recognised as either invalid or corrupted hence producing the errors noted on testing. Now, the <code>mode</code> argument has been set to <code>"wb"</code> in the <code>get_briefcase()</code> function.</li>
 </ul>
 </div>
     <div id="odkr-0-1-0" class="section level1">

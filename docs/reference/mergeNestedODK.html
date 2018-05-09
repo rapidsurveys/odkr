@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="mergeNestedODK — mergeNestedODK" />
 
 <meta property="og:description" content="Retrieve parent data, matching to a nested (child) dataset by keys of a
@@ -41,7 +44,15 @@ nested dataset exported from an ODK Aggregate Server." />
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102485058-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-102485058-5');
+</script>
 
   </head>
 
@@ -98,14 +109,16 @@ nested dataset exported from an ODK Aggregate Server." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>mergeNestedODK</h1>
-    <small>Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/nestedSurvey.R'><code>R/nestedSurvey.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/nestedSurvey.R'><code>R/nestedSurvey.R</code></a></small>
     <div class="hidden name"><code>mergeNestedODK.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Retrieve parent data, matching to a nested (child) dataset by keys of a
 nested dataset exported from an ODK Aggregate Server.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>mergeNestedODK</span>(<span class='no'>parent</span>, <span class='no'>child</span>, <span class='kw'>byPARENT_KEY</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>removeCols</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>removeRows</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
@@ -145,8 +158,8 @@ data frame (optional)</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># marge sampleData2 and sampleData3</span>
-<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span>(<span class='no'>sampleData2</span>)
-<span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span>(<span class='no'>sampleData3</span>)
+<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'>renameODK</span>(<span class='no'>sampleData2</span>)
+<span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'>renameODK</span>(<span class='no'>sampleData3</span>)
 <span class='no'>temp</span> <span class='kw'>&lt;-</span> <span class='fu'>mergeNestedODK</span>(<span class='kw'>parent</span> <span class='kw'>=</span> <span class='no'>x</span>, <span class='kw'>child</span> <span class='kw'>=</span> <span class='no'>y</span>, <span class='kw'>byPARENT_KEY</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

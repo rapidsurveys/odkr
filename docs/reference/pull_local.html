@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="pull_local — pull_local" />
 
 <meta property="og:description" content="Pull ODK forms from a local ODK folder (/odk) collected from
@@ -41,7 +44,15 @@ ODK Collect mobile clients" />
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102485058-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-102485058-5');
+</script>
 
   </head>
 
@@ -98,14 +109,16 @@ ODK Collect mobile clients" />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>pull_local</h1>
-    <small>Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/pull_local.R'><code>R/pull_local.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/pull_local.R'><code>R/pull_local.R</code></a></small>
     <div class="hidden name"><code>pull_local.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Pull ODK forms from a local ODK folder (<code>/odk</code>) collected from
 ODK Collect mobile clients</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>pull_local</span>(<span class='kw'>target</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>briefcase</span> <span class='kw'>=</span> <span class='st'>"odkBriefcase_latest"</span>, <span class='no'>id</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>""</span>,
   <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>pem</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
@@ -116,7 +129,7 @@ ODK Collect mobile clients</p>
     <tr>
       <th>target</th>
       <td><p>Path to directory of ODK Briefcase <code>.jar</code> file. Directory
-path should match directory path used when calling <code><a href='get_briefcase.html'>get_briefcase()</a></code>.
+path should match directory path used when calling <code>get_briefcase()</code>.
 If ODK Briefcase <code>.jar</code> file was downloaded manually from <a href='https://opendatakit.org'>https://opendatakit.org</a>,
 <code>target</code> should match the directory path where <code>.jar</code> file has
 been downloaded into.</p></td>
@@ -125,7 +138,7 @@ been downloaded into.</p></td>
       <th>briefcase</th>
       <td><p>Filename of the downloaded ODK Briefcase <code>.jar</code> file.
 Default is <code>odkBriefcase_latest</code> to match the default filename used
-by <code><a href='get_briefcase.html'>get_briefcase()</a></code>. If ODK Briefcase <code>.jar</code> file was
+by <code>get_briefcase()</code>. If ODK Briefcase <code>.jar</code> file was
 downloaded manually from <a href='https://opendatakit.org'>https://opendatakit.org</a>, filename should
 match the default filename used by Open Data Kit which is usually
 "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number</p></td>
@@ -161,7 +174,7 @@ containing forms pulled from local ODK folder</p>
 # local ODK folder found in Desktop to current working directory
 </div><span class='co'># NOT RUN {</span>
   <span class='no'>dirPath</span> <span class='kw'>&lt;-</span> <span class='fu'>tempdir</span>()
-  <span class='fu'><a href='get_briefcase.html'>get_briefcase</a></span>(<span class='kw'>destination</span> <span class='kw'>=</span> <span class='no'>dirPath</span>)
+  <span class='fu'>get_briefcase</span>(<span class='kw'>destination</span> <span class='kw'>=</span> <span class='no'>dirPath</span>)
   <span class='fu'>pull_local</span>(<span class='kw'>target</span> <span class='kw'>=</span> <span class='no'>dirPath</span>,
              <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"stakeholders"</span>,
              <span class='kw'>from</span> <span class='kw'>=</span> <span class='fu'>system.file</span>(<span class='st'>"odk"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"odkr"</span>),
