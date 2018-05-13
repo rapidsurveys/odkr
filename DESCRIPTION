@@ -3,7 +3,8 @@ Type: Package
 Title: 'Open Data Kit' ('ODK') R API
 Version: 0.1.3.9000
 Authors@R: c(
-    person("Ernest", "Guevarra", email = "ernestgmd@gmail.com", role = c("aut", "cre")),
+    person("Ernest", "Guevarra", comment = c(ORCID = "0000-0002-4887-4415"), 
+           email = "ernestgmd@gmail.com", role = c("aut", "cre")),
     person("Laura", "Bramley", email = "laura@validinternational.org", role = "aut"),
     person("Valid", "International", email = "office@validinternational", role = "cph"))
 Description: Utility functions for working with datasets gathered using
