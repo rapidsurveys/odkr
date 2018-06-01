@@ -28,7 +28,11 @@ get_briefcase <- function(destination = "",
   if(destination == "") {
     stop("No destination path for ODK Briefcase specified. Try again.", call. = TRUE)
   }
-  download.file(url = "https://opendatakit.org/download/4476/",
+  download.file(url = "https://github.com/opendatakit/briefcase/releases/download/v1.10.0/ODK-Briefcase-v1.10.0.jar",
                 destfile = paste(destination, "/", briefcase, ".jar", sep = ""),
                 mode = "wb")
 }
+
+
+
+
