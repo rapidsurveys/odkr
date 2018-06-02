@@ -40,6 +40,7 @@
 #'               username = "validtrial",
 #'               password = "zEF-STN-5ze-qom")
 #'   }
+#'
 #' @export
 #'
 #
@@ -47,24 +48,44 @@
 
 pull_remote <- function(target = "", briefcase = "odkBriefcase_latest",
                         id, to = "", from = "", username, password) {
-
+  #
+  # Check if appropriate Java runtime version is available
+  #
+  rJava::.jinit()
+  jv <- rJava::.jcall("java/lang/System", "S", "getProperty", "java.runtime.version")
+  if(substr(jv, 1L, 2L) == "1.") {
+    jvn <- as.numeric(paste0(strsplit(jv, "[.]")[[1L]][1:2], collapse = "."))
+    if(jvn < 1.8) stop("Java >= 8 is needed for this package but not available")
+  }
+  #
+  # Check if target is specified
+  #
   if(target == "") {
     stop("Cannot locate ODK Briefcase .jar file. Check target location of .jar file is correct.", call. = TRUE)
   }
-
+  #
+  # Check if from is specified
+  #
   if(from == "") {
     stop("Cannot locate remote ODK Aggregate server. Check target URL of remote ODK Aggregate server is correct.", call. = TRUE)
   }
-
+  #
+  # Check if to is specified
+  #
   if(to == "") {
     stop("Cannot locate distination folder for ODK Briefcase Storage. Check destination location is correct.", call. = TRUE)
   }
-
+  #
+  # Create command line inputs based on required specifications
+  #
   z <- paste("java -jar ", target, "/", briefcase, ".jar",
              " --form_id ", id,
              " --storage_directory ", to,
              " --aggregate_url ", from,
              " --odk_username ", username,
              " --odk_password ", password, sep = "")
+  #
+  # Execute inputs on command line
+  #
   system(z)
 }

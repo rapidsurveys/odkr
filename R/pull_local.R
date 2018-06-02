@@ -27,8 +27,7 @@
 #' containing forms pulled from local ODK folder
 #'
 #' @examples
-#' # Use pre-installed ODK Briefcase (version 1.8.0) and pull forms from a
-#' # local ODK folder found in Desktop to current working directory
+#' # Pull forms from a local ODK folder to current working directory
 #' \dontrun{
 #'   dirPath <- tempdir()
 #'   get_briefcase(destination = dirPath)
@@ -37,6 +36,7 @@
 #'              from = system.file("odk", package = "odkr"),
 #'              to = dirPath)
 #' }
+#'
 #' @export
 #'
 #
@@ -44,26 +44,46 @@
 
 pull_local <- function(target = "", briefcase = "odkBriefcase_latest",
                        id, to = "", from = "", pem = NULL) {
-
+  #
+  # Check if appropriate Java runtime version is available
+  #
+  rJava::.jinit()
+  jv <- rJava::.jcall("java/lang/System", "S", "getProperty", "java.runtime.version")
+  if(substr(jv, 1L, 2L) == "1.") {
+    jvn <- as.numeric(paste0(strsplit(jv, "[.]")[[1L]][1:2], collapse = "."))
+    if(jvn < 1.8) stop("Java >= 8 is needed for this package but not available")
+  }
+  #
+  # Check if target is specified
+  #
   if(target == "") {
     stop("Cannot locate ODK Briefcase .jar file. Check target location of .jar file is correct.", call. = TRUE)
   }
-
+  #
+  # Check if from is specified
+  #
   if(from == "") {
     stop("Cannot locate source ODK directory. Check target location of source ODK directory is correct.", call. = TRUE)
   }
-
+  #
+  # Chec if to is specified
+  #
   if(to == "") {
     stop("Cannot locate distination folder for ODK Briefcase Storage. Check destination location is correct.", call. = TRUE)
   }
-
-
+  #
+  # Create command line inputs based on required specifications
+  #
   z <- paste("java -jar ", target, "/", briefcase, ".jar",
              " --form_id ", id,
              " --storage_directory ", to,
              " --odk_directory ", from, sep = "")
-
+  #
+  # Add optional specifications to command line inputs
+  #
   if(!is.null(pem)) z <- paste(z, " --pem_file ", pem, sep = "")
-
+  #
+  # Execute inputs on command line
+  #
   system(z)
 }
