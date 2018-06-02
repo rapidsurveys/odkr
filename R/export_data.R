@@ -54,7 +54,7 @@
 ################################################################################
 
 export_data <- function(target = "", briefcase = "odkBriefcase_latest",
-                        id, from = "", to = "",
+                        id = "", from = "", to = "",
                         filename = paste(id, "_data.csv", sep = ""),
                         start = NULL, end = NULL,
                         overwrite = FALSE, exclude = TRUE) {
@@ -74,16 +74,22 @@ export_data <- function(target = "", briefcase = "odkBriefcase_latest",
     stop("Cannot locate ODK Briefcase .jar file. Check target location of .jar file is correct.", call. = TRUE)
   }
   #
+  # Check if id is specified
+  #
+  if(id == "") {
+    stop("Form id not specified. Try again.", call. = TRUE)
+  }
+  #
   # Check if from is specified
   #
   if(from == "") {
-    stop("Cannot locate ODK Briefcase Storage. Check target location of storage folder is correct.", call. = TRUE)
+    stop("Cannot locate source ODK directory. Check target location of source ODK directory is correct.", call. = TRUE)
   }
   #
   # Check if to is specified
   #
   if(to == "") {
-    stop("Cannot locate distination folder for ODK data output. Check destination location is correct.", call. = TRUE)
+    stop("Cannot locate destination folder for ODK Briefcase Storage. Check destination location is correct.", call. = TRUE)
   }
   #
   # Create command line input based on standard/required specifications

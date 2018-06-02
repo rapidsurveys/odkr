@@ -43,7 +43,7 @@
 ################################################################################
 
 pull_local <- function(target = "", briefcase = "odkBriefcase_latest",
-                       id, to = "", from = "", pem = NULL) {
+                       id = "", to = "", from = "", pem = NULL) {
   #
   # Check if appropriate Java runtime version is available
   #
@@ -60,6 +60,12 @@ pull_local <- function(target = "", briefcase = "odkBriefcase_latest",
     stop("Cannot locate ODK Briefcase .jar file. Check target location of .jar file is correct.", call. = TRUE)
   }
   #
+  # Check if id is specified
+  #
+  if(id == "") {
+    stop("Form id not specified. Try again.", call. = TRUE)
+  }
+  #
   # Check if from is specified
   #
   if(from == "") {
@@ -69,7 +75,7 @@ pull_local <- function(target = "", briefcase = "odkBriefcase_latest",
   # Chec if to is specified
   #
   if(to == "") {
-    stop("Cannot locate distination folder for ODK Briefcase Storage. Check destination location is correct.", call. = TRUE)
+    stop("Cannot locate destination folder for ODK Briefcase Storage. Check destination location is correct.", call. = TRUE)
   }
   #
   # Create command line inputs based on required specifications
