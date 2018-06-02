@@ -8,7 +8,7 @@
 #' when there is no ODK Aggregate Server set-up or when an ODK Aggregate
 #' Server is not preferred. Current production version of ODK Briefcase is
 #' v1.8.0 and an executable \code{.jar} file can be downloaded from the OpenDataKit
-#' \href{https://opendatakit.org/use/briefcase/}{website}.
+#' GitHub \href{https://github.com/opendatakit/briefcase/releases}{repo}.
 #'
 #' As of ODK Briefcase version 1.4.4, a scriptable command line interface (CLI)
 #' to the Java application has been available. This package provides an R

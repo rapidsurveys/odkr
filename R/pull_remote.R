@@ -47,7 +47,7 @@
 ################################################################################
 
 pull_remote <- function(target = "", briefcase = "odkBriefcase_latest",
-                        id, to = "", from = "", username, password) {
+                        id = "", to = "", from = "", username, password) {
   #
   # Check if appropriate Java runtime version is available
   #
@@ -64,16 +64,22 @@ pull_remote <- function(target = "", briefcase = "odkBriefcase_latest",
     stop("Cannot locate ODK Briefcase .jar file. Check target location of .jar file is correct.", call. = TRUE)
   }
   #
+  # Check if id is specified
+  #
+  if(id == "") {
+    stop("Form id not specified. Try again.", call. = TRUE)
+  }
+  #
   # Check if from is specified
   #
   if(from == "") {
-    stop("Cannot locate remote ODK Aggregate server. Check target URL of remote ODK Aggregate server is correct.", call. = TRUE)
+    stop("Cannot locate source ODK directory. Check target location of source ODK directory is correct.", call. = TRUE)
   }
   #
   # Check if to is specified
   #
   if(to == "") {
-    stop("Cannot locate distination folder for ODK Briefcase Storage. Check destination location is correct.", call. = TRUE)
+    stop("Cannot locate destination folder for ODK Briefcase Storage. Check destination location is correct.", call. = TRUE)
   }
   #
   # Create command line inputs based on required specifications
