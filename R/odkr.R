@@ -22,6 +22,7 @@
 #' @importFrom stringr str_split str_length
 #' @importFrom Hmisc %nin%
 #' @importFrom utils download.file
+#' @importFrom rJava .jinit .jcall
 #'
 #
 ################################################################################
