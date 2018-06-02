@@ -1,4 +1,4 @@
-#library("odkr")
+library(rJava); library(odkr)
 context("Check exported data")
 
 dirPath <- tempdir()
