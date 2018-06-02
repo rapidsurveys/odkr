@@ -1,7 +1,7 @@
 # odkr 0.2.0
 
 In this version, I have implemented changes to respond to package issues from
-[CRAN check results](See https://cran.r-project.org/web/checks/check_results_odkr.html).
+[CRAN check results](https://cran.r-project.org/web/checks/check_results_odkr.html).
 
 * The `get_briefcase()` function, I changed the download url for ODK Briefcase to
 the permanent download url provided by the developers at https://github.com/opendatakit/briefcase.
