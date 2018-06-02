@@ -4,8 +4,8 @@
 \alias{pull_remote}
 \title{pull_remote}
 \usage{
-pull_remote(target = "", briefcase = "odkBriefcase_latest", id, to = "",
-  from = "", username, password)
+pull_remote(target = "", briefcase = "odkBriefcase_latest", id = "",
+  to = "", from = "", username, password)
 }
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
