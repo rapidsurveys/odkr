@@ -39,7 +39,7 @@ test_that("Error for no from", {
                            to = dirPath,
                            username = "validtrial",
                            password = "zEF-STN-5ze-qom"),
-               "Cannot locate source ODK directory. Check target location of source ODK directory is correct.")
+               "URL of remote ODK Aggregate not specified. Try again.")
 })
 
 test_that("Error for no to", {
