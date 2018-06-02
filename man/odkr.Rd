@@ -19,7 +19,6 @@ As of ODK Briefcase version 1.4.4, a scriptable command line interface (CLI)
 to the Java application has been available. This package provides an R
 interface to ODK Briefcase via the available CLI to pull forms from a remote
 ODK Aggregate Server or from a local ODK folder \code{/odk} collected from
-mobile clients. This package includes the latest version of ODK Briefcase
-(v1.8.0) as an installed Java application. This package requires Java 8
-installed. Java 8 can be downloaded from \href{https://java.com/en/download/}{here}.
+mobile clients. This package requires Java 8 installed. Java 8 can be downloaded
+\href{https://java.com/en/download/}{here}.
 }
