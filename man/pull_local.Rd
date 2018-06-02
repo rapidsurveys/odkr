@@ -4,8 +4,8 @@
 \alias{pull_local}
 \title{pull_local}
 \usage{
-pull_local(target = "", briefcase = "odkBriefcase_latest", id, to = "",
-  from = "", pem = NULL)
+pull_local(target = "", briefcase = "odkBriefcase_latest", id = "",
+  to = "", from = "", pem = NULL)
 }
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory

@@ -44,7 +44,7 @@ Pull ODK forms from remote ODK Aggregate via ODK Briefcase
   # Use latest ODK Briefcase (version 1.8,0) and connect to a test
   # remote ODK Aggregate server from ONA (https://ona.io); pulled forms to
   # be saved in default location at current working directory
-  #\dontrun{
+  \dontrun{
   dirPath <- tempdir()
   get_briefcase(destination = dirPath)
   pull_remote(target = dirPath,
@@ -53,5 +53,6 @@ Pull ODK forms from remote ODK Aggregate via ODK Briefcase
               to = dirPath,
               username = "validtrial",
               password = "zEF-STN-5ze-qom")
-  #}
+  }
+
 }
