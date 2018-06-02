@@ -17,7 +17,7 @@
 #'     "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number
 #' @param id Form ID of form to be pulled
 #' @param to Destination directory for pulled ODK forms
-#' @param from URL of remote ODK Aggregate server
+#' @param from URL of remote ODK Aggregate server to pull ODK forms data from
 #' @param username Username for account in remote ODK Aggregate server from
 #' which forms are to be pulled
 #' @param password Password for account in remote ODK Aggregate server from
@@ -73,7 +73,7 @@ pull_remote <- function(target = "", briefcase = "odkBriefcase_latest",
   # Check if from is specified
   #
   if(from == "") {
-    stop("Cannot locate source ODK directory. Check target location of source ODK directory is correct.", call. = TRUE)
+    stop("URL of remote ODK Aggregate not specified. Try again.", call. = TRUE)
   }
   #
   # Check if to is specified
