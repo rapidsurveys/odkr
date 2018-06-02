@@ -7,12 +7,16 @@
 \format{A data frame with 9 columns and 50 rows:
 \describe{
 \item{\code{wcount.wdata.ccount.child.csex}}{Child's gender}
-\item{\code{wcount.wdata.ccount.child.card}}{Does child have an immunisation card?}
+\item{\code{wcount.wdata.ccount.child.card}}{Does child have an immunisation
+    card?}
 \item{\code{wcount.wdata.ccount.child.cdob}}{Child's date of birth}
 \item{\code{wcount.wdata.ccount.child.cage}}{Age of child}
-\item{\code{wcount.wdata.ccount.illness.ill1}}{Has child had diarrhoea in the past 2 weeks}
-\item{\code{wcount.wdata.ccount.illness.ill2}}{Has child had fever in the past 2 weeks}
-\item{\code{wcount.wdata.ccount.illness.ill3}}{Has child had cough in the past 2 weeks}
+\item{\code{wcount.wdata.ccount.illness.ill1}}{Has child had diarrhoea in the
+    past 2 weeks}
+\item{\code{wcount.wdata.ccount.illness.ill2}}{Has child had fever in the past
+    2 weeks}
+\item{\code{wcount.wdata.ccount.illness.ill3}}{Has child had cough in the past
+    2 weeks}
 \item{\code{KEY}}{Parent data identifier}
 \item{\code{PARENT_KEY}}{Child data identifier}
 }}
