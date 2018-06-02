@@ -40,8 +40,7 @@ Pull ODK forms from a local ODK folder (\code{/odk}) collected from
 ODK Collect mobile clients
 }
 \examples{
-# Use pre-installed ODK Briefcase (version 1.8.0) and pull forms from a
-# local ODK folder found in Desktop to current working directory
+# Pull forms from a local ODK folder to current working directory
 \dontrun{
   dirPath <- tempdir()
   get_briefcase(destination = dirPath)
@@ -50,4 +49,5 @@ ODK Collect mobile clients
              from = system.file("odk", package = "odkr"),
              to = dirPath)
 }
+
 }

@@ -32,4 +32,5 @@ Get help with command line interface for ODK Briefcase
   get_briefcase(destination = dirPath)
   get_help(target = dirPath)
 }
+
 }
