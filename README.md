@@ -9,6 +9,7 @@
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/validmeasures/odkr?branch=master&svg=true)](https://ci.appveyor.com/project/validmeasures/odkr)
 [![codecov](https://codecov.io/gh/validmeasures/odkr/branch/master/graph/badge.svg)](https://codecov.io/gh/validmeasures/odkr)
 [![DOI](https://zenodo.org/badge/118323284.svg)](https://zenodo.org/badge/latestdoi/118323284)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1170514.svg)](https://doi.org/10.5281/zenodo.1170514)
 
 **Open Data Kit (ODK)** is a free and open-source set of tools which help 
 organizations author, field, and manage mobile data collection solutions. ODK 
