@@ -1,6 +1,5 @@
 # inst folder docs
 inst/doc
-
 # History files
 .Rhistory
 .Rapp.history
@@ -31,3 +30,4 @@ ODK Briefcase Storage/
 /*.csv
 /*.jar
 /revdep/.cache.rds
+briefcase.log
