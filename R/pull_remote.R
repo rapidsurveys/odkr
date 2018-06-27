@@ -85,6 +85,7 @@ pull_remote <- function(target = "", briefcase = "odkBriefcase_latest",
   # Create command line inputs based on required specifications
   #
   z <- paste("java -jar ", target, "/", briefcase, ".jar",
+             " --pull_aggregate ",
              " --form_id ", id,
              " --storage_directory ", to,
              " --aggregate_url ", from,
