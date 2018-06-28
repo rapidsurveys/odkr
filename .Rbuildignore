@@ -20,3 +20,4 @@
 ^netlify\.toml$
 ^_pkgdown\.yml$
 ^revdep$
+^briefcase\.log$
