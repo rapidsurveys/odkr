@@ -5,6 +5,7 @@ dirPath <- tempdir()
 get_briefcase(destination = dirPath)
 
 pull_remote(target = dirPath,
+            sd = TRUE,
             id = "stakeholders",
             from = "https://ona.io/validtrial",
             to = dirPath,
@@ -16,7 +17,8 @@ test_that("ODK Briefcase Storage exists", {
 })
 
 test_that("Error for no target", {
-  expect_error(pull_remote(id = "stakeholders",
+  expect_error(pull_remote(sd = TRUE,
+                           id = "stakeholders",
                            from = "https://ona.io/validtrial",
                            to = dirPath,
                            username = "validtrial",
@@ -26,6 +28,7 @@ test_that("Error for no target", {
 
 test_that("Error for no id", {
   expect_error(pull_remote(target = dirPath,
+                           sd = TRUE,
                            from = "https://ona.io/validtrial",
                            to = dirPath,
                            username = "validtrial",
@@ -35,6 +38,7 @@ test_that("Error for no id", {
 
 test_that("Error for no from", {
   expect_error(pull_remote(target = dirPath,
+                           sd = TRUE,
                            id = "stakeholders",
                            to = dirPath,
                            username = "validtrial",
@@ -44,6 +48,7 @@ test_that("Error for no from", {
 
 test_that("Error for no to", {
   expect_error(pull_remote(target = dirPath,
+                           sd = TRUE,
                            id = "stakeholders",
                            from = "https://ona.io/validtrial",
                            username = "validtrial",

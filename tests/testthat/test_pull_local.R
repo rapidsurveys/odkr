@@ -6,7 +6,7 @@ get_briefcase(destination = dirPath)
 
 pull_local(target = dirPath,
            id = "stakeholders",
-           from = system.file("odk", package = "odkr"),
+           from = "ODK Briefcase Storage",
            to = dirPath)
 
 test_that("ODK Briefcase Storage exists", {
@@ -15,14 +15,14 @@ test_that("ODK Briefcase Storage exists", {
 
 test_that("Error for no target", {
   expect_error(pull_local(id = "stakeholders",
-                          from = system.file("odk", package = "odkr"),
+                          from = "ODK Briefcase Storage",
                           to = dirPath),
                "Cannot locate ODK Briefcase .jar file. Check target location of .jar file is correct.")
 })
 
 test_that("Error for no id", {
   expect_error(pull_local(target = dirPath,
-                          from = system.file("odk", package = "odkr"),
+                          from = "ODK Briefcase Storage",
                           to = dirPath),
                "Form id not specified. Try again.")
 })
@@ -37,6 +37,6 @@ test_that("Error for no from", {
 test_that("Error for no to", {
   expect_error(pull_local(target = dirPath,
                           id = "stakeholders",
-                          from = system.file("odk", package = "odkr")),
+                          from = "ODK Briefcase Storage"),
                "Cannot locate destination folder for ODK Briefcase Storage. Check destination location is correct.")
 })
