@@ -4,8 +4,8 @@
 \alias{pull_remote}
 \title{pull_remote}
 \usage{
-pull_remote(target = "", briefcase = "odkBriefcase_latest", id = "",
-  to = "", from = "", username, password)
+pull_remote(target = "", briefcase = "odkBriefcase_latest", sd = FALSE,
+  id = "", to = "", from = "", username, password)
 }
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
@@ -20,6 +20,9 @@ by \code{get_briefcase()}. If ODK Briefcase \code{.jar} file was
 downloaded manually from \url{https://opendatakit.org}, filename should
 match the default filename used by Open Data Kit which is usually
 "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number}
+
+\item{sd}{Logical. If TRUE, create an ODK Briefcase Storage in the path
+specified by \code{to}. Default is FALSE.}
 
 \item{id}{Form ID of form to be pulled}
 
