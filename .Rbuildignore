@@ -21,3 +21,4 @@
 ^_pkgdown\.yml$
 ^revdep$
 ^briefcase\.log$
+^ODK Briefcase Storage$
