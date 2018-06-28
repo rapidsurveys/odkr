@@ -15,6 +15,8 @@
 #'     downloaded manually from \url{https://opendatakit.org}, filename should
 #'     match the default filename used by Open Data Kit which is usually
 #'     "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number
+#' @param sd Logical. If TRUE, create an ODK Briefcase Storage in the path
+#'     specified by \code{to}. Default is FALSE.
 #' @param id Form ID of form to be pulled
 #' @param to Destination directory for pulled ODK forms
 #' @param from URL of remote ODK Aggregate server to pull ODK forms data from
@@ -46,7 +48,7 @@
 #
 ################################################################################
 
-pull_remote <- function(target = "", briefcase = "odkBriefcase_latest",
+pull_remote <- function(target = "", briefcase = "odkBriefcase_latest", sd = FALSE,
                         id = "", to = "", from = "", username, password) {
   #
   # Check if appropriate Java runtime version is available
@@ -80,6 +82,12 @@ pull_remote <- function(target = "", briefcase = "odkBriefcase_latest",
   #
   if(to == "") {
     stop("Cannot locate destination folder for ODK Briefcase Storage. Check destination location is correct.", call. = TRUE)
+  }
+  #
+  # Check if storage directory needed
+  #
+  if(sd == TRUE) {
+    create_sd(path = to)
   }
   #
   # Create command line inputs based on required specifications

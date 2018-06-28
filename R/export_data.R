@@ -16,6 +16,8 @@
 #'     downloaded manually from \url{https://opendatakit.org}, filename should
 #'     match the default filename used by Open Data Kit which is usually
 #'     "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number
+#' @param sd Logical. If TRUE, create an ODK Briefcase Storage in the path
+#'     specified by \code{to}. Default is FALSE.
 #' @param id Form ID of form to be pulled
 #' @param from Path to source ODK Briefcase Storage from which to extract data.
 #'     This should match directory path specified when making a call to \code{pull_remote()}
@@ -53,7 +55,7 @@
 #
 ################################################################################
 
-export_data <- function(target = "", briefcase = "odkBriefcase_latest",
+export_data <- function(target = "", briefcase = "odkBriefcase_latest", sd = FALSE,
                         id = "", from = "", to = "",
                         filename = paste(id, "_data.csv", sep = ""),
                         start = NULL, end = NULL,
@@ -92,9 +94,16 @@ export_data <- function(target = "", briefcase = "odkBriefcase_latest",
     stop("Cannot locate destination folder for ODK Briefcase Storage. Check destination location is correct.", call. = TRUE)
   }
   #
+  # Check if storage directory needed
+  #
+  if(sd == TRUE) {
+    create_sd(path = to)
+  }
+  #
   # Create command line input based on standard/required specifications
   #
   z <- paste("java -jar ", target, "/", briefcase, ".jar",
+             " --export ",
              " --form_id ", id,
              " --storage_directory ", from,
              " --export_directory ", to,
