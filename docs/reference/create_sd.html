@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>mergeNestedODK — mergeNestedODK • odkr</title>
+<title>create_sd — create_sd • odkr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,10 +30,9 @@
 
 
 
-<meta property="og:title" content="mergeNestedODK — mergeNestedODK" />
+<meta property="og:title" content="create_sd — create_sd" />
 
-<meta property="og:description" content="Retrieve parent data, matching to a nested (child) dataset by keys of a
-nested dataset exported from an ODK Aggregate Server." />
+<meta property="og:description" content="Function to create an ODK Briefcase Storage directory" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -111,59 +110,36 @@ nested dataset exported from an ODK Aggregate Server." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>mergeNestedODK</h1>
-    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/nestedSurvey.R'><code>R/nestedSurvey.R</code></a></small>
-    <div class="hidden name"><code>mergeNestedODK.Rd</code></div>
+    <h1>create_sd</h1>
+    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/create_sd.R'><code>R/create_sd.R</code></a></small>
+    <div class="hidden name"><code>create_sd.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Retrieve parent data, matching to a nested (child) dataset by keys of a
-nested dataset exported from an ODK Aggregate Server.</p>
+    <p>Function to create an ODK Briefcase Storage directory</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>mergeNestedODK</span>(<span class='no'>parent</span>, <span class='no'>child</span>, <span class='kw'>byPARENT_KEY</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>removeCols</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>removeRows</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>create_sd</span>(<span class='no'>path</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>parent</th>
-      <td><p>Data frame of household data</p></td>
-    </tr>
-    <tr>
-      <th>child</th>
-      <td><p>Data frame of child (repeat) data</p></td>
-    </tr>
-    <tr>
-      <th>byPARENT_KEY</th>
-      <td><p>Should data frames be matched based on PARENT_KEY (child)
-and KEY (parent) columns? (Currently only option is TRUE)</p></td>
-    </tr>
-    <tr>
-      <th>removeCols</th>
-      <td><p>Character vector of column names to remove from the parent
-data frame (optional)</p></td>
-    </tr>
-    <tr>
-      <th>removeRows</th>
-      <td><p>Index of which rows should be removed from child data frame
-(optional)</p></td>
+      <th>path</th>
+      <td><p>Directory path on which to create the ODK Briefcase Storage</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Merged dataframe</p>
+    <p>ODK Briefcase Storage directory in the specified path</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># marge sampleData2 and sampleData3</span>
-<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span>(<span class='no'>sampleData2</span>)
-<span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span>(<span class='no'>sampleData3</span>)
-<span class='no'>temp</span> <span class='kw'>&lt;-</span> <span class='fu'>mergeNestedODK</span>(<span class='kw'>parent</span> <span class='kw'>=</span> <span class='no'>x</span>, <span class='kw'>child</span> <span class='kw'>=</span> <span class='no'>y</span>, <span class='kw'>byPARENT_KEY</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>create_sd</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='st'>"Desktop"</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot create dir 'Desktop/ODK Briefcase Storage', reason 'No such file or directory'</span></div><div class='output co'>#&gt; <span class='warning'>Warning: cannot create dir 'Desktop/ODK Briefcase Storage/forms', reason 'No such file or directory'</span></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

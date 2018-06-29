@@ -21,9 +21,11 @@
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
 
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 
@@ -33,6 +35,7 @@
 <meta property="og:description" content="Export data in CSV format from local ODK Briefcase Storage directory to a
 specified destination directory and a specified file name" />
 <meta name="twitter:card" content="summary" />
+
 
 
 <!-- mathjax -->
@@ -120,9 +123,9 @@ specified destination directory and a specified file name</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>export_data</span>(<span class='kw'>target</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>briefcase</span> <span class='kw'>=</span> <span class='st'>"odkBriefcase_latest"</span>, <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>""</span>,
-  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>filename</span> <span class='kw'>=</span> <span class='fu'>paste</span>(<span class='no'>id</span>, <span class='st'>"_data.csv"</span>, <span class='kw'>sep</span> <span class='kw'>=</span> <span class='st'>""</span>),
-  <span class='kw'>start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>exclude</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    <pre class="usage"><span class='fu'>export_data</span>(<span class='kw'>target</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>briefcase</span> <span class='kw'>=</span> <span class='st'>"odkBriefcase_latest"</span>, <span class='kw'>sd</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>filename</span> <span class='kw'>=</span> <span class='fu'>paste</span>(<span class='no'>id</span>, <span class='st'>"_data.csv"</span>, <span class='kw'>sep</span> <span class='kw'>=</span>
+  <span class='st'>""</span>), <span class='kw'>start</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>end</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>exclude</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -143,6 +146,11 @@ by <code><a href='get_briefcase.html'>get_briefcase()</a></code>. If ODK Briefca
 downloaded manually from <a href='https://opendatakit.org'>https://opendatakit.org</a>, filename should
 match the default filename used by Open Data Kit which is usually
 "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number</p></td>
+    </tr>
+    <tr>
+      <th>sd</th>
+      <td><p>Logical. If TRUE, create an ODK Briefcase Storage in the path
+specified by <code>to</code>. Default is FALSE.</p></td>
     </tr>
     <tr>
       <th>id</th>
