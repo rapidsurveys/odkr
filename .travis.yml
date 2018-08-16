@@ -2,6 +2,9 @@
 
 language: r
 
+install:
+  - sudo R CMD javareconf
+
 #warnings_are_errors: true
 sudo: false
 #cache: packages
