@@ -4,9 +4,10 @@
 \alias{export_data}
 \title{export_data}
 \usage{
-export_data(target = "", briefcase = "odkBriefcase_latest", sd = FALSE,
-  id = "", from = "", to = "", filename = paste(id, "_data.csv", sep =
-  ""), start = NULL, end = NULL, overwrite = FALSE, exclude = TRUE)
+export_data(target = "", briefcase = "odkBriefcase_latest",
+  sd = FALSE, id = "", from = "", to = "", filename = paste(id,
+  "_data.csv", sep = ""), start = NULL, end = NULL,
+  overwrite = FALSE, exclude = TRUE)
 }
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
