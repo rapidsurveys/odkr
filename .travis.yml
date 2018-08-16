@@ -6,7 +6,7 @@ install:
   - sudo R CMD javareconf
 
 #warnings_are_errors: true
-sudo: false
+#sudo: false
 #cache: packages
 
 r_github_packages:
