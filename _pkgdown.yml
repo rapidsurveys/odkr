@@ -2,5 +2,5 @@ title: odkr
 url: https://validmeasures.org/odkr
 template:
   params:
-    #bootswatch: minty
+    bootswatch: sandstone
     ganalytics: UA-102485058-5
