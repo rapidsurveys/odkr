@@ -1,7 +1,7 @@
 Package: odkr
 Type: Package
 Title: 'Open Data Kit' ('ODK') R API
-Version: 0.3.1.9000
+Version: 0.3.2
 Authors@R: c(
     person("Ernest", "Guevarra", comment = c(ORCID = "0000-0002-4887-4415"), 
            email = "ernestgmd@gmail.com", role = c("aut", "cre", "cph")),
@@ -26,6 +26,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 SystemRequirements: Java (>= 8)
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 URL: https://github.com/validmeasures/odkr, https://validmeasures.org/odkr
 BugReports: https://github.com/validmeasures/odkr/issues
