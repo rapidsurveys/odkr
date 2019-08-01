@@ -12,9 +12,9 @@ export_data(target = "", briefcase = "odkBriefcase_latest",
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
 path should match directory path used when calling \code{get_briefcase()}.
-If ODK Briefcase \code{.jar} file was downloaded manually from \url{https://opendatakit.org},
-\code{target} should match the directory path where \code{.jar} file has
-been downloaded into.}
+If ODK Briefcase \code{.jar} file was downloaded manually from
+\url{https://opendatakit.org}, \code{target} should match the directory
+path where \code{.jar} file has been downloaded into.}
 
 \item{briefcase}{Filename of the downloaded ODK Briefcase \code{.jar} file.
 Default is \code{odkBriefcase_latest} to match the default filename used
@@ -29,8 +29,8 @@ specified by \code{to}. Default is FALSE.}
 \item{id}{Form ID of form to be pulled}
 
 \item{from}{Path to source ODK Briefcase Storage from which to extract data.
-This should match directory path specified when making a call to \code{pull_remote()}
-or \code{pull_local()}}
+This should match directory path specified when making a call to
+\code{pull_remote()} or \code{pull_local()}}
 
 \item{to}{Destination directory to save output data file}
 
@@ -38,10 +38,10 @@ or \code{pull_local()}}
 \code{paste(id, "_data.csv", sep = "")}}
 
 \item{start}{Include data from submission dates after (inclusive) this start
-date in export to CSV; format <yyyy/MM/dd>}
+date in export to CSV. Date format <yyyy-MM-dd> or <yyyy/MM/dd>}
 
-\item{end}{Include data from submission dates before (exclusive) this date in
-export to CSV; format <yyyy/MM/dd>}
+\item{end}{Include data from submission dates before (inclusive) this date in
+export to CSV. Date format <yyyy-MM-dd> or <yyyy/MM/dd>}
 
 \item{overwrite}{Overwrite existing output data in destination
 directory with the same filename; default is FALSE}
