@@ -7,7 +7,8 @@
 export_data(target = "", briefcase = "odkBriefcase_latest",
   sd = FALSE, id = "", from = "", to = "", filename = paste(id,
   "_data.csv", sep = ""), start = NULL, end = NULL,
-  overwrite = FALSE, exclude = TRUE)
+  overwrite = FALSE, exclude = TRUE, group.names = TRUE,
+  split = FALSE)
 }
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
@@ -47,6 +48,12 @@ export to CSV. Date format <yyyy-MM-dd> or <yyyy/MM/dd>}
 directory with the same filename; default is FALSE}
 
 \item{exclude}{Exclude media files on export; default is TRUE}
+
+\item{group.names}{Logical. Should group names be removed from column names
+on export? Default TRUE.}
+
+\item{split}{Logical. Should select multiple fields be split on export?
+Default FALSE.}
 }
 \value{
 CSV file in destination directory containing data from the pulled
