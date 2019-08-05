@@ -32,6 +32,10 @@
 #' @param overwrite Overwrite existing output data in destination
 #' directory with the same filename; default is FALSE
 #' @param exclude Exclude media files on export; default is TRUE
+#' @param group.names Logical. Should group names be removed from column names
+#'     on export? Default TRUE.
+#' @param split Logical. Should select multiple fields be split on export?
+#'     Default FALSE.
 #'
 #' @return CSV file in destination directory containing data from the pulled
 #' forms
@@ -59,7 +63,8 @@ export_data <- function(target = "", briefcase = "odkBriefcase_latest", sd = FAL
                         id = "", from = "", to = "",
                         filename = paste(id, "_data.csv", sep = ""),
                         start = NULL, end = NULL,
-                        overwrite = FALSE, exclude = TRUE) {
+                        overwrite = FALSE, exclude = TRUE,
+                        group.names = TRUE, split = FALSE) {
   #
   # Check if appropriate Java runtime version is available
   #
@@ -113,8 +118,10 @@ export_data <- function(target = "", briefcase = "odkBriefcase_latest", sd = FAL
   #
   if(!is.null(start)) z <- paste(z, " --export_start_date ", start, sep = "")
   if(!is.null(end)) z <- paste(z, " --export_end_date ", end, sep = "")
-  if(overwrite == TRUE) z <- paste(z, " --overwrite_csv_export ", sep = "")
-  if(exclude == TRUE) z <- paste(z, " --exclude_media_export ", sep = "")
+  if(overwrite) z <- paste(z, " --overwrite_csv_export ", sep = "")
+  if(exclude) z <- paste(z, " --exclude_media_export ", sep = "")
+  if(group.names) z <- paste(z, " --remove_group_names ", sep = "")
+  if(split) z <- paste(z, " --split_select_multiples ", sep = "")
   #
   # Execute inputs on command line
   #
