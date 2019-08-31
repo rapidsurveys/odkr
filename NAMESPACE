@@ -2,6 +2,7 @@
 
 export(create_sd)
 export(expandMultChoice)
+export(expandMultipleChoice)
 export(export_data)
 export(get_briefcase)
 export(get_help)
