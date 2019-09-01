@@ -30,7 +30,7 @@ platform: x64
 environment:
   global:
     R_BUILD_ARGS: --no-multiarch
-    R_CHECK_ARGS: "--no-manual --as-cran --run-donttest --no-multiarch"
+    R_CHECK_ARGS: --no-manual --as-cran --run-donttest --no-multiarch
     WARNINGS_ARE_ERRORS: 1
 
   matrix:
