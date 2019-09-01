@@ -2,7 +2,6 @@ library(odkr)
 context("Check exported data")
 
 dirPath <- tempdir()
-
 get_briefcase(destination = dirPath)
 
 pull_remote(target = dirPath,

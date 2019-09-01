@@ -59,7 +59,8 @@
 #
 ################################################################################
 
-export_data <- function(target = "", briefcase = "odkBriefcase_latest", sd = FALSE,
+export_data <- function(target = "", briefcase = "odkBriefcase_latest",
+                        sd = FALSE,
                         id = "", from = "", to = "",
                         filename = paste(id, "_data.csv", sep = ""),
                         start = NULL, end = NULL,

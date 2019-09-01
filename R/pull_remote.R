@@ -6,9 +6,9 @@
 #'
 #' @param target Path to directory of ODK Briefcase \code{.jar} file. Directory
 #'     path should match directory path used when calling \code{get_briefcase()}.
-#'     If ODK Briefcase \code{.jar} file was downloaded manually from \url{https://opendatakit.org},
-#'     \code{target} should match the directory path where \code{.jar} file has
-#'     been downloaded into.
+#'     If ODK Briefcase \code{.jar} file was downloaded manually from
+#'     \url{https://opendatakit.org}, \code{target} should match the directory
+#'     path where \code{.jar} file has been downloaded into.
 #' @param briefcase Filename of the downloaded ODK Briefcase \code{.jar} file.
 #'     Default is \code{odkBriefcase_latest} to match the default filename used
 #'     by \code{get_briefcase()}. If ODK Briefcase \code{.jar} file was
@@ -29,7 +29,7 @@
 #' containing forms pulled from remote ODK Aggregate server
 #'
 #' @examples
-#'   # Use latest ODK Briefcase (version 1.8,0) and connect to a test
+#'   # Use latest ODK Briefcase and connect to a test
 #'   # remote ODK Aggregate server from ONA (https://ona.io); pulled forms to
 #'   # be saved in default location at current working directory
 #'   \dontrun{
