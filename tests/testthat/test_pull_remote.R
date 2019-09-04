@@ -2,7 +2,7 @@ library(odkr)
 context("Check pull_remote output")
 
 dirPath <- tempdir()
-get_briefcase(destination = dirPath)
+#get_briefcase(destination = dirPath)
 
 pull_remote(target = dirPath,
             sd = TRUE,
