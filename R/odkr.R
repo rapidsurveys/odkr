@@ -17,6 +17,7 @@
 #' mobile clients. This package requires Java 8 installed. Java 8 can be downloaded
 #' \href{https://java.com/en/download/}{here}.
 #'
+#' @keywords internal
 #' @docType package
 #' @name odkr
 #' @importFrom stringr str_split str_length
@@ -26,7 +27,7 @@
 #'
 #
 ################################################################################
-NULL
+"_PACKAGE"
 
 
 ################################################################################
