@@ -2,7 +2,7 @@ library(odkr)
 context("Check push_data output")
 
 dirPath <- tempdir()
-get_briefcase(destination = dirPath)
+#get_briefcase(destination = dirPath)
 
 test_that("Error for no target", {
   expect_error(push_data(id = "stakeholders",

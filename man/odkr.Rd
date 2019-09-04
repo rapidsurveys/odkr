@@ -22,3 +22,27 @@ ODK Aggregate Server or from a local ODK folder \code{/odk} collected from
 mobile clients. This package requires Java 8 installed. Java 8 can be downloaded
 \href{https://java.com/en/download/}{here}.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/validmeasures/odkr}
+  \item \url{https://validmeasures.org/odkr}
+  \item Report bugs at \url{https://github.com/validmeasures/odkr/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Ernest Guevarra \email{ernestgmd@gmail.com} (0000-0002-4887-4415) [copyright holder]
+
+Authors:
+\itemize{
+  \item Laura Bramley \email{laura@validinternational.org} [copyright holder]
+}
+
+Other contributors:
+\itemize{
+  \item Valid International \email{office@validinternational} [copyright holder]
+}
+
+}
+\keyword{internal}
