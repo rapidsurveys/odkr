@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' pull_remote
-#'
 #' Pull ODK forms from remote ODK Aggregate via ODK Briefcase
 #'
 #' @param target Path to directory of ODK Briefcase \code{.jar} file. Directory

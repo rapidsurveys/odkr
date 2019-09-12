@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' mergeNestedODK
-#'
 #' Retrieve parent data, matching to a nested (child) dataset by keys of a
 #' nested dataset exported from an ODK Aggregate Server.
 #'

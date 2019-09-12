@@ -6,8 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pull ODK forms from a local ODK folder (<code>/odk</code>) collected from
-ODK Collect mobile clients — pull_local • odkr</title>
+<title>Function to expand response to a more than one answer multiple choice
+question coded as a concatenated string — expand_choice • odkr</title>
 
 
 <!-- jquery -->
@@ -34,10 +34,10 @@ ODK Collect mobile clients — pull_local • odkr</title>
 
 
 
-<meta property="og:title" content="Pull ODK forms from a local ODK folder (<code>/odk</code>) collected from
-ODK Collect mobile clients — pull_local" />
-<meta property="og:description" content="Pull ODK forms from a local ODK folder (/odk) collected from
-ODK Collect mobile clients" />
+<meta property="og:title" content="Function to expand response to a more than one answer multiple choice
+question coded as a concatenated string — expand_choice" />
+<meta property="og:description" content="Function to expand response to a more than one answer multiple choice
+question coded as a concatenated string" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -117,74 +117,70 @@ ODK Collect mobile clients" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Pull ODK forms from a local ODK folder (<code>/odk</code>) collected from
-ODK Collect mobile clients</h1>
-    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/pull_local.R'><code>R/pull_local.R</code></a></small>
-    <div class="hidden name"><code>pull_local.Rd</code></div>
+    <h1>Function to expand response to a more than one answer multiple choice
+question coded as a concatenated string</h1>
+    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/expand_choice.R'><code>R/expand_choice.R</code></a></small>
+    <div class="hidden name"><code>expand_choice.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Pull ODK forms from a local ODK folder (<code>/odk</code>) collected from
-ODK Collect mobile clients</p>
+    <p>Function to expand response to a more than one answer multiple choice
+question coded as a concatenated string</p>
     </div>
 
-    <pre class="usage"><span class='fu'>pull_local</span>(<span class='kw'>target</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>briefcase</span> <span class='kw'>=</span> <span class='st'>"odkBriefcase_latest"</span>, <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>""</span>,
-  <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>pem</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>expand_choice</span>(<span class='no'>df</span>, <span class='no'>x</span>, <span class='no'>values</span>, <span class='kw'>pattern</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>prefix</span> <span class='kw'>=</span> <span class='no'>x</span>,
+  <span class='kw'>labels</span> <span class='kw'>=</span> <span class='no'>values</span>, <span class='kw'>sep</span> <span class='kw'>=</span> <span class='st'>"."</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>target</th>
-      <td><p>Path to directory of ODK Briefcase <code>.jar</code> file. Directory
-path should match directory path used when calling <code><a href='get_briefcase.html'>get_briefcase()</a></code>.
-If ODK Briefcase <code>.jar</code> file was downloaded manually from <a href='https://opendatakit.org'>https://opendatakit.org</a>,
-<code>target</code> should match the directory path where <code>.jar</code> file has
-been downloaded into.</p></td>
+      <th>df</th>
+      <td><p>A dataframe containing the vector data that requires expansion.</p></td>
     </tr>
     <tr>
-      <th>briefcase</th>
-      <td><p>Filename of the downloaded ODK Briefcase <code>.jar</code> file.
-Default is <code>odkBriefcase_latest</code> to match the default filename used
-by <code><a href='get_briefcase.html'>get_briefcase()</a></code>. If ODK Briefcase <code>.jar</code> file was
-downloaded manually from <a href='https://opendatakit.org'>https://opendatakit.org</a>, filename should
-match the default filename used by Open Data Kit which is usually
-"ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number</p></td>
+      <th>x</th>
+      <td><p>Name of variable in <code>df</code> containing vector needing expansion.</p></td>
     </tr>
     <tr>
-      <th>id</th>
-      <td><p>Form ID of form to be pulled</p></td>
+      <th>values</th>
+      <td><p>Vector of string values used to create concatenated string
+response.</p></td>
     </tr>
     <tr>
-      <th>to</th>
-      <td><p>Destination directory for pulled ODK forms</p></td>
+      <th>pattern</th>
+      <td><p>Pattern used to separate values in the concatenated string.
+Default is "" for concatenated strings with no separator.</p></td>
     </tr>
     <tr>
-      <th>from</th>
-      <td><p>Source ODK directory (<code>/odk</code>) from ODK Collect mobile client</p></td>
+      <th>prefix</th>
+      <td><p>Prefix to names of newly created variables.</p></td>
     </tr>
     <tr>
-      <th>pem</th>
-      <td><p>If form to be pulled is encrypted, a PEM private key file would be
-required to pull forms; default is NULL; if form is encrypted, provide path
-to PEM file</p></td>
+      <th>labels</th>
+      <td><p>Vector of names to use for columns of resulting data.frame.
+If not specified, columns are named using <code>values</code>.</p></td>
+    </tr>
+    <tr>
+      <th>sep</th>
+      <td><p>Charater to separate <code>prefix</code> from <code>labels</code> in the
+names of newly created variables.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Folder in destination directory named "ODK Briefcase Storage"
-containing forms pulled from local ODK folder</p>
+    <p>A data.frame with same rows as <code>df</code> containing columns
+  corresponding to each newly created variable.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'># Pull forms from a local ODK folder to current working directory
-</div><span class='co'># NOT RUN {</span>
-  <span class='no'>dirPath</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/tempfile'>tempdir</a></span>()
-  <span class='fu'><a href='get_briefcase.html'>get_briefcase</a></span>(<span class='kw'>destination</span> <span class='kw'>=</span> <span class='no'>dirPath</span>)
-  <span class='fu'>pull_local</span>(<span class='kw'>target</span> <span class='kw'>=</span> <span class='no'>dirPath</span>,
-             <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"stakeholders"</span>,
-             <span class='kw'>from</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>"odk"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"odkr"</span>),
-             <span class='kw'>to</span> <span class='kw'>=</span> <span class='no'>dirPath</span>)
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='fu'>expandMultipleChoice</span>(<span class='kw'>df</span> <span class='kw'>=</span> <span class='no'>individual</span>,
+                     <span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>"mddw1"</span>,
+                     <span class='kw'>values</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/character'>as.character</a></span>(<span class='fl'>0</span>:<span class='fl'>18</span>),
+                     <span class='kw'>pattern</span> <span class='kw'>=</span> <span class='st'>" "</span>,
+                     <span class='kw'>prefix</span> <span class='kw'>=</span> <span class='st'>"mddw"</span>,
+                     <span class='kw'>sep</span> <span class='kw'>=</span> <span class='st'>""</span>)
 <span class='co'># }</span><div class='input'>
 </div></pre>
   </div>

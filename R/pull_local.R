@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' pull_local
-#'
 #' Pull ODK forms from a local ODK folder (\code{/odk}) collected from
 #' ODK Collect mobile clients
 #'

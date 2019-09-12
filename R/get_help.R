@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' get_help
-#'
 #' Get help with command line interface for ODK Briefcase
 #'
 #' @param target Path to directory of ODK Briefcase \code{.jar} file. Directory

@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' ranameODK
-#'
 #' Rename column names of data exported from an ODK Aggregate Server or from
 #' ODK Briefcase into more usable and human readable variable names.
 #'

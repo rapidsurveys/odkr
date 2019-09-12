@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' push_data
-#'
 #' Push ODK forms from local ODK Briefcase Storage folder to remote ODK Aggregate
 #' via ODK Briefcase
 #'

@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' expandMultChoice
-#'
 #' Function to recode a choose-multiple column where multiple answers are
 #' recorded in the same element (e.g. "ab ac ad", "ef eg eh") to a data frame
 #' with multiple separate 0/1 columns e.g.:

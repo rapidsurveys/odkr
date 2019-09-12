@@ -2,7 +2,8 @@
 % Please edit documentation in R/nestedSurvey.R
 \name{mergeNestedODK}
 \alias{mergeNestedODK}
-\title{mergeNestedODK}
+\title{Retrieve parent data, matching to a nested (child) dataset by keys of a
+nested dataset exported from an ODK Aggregate Server.}
 \usage{
 mergeNestedODK(parent, child, byPARENT_KEY = TRUE, removeCols = NULL,
   removeRows = NULL)

@@ -24,6 +24,7 @@
 #' @importFrom Hmisc %nin%
 #' @importFrom utils download.file
 #' @importFrom rJava .jinit .jcall
+#' @importFrom utils read.csv
 #'
 #
 ################################################################################

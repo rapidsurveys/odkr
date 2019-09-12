@@ -2,7 +2,7 @@
 % Please edit documentation in R/create_sd.R
 \name{create_sd}
 \alias{create_sd}
-\title{create_sd}
+\title{Function to create an ODK Briefcase Storage directory}
 \usage{
 create_sd(path)
 }

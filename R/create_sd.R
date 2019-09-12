@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' create_sd
-#'
 #' Function to create an ODK Briefcase Storage directory
 #'
 #' @param path Directory path on which to create the ODK Briefcase Storage

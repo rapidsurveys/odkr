@@ -2,7 +2,7 @@
 % Please edit documentation in R/pull_remote.R
 \name{pull_remote}
 \alias{pull_remote}
-\title{pull_remote}
+\title{Pull ODK forms from remote ODK Aggregate via ODK Briefcase}
 \usage{
 pull_remote(target = "", briefcase = "odkBriefcase_latest",
   sd = FALSE, id = "", to = "", from = "", username, password)

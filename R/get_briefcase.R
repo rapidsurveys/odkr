@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' get_briefcase
-#'
 #' Updates pre-installed ODK Briefcase \code{jar} file to the latest version
 #' downloaded from \url{https://opendatakit.org}.
 #'
