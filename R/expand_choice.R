@@ -33,8 +33,8 @@
 #
 ################################################################################
 
-expandMultipleChoice <- function(df, x, values, pattern = "",
-                                 prefix = x, labels = values, sep = ".") {
+expand_choice <- function(df, x, values, pattern = "",
+                          prefix = x, labels = values, sep = ".") {
   labels <- paste(prefix, labels, sep = sep)
   temp <- stringr::str_split(df[ , x], pattern = pattern)
   result <- NULL

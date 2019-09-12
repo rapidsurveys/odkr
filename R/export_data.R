@@ -18,11 +18,11 @@
 #'     specified by \code{to}. Default is FALSE.
 #' @param id Form ID of form to be pulled
 #' @param from Path to source ODK Briefcase Storage from which to extract data.
-#'     This should match directory path specified when making a call to
-#'     \code{pull_remote()} or \code{pull_local()}
+#'   This should match directory path specified when making a call to
+#'   \code{pull_remote()} or \code{pull_local()}
 #' @param to Destination directory to save output data file
 #' @param filename Filename of output CSV data; default is
-#' \code{paste(id, "_data.csv", sep = "")}
+#'   \code{paste(id, "_data.csv", sep = "")}
 #' @param start Include data from submission dates after (inclusive) this start
 #' date in export to CSV. Date format <yyyy-MM-dd> or <yyyy/MM/dd>
 #' @param end Include data from submission dates before (inclusive) this date in
