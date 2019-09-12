@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_help.R
 \name{get_help}
 \alias{get_help}
-\title{get_help}
+\title{Get help with command line interface for ODK Briefcase}
 \usage{
 get_help(target = "", briefcase = "odkBriefcase_latest")
 }

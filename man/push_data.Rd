@@ -2,7 +2,8 @@
 % Please edit documentation in R/push_data.R
 \name{push_data}
 \alias{push_data}
-\title{push_data}
+\title{Push ODK forms from local ODK Briefcase Storage folder to remote ODK Aggregate
+via ODK Briefcase}
 \usage{
 push_data(target = "", briefcase = "odkBriefcase_latest", id = "",
   to = "", from = "", username, password)

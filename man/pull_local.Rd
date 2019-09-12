@@ -2,7 +2,8 @@
 % Please edit documentation in R/pull_local.R
 \name{pull_local}
 \alias{pull_local}
-\title{pull_local}
+\title{Pull ODK forms from a local ODK folder (\code{/odk}) collected from
+ODK Collect mobile clients}
 \usage{
 pull_local(target = "", briefcase = "odkBriefcase_latest", id = "",
   to = "", from = "", pem = NULL)

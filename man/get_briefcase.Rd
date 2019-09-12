@@ -2,7 +2,8 @@
 % Please edit documentation in R/get_briefcase.R
 \name{get_briefcase}
 \alias{get_briefcase}
-\title{get_briefcase}
+\title{Updates pre-installed ODK Briefcase \code{jar} file to the latest version
+downloaded from \url{https://opendatakit.org}.}
 \usage{
 get_briefcase(destination = "", briefcase = "odkBriefcase_latest")
 }

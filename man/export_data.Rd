@@ -2,7 +2,8 @@
 % Please edit documentation in R/export_data.R
 \name{export_data}
 \alias{export_data}
-\title{export_data}
+\title{Export data in CSV format from local ODK Briefcase Storage directory to a
+specified destination directory and a specified file name}
 \usage{
 export_data(target = "", briefcase = "odkBriefcase_latest",
   sd = FALSE, id = "", from = "", to = "", filename = paste(id,

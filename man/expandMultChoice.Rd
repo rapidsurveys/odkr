@@ -2,7 +2,9 @@
 % Please edit documentation in R/multipleChoiceExpand.R
 \name{expandMultChoice}
 \alias{expandMultChoice}
-\title{expandMultChoice}
+\title{Function to recode a choose-multiple column where multiple answers are
+recorded in the same element (e.g. "ab ac ad", "ef eg eh") to a data frame
+with multiple separate 0/1 columns e.g.:}
 \usage{
 expandMultChoice(answers, choices = NULL, naCode = NULL,
   naQuestion = NULL)
@@ -26,11 +28,6 @@ in rows where this is false, all columns will be coded as \code{NA}}
 a data frame with multiple separate 0/1 columns
 }
 \description{
-Function to recode a choose-multiple column where multiple answers are
-recorded in the same element (e.g. "ab ac ad", "ef eg eh") to a data frame
-with multiple separate 0/1 columns e.g.:
-}
-\details{
 ab  ac  ad  ef  eg  eh
 [1,]  1   1   1   0   0   0
 [2,]  0   0   0   1   1   1
