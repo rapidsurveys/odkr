@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' export_data
-#'
 #' Export data in CSV format from local ODK Briefcase Storage directory to a
 #' specified destination directory and a specified file name
 #'
