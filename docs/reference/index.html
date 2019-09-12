@@ -8,10 +8,12 @@
 
 <title>Function reference • odkr</title>
 
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -30,7 +32,9 @@
 
 
 
+
 <meta property="og:title" content="Function reference" />
+
 
 
 
@@ -89,7 +93,6 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/validmeasures/odkr">
@@ -123,77 +126,122 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+          <h2 id="section-description" class="hasAnchor"><a href="#section-description" class="anchor"></a>Description</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
       <tr>
         
         <td>
-          <p><code><a href="create_sd.html">create_sd()</a></code> </p>
+          <p><code><a href="odkr.html">odkr</a></code> </p>
         </td>
-        <td><p>create_sd</p></td>
-      </tr><tr>
+        <td><p>ODK Briefcase R API</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-r-odk-interface-via-odk-briefcase" class="hasAnchor"><a href="#section-r-odk-interface-via-odk-briefcase" class="anchor"></a>R-ODK interface via ODK Briefcase</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
         
         <td>
-          <p><code><a href="expandMultChoice.html">expandMultChoice()</a></code> </p>
+          <p><code><a href="get_help.html">get_help()</a></code> </p>
         </td>
-        <td><p>expandMultChoice</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="export_data.html">export_data()</a></code> </p>
-        </td>
-        <td><p>export_data</p></td>
+        <td><p>Get help with command line interface for ODK Briefcase</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="get_briefcase.html">get_briefcase()</a></code> </p>
         </td>
-        <td><p>get_briefcase</p></td>
+        <td><p>Updates pre-installed ODK Briefcase <code>jar</code> file to the latest version
+downloaded from <a href='https://opendatakit.org'>https://opendatakit.org</a>.</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="get_help.html">get_help()</a></code> </p>
+          <p><code><a href="create_sd.html">create_sd()</a></code> </p>
         </td>
-        <td><p>get_help</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mergeNestedODK.html">mergeNestedODK()</a></code> </p>
-        </td>
-        <td><p>mergeNestedODK</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="odkr.html">odkr</a></code> </p>
-        </td>
-        <td><p>ODK Briefcase R API</p></td>
+        <td><p>Function to create an ODK Briefcase Storage directory</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="pull_local.html">pull_local()</a></code> </p>
         </td>
-        <td><p>pull_local</p></td>
+        <td><p>Pull ODK forms from a local ODK folder (<code>/odk</code>) collected from
+ODK Collect mobile clients</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="pull_remote.html">pull_remote()</a></code> </p>
         </td>
-        <td><p>pull_remote</p></td>
+        <td><p>Pull ODK forms from remote ODK Aggregate via ODK Briefcase</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="push_data.html">push_data()</a></code> </p>
         </td>
-        <td><p>push_data</p></td>
+        <td><p>Push ODK forms from local ODK Briefcase Storage folder to remote ODK Aggregate
+via ODK Briefcase</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="export_data.html">export_data()</a></code> </p>
+        </td>
+        <td><p>Export data in CSV format from local ODK Briefcase Storage directory to a
+specified destination directory and a specified file name</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="get_data.html">get_data()</a></code> </p>
+        </td>
+        <td><p>Function to get ODK survey datasets and forms from an ODK Aggregate server.</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-data-handling-post-export" class="hasAnchor"><a href="#section-data-handling-post-export" class="anchor"></a>Data handling post-export</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="expandMultChoice.html">expandMultChoice()</a></code> </p>
+        </td>
+        <td><p>Function to recode a choose-multiple column where multiple answers are
+recorded in the same element (e.g. "ab ac ad", "ef eg eh") to a data frame
+with multiple separate 0/1 columns e.g.:</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="expand_choice.html">expand_choice()</a></code> </p>
+        </td>
+        <td><p>Function to expand response to a more than one answer multiple choice
+question coded as a concatenated string</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="mergeNestedODK.html">mergeNestedODK()</a></code> </p>
+        </td>
+        <td><p>Retrieve parent data, matching to a nested (child) dataset by keys of a
+nested dataset exported from an ODK Aggregate Server.</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="renameODK.html">renameODK()</a></code> </p>
         </td>
-        <td><p>ranameODK</p></td>
-      </tr><tr>
+        <td><p>Rename column names of data exported from an ODK Aggregate Server or from
+ODK Briefcase into more usable and human readable variable names.</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-sample-data" class="hasAnchor"><a href="#section-sample-data" class="anchor"></a>Sample data</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
         
         <td>
           <p><code><a href="sampleData1.html">sampleData1</a></code> </p>
@@ -219,7 +267,10 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#section-description">Description</a></li>
+      <li><a href="#section-r-odk-interface-via-odk-briefcase">R-ODK interface via ODK Briefcase</a></li>
+      <li><a href="#section-data-handling-post-export">Data handling post-export</a></li>
+      <li><a href="#section-sample-data">Sample data</a></li>
     </ul>
   </div>
 </div>
