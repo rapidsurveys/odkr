@@ -92,7 +92,7 @@ get_data <- function(id,
   for(i in rep.name) {
     assign(x = paste(i, "_data", sep = ""),
            value = read.csv(paste(temp, "/", filename, "-",
-                                  rep.name, ".csv", sep = ""),
+                                  i, ".csv", sep = ""),
                             stringsAsFactors = FALSE))
   }
   ##
