@@ -39,10 +39,5 @@ Authors:
   \item Laura Bramley \email{laura@validinternational.org} [copyright holder]
 }
 
-Other contributors:
-\itemize{
-  \item Valid International \email{office@validinternational} [copyright holder]
-}
-
 }
 \keyword{internal}

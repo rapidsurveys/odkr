@@ -22,3 +22,4 @@
 ^revdep$
 ^briefcase\.log$
 ^ODK Briefcase Storage$
+^LICENSE\.md$

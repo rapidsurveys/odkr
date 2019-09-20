@@ -1,3 +1,19 @@
+# odkr 0.3.2
+
+This is the fifth release of `odkr` (third development release).
+
+In this version
+
+# odkr 0.3.1
+
+This is the fourth release of `odkr` (second development release).
+
+# odkr 0.3.0
+
+This is the third release of `odkr`. This is a developmental release. `odkr` has
+been archived in CRAN (see previous release). Current plan is to continue 
+development of odkr outside of CRAN.
+
 # odkr 0.2.0
 
 In this version, I have implemented changes to respond to package issues from
