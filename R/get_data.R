@@ -88,23 +88,17 @@ get_data <- function(id,
   ## Read specified dataset
   surveyData <- read.csv(paste(temp, "/", filename, ".csv", sep = ""),
                          stringsAsFactors = FALSE)
-  ## Read repeat data
-  for(i in rep.name) {
-    assign(x = paste(i, "_data", sep = ""),
-           value = read.csv(paste(temp, "/", filename, "-",
-                                  rep.name, ".csv", sep = ""),
-                            stringsAsFactors = FALSE))
-  }
   ##
   fullData <- surveyData
   ##
   if(rep) {
     fullData <- vector(mode = "list", length = length(rep.name) + 1)
-    fullData[[1]] <- surveyData
-    for(i in length(rep.name)) {
-      fullData[[i + 1]] <- get(paste(rep.name[i], "_data", sep = ""))
-    }
     names(fullData) <- c("surveyData", rep.name)
+    fullData[[1]] <- surveyData
+    for(i in rep.name) {
+      fullData[[i]] <- read.csv(paste(temp, "/", filename, "-", i, ".csv", sep = ""),
+                                stringsAsFactors = FALSE)
+    }
   }
   ## Return data.frame
   return(fullData)

@@ -80,7 +80,7 @@ pull_remote <- function(target = "", briefcase = "odkBriefcase_latest", sd = FAL
              " --pull_aggregate ",
              " --form_id ", id,
              " --storage_directory ", to,
-             " --aggregate_url ", from,
+             " --odk_url ", from,
              " --odk_username ", username,
              " --odk_password ", password, sep = "")
   ## Execute inputs on command line
