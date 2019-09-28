@@ -1,10 +1,14 @@
 # odkr: Open Data Kit (ODK) R API <img src="man/figures/odkr.png" width="200" align="right" />
 
+<!-- badges: start -->
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Travis](https://img.shields.io/travis/validmeasures/odkr.svg?branch=master)](https://travis-ci.org/validmeasures/odkr)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/validmeasures/odkr?branch=master&svg=true)](https://ci.appveyor.com/project/validmeasures/odkr)
 [![codecov](https://codecov.io/gh/validmeasures/odkr/branch/master/graph/badge.svg)](https://codecov.io/gh/validmeasures/odkr)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1170514.svg)](https://doi.org/10.5281/zenodo.1170514)
+<!-- badges: end -->
+
 
 **Open Data Kit (ODK)** is a free and open-source set of tools which help 
 organizations author, field, and manage mobile data collection solutions. ODK 
