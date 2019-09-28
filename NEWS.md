@@ -11,6 +11,8 @@ exported.
 * updated the `pull_remote` and `push_data` functions to match new CLI syntax
 for `ODK Briefcase`
 
+* change license from `MIT` to `GPL3`
+
 * general package maintenance (documentation, external site)
 
 # odkr 0.3.1
