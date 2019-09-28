@@ -3,7 +3,9 @@
 \docType{data}
 \name{sampleData2}
 \alias{sampleData2}
-\title{Sample Dataset 2}
+\title{Sample dataset from an impact evaluation study of a mother and child nutrition
+programme in Kassala State, Sudan. This dataset contains information from
+mother respondents.}
 \format{A data frame with 16 columns and 50 rows:
 \describe{
 \item{\code{wcount.wdata.women.wage}}{Mother's age}

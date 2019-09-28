@@ -1,8 +1,19 @@
 # odkr 0.3.2
 
-This is the fifth release of `odkr` (third development release).
+This is the fifth release of `odkr` (third development release). In this version,
+the following have been implemented:
 
-In this version
+* created a `get_data` function to wrap around the `pull_remote` or `pull_local`
+and `export_data` functions to pull and export data from a server or locally
+using one function. This function also gives the option for repeat data to be 
+exported.
+
+* updated the `pull_remote` and `push_data` functions to match new CLI syntax
+for `ODK Briefcase`
+
+* change license from `MIT` to `GPL3`
+
+* general package maintenance (documentation, external site)
 
 # odkr 0.3.1
 

@@ -33,7 +33,6 @@
 
 ################################################################################
 #
-#' Sample Dataset 1
 #'
 #' Sample dataset from an impact evaluation study of a mother and child nutrition
 #' programme in Kassala State, Sudan. This dataset contains cluster level data
@@ -66,7 +65,6 @@
 
 ################################################################################
 #
-#' Sample Dataset 2
 #'
 #' Sample dataset from an impact evaluation study of a mother and child nutrition
 #' programme in Kassala State, Sudan. This dataset contains information from
@@ -103,7 +101,6 @@
 
 ################################################################################
 #
-#' Sample Dataset 3
 #'
 #' Sample dataset from an impact evaluation study of a mother and child nutrition
 #' programme in Kassala State, Sudan. This dataset contains information from

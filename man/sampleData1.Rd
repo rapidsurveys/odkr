@@ -3,7 +3,9 @@
 \docType{data}
 \name{sampleData1}
 \alias{sampleData1}
-\title{Sample Dataset 1}
+\title{Sample dataset from an impact evaluation study of a mother and child nutrition
+programme in Kassala State, Sudan. This dataset contains cluster level data
+from the survey.}
 \format{A data frame with 16 columns and 50 rows:
 \describe{
 \item{\code{admin.admin1.adm1}}{Date of survey}
