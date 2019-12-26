@@ -5,8 +5,14 @@
 \title{Pull ODK forms from a local ODK folder (\code{/odk}) collected from
 ODK Collect mobile clients}
 \usage{
-pull_local(target = "", briefcase = "odkBriefcase_latest", id = "",
-  to = "", from = "", pem = NULL)
+pull_local(
+  target = "",
+  briefcase = "odkBriefcase_latest",
+  id = "",
+  to = "",
+  from = "",
+  pem = NULL
+)
 }
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory

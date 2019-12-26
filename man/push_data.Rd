@@ -5,8 +5,15 @@
 \title{Push ODK forms from local ODK Briefcase Storage folder to remote ODK Aggregate
 via ODK Briefcase}
 \usage{
-push_data(target = "", briefcase = "odkBriefcase_latest", id = "",
-  to = "", from = "", username, password)
+push_data(
+  target = "",
+  briefcase = "odkBriefcase_latest",
+  id = "",
+  to = "",
+  from = "",
+  username,
+  password
+)
 }
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory

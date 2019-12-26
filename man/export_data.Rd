@@ -5,11 +5,21 @@
 \title{Export data in CSV format from local ODK Briefcase Storage directory to a
 specified destination directory and a specified file name}
 \usage{
-export_data(target = "", briefcase = "odkBriefcase_latest",
-  sd = FALSE, id = "", from = "", to = "", filename = paste(id,
-  "_data.csv", sep = ""), start = NULL, end = NULL,
-  overwrite = FALSE, exclude = TRUE, group.names = TRUE,
-  split = FALSE)
+export_data(
+  target = "",
+  briefcase = "odkBriefcase_latest",
+  sd = FALSE,
+  id = "",
+  from = "",
+  to = "",
+  filename = paste(id, "_data.csv", sep = ""),
+  start = NULL,
+  end = NULL,
+  overwrite = FALSE,
+  exclude = TRUE,
+  group.names = TRUE,
+  split = FALSE
+)
 }
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory

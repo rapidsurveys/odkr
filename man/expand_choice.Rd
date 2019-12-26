@@ -5,8 +5,15 @@
 \title{Function to expand response to a more than one answer multiple choice
 question coded as a concatenated string}
 \usage{
-expand_choice(df, x, values, pattern = "", prefix = x,
-  labels = values, sep = ".")
+expand_choice(
+  df,
+  x,
+  values,
+  pattern = "",
+  prefix = x,
+  labels = values,
+  sep = "."
+)
 }
 \arguments{
 \item{df}{A dataframe containing the vector data that requires expansion.}

@@ -5,8 +5,13 @@
 \title{Retrieve parent data, matching to a nested (child) dataset by keys of a
 nested dataset exported from an ODK Aggregate Server.}
 \usage{
-mergeNestedODK(parent, child, byPARENT_KEY = TRUE, removeCols = NULL,
-  removeRows = NULL)
+mergeNestedODK(
+  parent,
+  child,
+  byPARENT_KEY = TRUE,
+  removeCols = NULL,
+  removeRows = NULL
+)
 }
 \arguments{
 \item{parent}{Data frame of household data}

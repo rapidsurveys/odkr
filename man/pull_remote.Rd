@@ -4,8 +4,16 @@
 \alias{pull_remote}
 \title{Pull ODK forms from remote ODK Aggregate via ODK Briefcase}
 \usage{
-pull_remote(target = "", briefcase = "odkBriefcase_latest",
-  sd = FALSE, id = "", to = "", from = "", username, password)
+pull_remote(
+  target = "",
+  briefcase = "odkBriefcase_latest",
+  sd = FALSE,
+  id = "",
+  to = "",
+  from = "",
+  username,
+  password
+)
 }
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory

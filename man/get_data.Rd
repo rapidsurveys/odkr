@@ -4,9 +4,20 @@
 \alias{get_data}
 \title{Function to get ODK survey datasets and forms from an ODK Aggregate server.}
 \usage{
-get_data(id, username, password, start = Sys.Date(), end = Sys.Date(),
-  filename, overwrite = FALSE, exclude = TRUE, group.names = FALSE,
-  split = FALSE, rep = FALSE, rep.name = NULL)
+get_data(
+  id,
+  username,
+  password,
+  start = Sys.Date(),
+  end = Sys.Date(),
+  filename,
+  overwrite = FALSE,
+  exclude = TRUE,
+  group.names = FALSE,
+  split = FALSE,
+  rep = FALSE,
+  rep.name = NULL
+)
 }
 \arguments{
 \item{id}{Form ID of form to get data from.}
