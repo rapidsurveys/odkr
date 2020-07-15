@@ -15,6 +15,9 @@ for `ODK Briefcase`
 
 * general package maintenance (documentation, external site)
 
+* addressed issues raised by users with regard to package not installable; error
+arising from a wrong .Rbuildignore specification
+
 # odkr 0.3.1
 
 This is the fourth release of `odkr` (second development release).
