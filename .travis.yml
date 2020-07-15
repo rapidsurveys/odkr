@@ -1,7 +1,6 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: r
-sudo: required
 warnings_are_errors: true
 cache: packages
 
@@ -10,7 +9,7 @@ before_install:
   - sudo apt-get -q update
   - sudo apt-get install -y r-cran-rjava
 
-before_script:
+after_script:
   - sudo R CMD javareconf
 
 r_github_packages:
