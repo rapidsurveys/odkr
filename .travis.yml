@@ -6,7 +6,6 @@ warnings_are_errors: true
 cache: packages
 
 apt_packages:
-  - r-api-3
   - r-cran-rjava
 
 r_github_packages:
