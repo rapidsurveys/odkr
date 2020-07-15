@@ -6,6 +6,7 @@
 [![Travis](https://img.shields.io/travis/validmeasures/odkr.svg?branch=master)](https://travis-ci.org/validmeasures/odkr)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/validmeasures/odkr?branch=master&svg=true)](https://ci.appveyor.com/project/validmeasures/odkr)
 [![codecov](https://codecov.io/gh/validmeasures/odkr/branch/master/graph/badge.svg)](https://codecov.io/gh/validmeasures/odkr)
+[![CodeFactor](https://www.codefactor.io/repository/github/validmeasures/odkr/badge)](https://www.codefactor.io/repository/github/validmeasures/odkr)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1170514.svg)](https://doi.org/10.5281/zenodo.1170514)
 <!-- badges: end -->
 
