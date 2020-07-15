@@ -8,9 +8,11 @@ cache: packages
 before_install:
   - sudo add-apt-repository -y ppa:c2d4u.team/c2d4u4.0+
   - sudo apt-get -q update
+  - sudo apt-get install -y r-cran-rjava
+  - sudo R CMD javareconf
 
-apt_packages:
-  - r-cran-rjava
+#apt_packages:
+#  - r-cran-rjava
 
 r_github_packages:
   - r-lib/covr
