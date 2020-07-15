@@ -6,8 +6,8 @@ warnings_are_errors: true
 cache: packages
 
 before_install:
-  - add-apt-repository ppa:c2d4u.team/c2d4u4.0+
-  - apt-get -q update
+  - sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
+  - sudo apt-get -q update
 
 apt_packages:
   - r-cran-rjava
