@@ -16,17 +16,18 @@ Description: Utility functions for working with datasets gathered using
     a single dataframe from a nested 'ODK' dataset and an expand function to 
     disaggregate multiple choice answers that have been collapsed into single code 
     by 'ODK'.
+License: GPL-3
+SystemRequirements: Java (>= 8)
+Depends: R (>= 2.10)
 Imports: 
     stringr,
     Hmisc,
     curl,
     rJava
-Depends: R (>= 2.10)
 Suggests: testthat
-License: GPL-3
 Encoding: UTF-8
 LazyData: true
-SystemRequirements: Java (>= 8)
+Language: en-gb
 RoxygenNote: 7.1.1
 URL: https://github.com/validmeasures/odkr, https://validmeasures.org/odkr
 BugReports: https://github.com/validmeasures/odkr/issues
