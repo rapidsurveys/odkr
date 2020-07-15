@@ -6,7 +6,8 @@
 \title{Sample dataset from an impact evaluation study of a mother and child nutrition
 programme in Kassala State, Sudan. This dataset contains information from
 child respondents.}
-\format{A data frame with 9 columns and 50 rows:
+\format{
+A data frame with 9 columns and 50 rows:
 \describe{
 \item{\code{wcount.wdata.ccount.child.csex}}{Child's gender}
 \item{\code{wcount.wdata.ccount.child.card}}{Does child have an immunisation
@@ -21,7 +22,8 @@ child respondents.}
     2 weeks}
 \item{\code{KEY}}{Parent data identifier}
 \item{\code{PARENT_KEY}}{Child data identifier}
-}}
+}
+}
 \usage{
 sampleData3
 }

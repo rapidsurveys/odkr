@@ -41,7 +41,7 @@ get_briefcase <- function(destination = "",
   #
   # Get the url for latest release download of Briefcase from GitHub
   #
-  x <- curl::curl("https://api.github.com/repos/opendatakit/briefcase/releases/latest")
+  x <- curl::curl("https://api.github.com/repos/getodk/briefcase/releases/latest")
   y <- readLines(x, warn = FALSE)
   z <- unlist(stringr::str_split(y, pattern = ","))
   download.url <- stringr::str_extract(string = z[stringr::str_detect(z, "browser_download_url")],

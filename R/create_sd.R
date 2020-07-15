@@ -7,7 +7,7 @@
 #' @return ODK Briefcase Storage directory in the specified path
 #'
 #' @examples
-#' create_sd(path = "Desktop")
+#' create_sd(path = tempdir())
 #'
 #' @export
 #'
@@ -16,6 +16,6 @@
 ################################################################################
 
 create_sd <- function(path) {
-  dir.create(path = paste(path, "/ODK Briefcase Storage", sep = ""))
-  dir.create(path = paste(path, "/ODK Briefcase Storage/forms", sep = ""))
+  dir.create(path = paste(path, "ODK Briefcase Storage", sep = "/"))
+  dir.create(path = paste(path, "ODK Briefcase Storage", "forms", sep = "/"))
 }
