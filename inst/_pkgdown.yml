@@ -29,7 +29,6 @@ reference:
   - pull_remote
   - push_data
   - export_data
-  - get_data
 
 - title: Data handling post-export
   contents:

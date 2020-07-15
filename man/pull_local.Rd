@@ -5,8 +5,14 @@
 \title{Pull ODK forms from a local ODK folder (\code{/odk}) collected from
 ODK Collect mobile clients}
 \usage{
-pull_local(target = "", briefcase = "odkBriefcase_latest", id = "",
-  to = "", from = "", pem = NULL)
+pull_local(
+  target = "",
+  briefcase = "odkBriefcase_latest",
+  id = "",
+  to = "",
+  from = "",
+  pem = NULL
+)
 }
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
@@ -33,7 +39,7 @@ required to pull forms; default is NULL; if form is encrypted, provide path
 to PEM file}
 }
 \value{
-Folder in destination directory named "ODK Briefcase Storage"
+Folder in destination directory named ODK Briefcase Storage
 containing forms pulled from local ODK folder
 }
 \description{

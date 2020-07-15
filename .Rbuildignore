@@ -1,4 +1,4 @@
-^\ODK Briefcase Storage$
+^ODK Briefcase Storage$
 ^\.Rprofile$
 ^.*\.Rproj$
 ^\.Rproj\.user$
@@ -9,7 +9,7 @@
 ^_config\.yml$
 ^\.github$
 ^inst/odk/\.cache$
-^test/testthat/ODK Briefcase Storage/$
+^test/testthat/ODK Briefcase Storage$
 ^test/testthat/test\.csv$
 ^README\.Rmd$
 ^README-.*\.png$

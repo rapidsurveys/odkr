@@ -27,6 +27,6 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 SystemRequirements: Java (>= 8)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 URL: https://github.com/validmeasures/odkr, https://validmeasures.org/odkr
 BugReports: https://github.com/validmeasures/odkr/issues

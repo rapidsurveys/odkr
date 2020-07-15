@@ -6,7 +6,8 @@
 \title{Sample dataset from an impact evaluation study of a mother and child nutrition
 programme in Kassala State, Sudan. This dataset contains information from
 mother respondents.}
-\format{A data frame with 16 columns and 50 rows:
+\format{
+A data frame with 16 columns and 50 rows:
 \describe{
 \item{\code{wcount.wdata.women.wage}}{Mother's age}
 \item{\code{wcount.wdata.women.wmarried}}{Is mother married?}
@@ -28,7 +29,8 @@ mother respondents.}
 \item{\code{wcount.wdata.wash.ws7}}{Episodes when handwashing is done}
 \item{\code{KEY}}{Parent data identifier}
 \item{\code{PARENT_KEY}}{Child data identifier}
-}}
+}
+}
 \usage{
 sampleData2
 }

@@ -19,9 +19,9 @@
 #'     server
 #' @param to URL of remote ODK Aggregate server
 #' @param username Username for account in remote ODK Aggregate server from
-#' which forms are to be pulled
+#'     which forms are to be pulled
 #' @param password Password for account in remote ODK Aggregate server from
-#' which forms are to be pulled
+#'     which forms are to be pulled
 #'
 #' @return NULL
 #'
@@ -47,42 +47,35 @@
 
 push_data <- function(target = "", briefcase = "odkBriefcase_latest",
                       id = "", to = "", from = "", username, password) {
-  #
-  # Check if appropriate Java runtime version is available
-  #
+  ## Check if appropriate Java runtime version is available
   rJava::.jinit()
   jv <- rJava::.jcall("java/lang/System", "S", "getProperty", "java.runtime.version")
   if(substr(jv, 1L, 2L) == "1.") {
     jvn <- as.numeric(paste0(strsplit(jv, "[.]")[[1L]][1:2], collapse = "."))
     if(jvn < 1.8) stop("Java >= 8 is needed for this package but not available")
   }
-  #
-  # Check if target is specified
-  #
+
+  ## Check if target is specified
   if(target == "") {
     stop("Cannot locate ODK Briefcase .jar file. Check target location of .jar file is correct.", call. = TRUE)
   }
-  #
-  # Check if id is specified
-  #
+
+  ## Check if id is specified
   if(id == "") {
     stop("Form id not specified. Try again.", call. = TRUE)
   }
-  #
-  # Check if from is specified
-  #
+
+  ## Check if from is specified
   if(to == "") {
     stop("URL of remote ODK Aggregate not specified. Try again.", call. = TRUE)
   }
-  #
-  # Check if to is specified
-  #
+
+  ## Check if to is specified
   if(from == "") {
     stop("Cannot locate source ODK Briefcase Storage folder. Check source location is correct.", call. = TRUE)
   }
-  #
-  # Create command line inputs based on required specifications
-  #
+
+  ## Create command line inputs based on required specifications
   z <- paste("java -jar ", target, "/", briefcase, ".jar",
              " --push_aggregate ",
              " --form_id ", id,
@@ -90,8 +83,7 @@ push_data <- function(target = "", briefcase = "odkBriefcase_latest",
              " --odk_url ", from,
              " --odk_username ", username,
              " --odk_password ", password, sep = "")
-  #
-  # Execute inputs on command line
-  #
+
+  ## Execute inputs on command line
   system(z)
 }

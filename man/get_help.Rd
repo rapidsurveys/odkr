@@ -9,9 +9,9 @@ get_help(target = "", briefcase = "odkBriefcase_latest")
 \arguments{
 \item{target}{Path to directory of ODK Briefcase \code{.jar} file. Directory
 path should match directory path used when calling \code{get_briefcase()}.
-If ODK Briefcase \code{.jar} file was downloaded manually from \url{https://opendatakit.org},
-\code{target} should match the directory path where \code{.jar} file has
-been downloaded into.}
+If ODK Briefcase \code{.jar} file was downloaded manually from
+\url{https://opendatakit.org}, \code{target} should match the directory
+path where \code{.jar} file has been downloaded into.}
 
 \item{briefcase}{Filename of the downloaded ODK Briefcase \code{.jar} file.
 Default is \code{odkBriefcase_latest} to match the default filename used

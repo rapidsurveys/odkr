@@ -47,7 +47,7 @@ expandMultChoice <- function(answers,
   targetDF <- data.frame(matrix(nrow = length(answers), ncol = length(strings)))
   names(targetDF) <- strings
 
-  for (i in 1:length(strings)) {
+  for (i in seq_len(length(strings))) {
     temp <- grep(strings[i], answers)
     targetDF[[strings[i]]] <- 0
     targetDF[[strings[i]]][temp] <- 1
