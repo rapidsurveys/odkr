@@ -11,8 +11,10 @@ before_install:
   - sudo apt-get install -y r-cran-rjava
   - sudo R CMD javareconf
 
-#apt_packages:
-#  - r-cran-rjava
+script:
+  - R CMD build .
+  - R CMD check *tar.gz
+  - R CMD javareconf
 
 r_github_packages:
   - r-lib/covr
