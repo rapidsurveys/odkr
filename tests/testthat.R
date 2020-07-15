@@ -11,10 +11,10 @@ pull_remote(target = dirPath,
             username = "validtrial",
             password = "zEF-STN-5ze-qom")
 
-pull_local(target = dirPath,
-           id = "stakeholders",
-           from = "ODK Briefcase Storage",
-           to = dirPath)
+#pull_local(target = dirPath,
+#           id = "stakeholders",
+#           from = "ODK Briefcase Storage",
+#           to = dirPath)
 
 export_data(target = dirPath,
             id = "stakeholders",

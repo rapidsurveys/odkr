@@ -26,7 +26,7 @@ vignettes/*.pdf
 .Rproj.user
 .github
 .DS_Store
-ODK Briefcase Storage/
+/ODK Briefcase Storage/
 /*.csv
 /*.jar
 /revdep/.cache.rds

@@ -39,7 +39,7 @@ required to pull forms; default is NULL; if form is encrypted, provide path
 to PEM file}
 }
 \value{
-Folder in destination directory named "ODK Briefcase Storage"
+Folder in destination directory named ODK Briefcase Storage
 containing forms pulled from local ODK folder
 }
 \description{

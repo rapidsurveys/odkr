@@ -6,16 +6,16 @@
 #' @param parent Data frame of household data
 #' @param child Data frame of child (repeat) data
 #' @param byPARENT_KEY Should data frames be matched based on PARENT_KEY (child)
-#' and KEY (parent) columns? (Currently only option is TRUE)
+#'   and KEY (parent) columns? (Currently only option is TRUE)
 #' @param removeCols Character vector of column names to remove from the parent
-#' data frame (optional)
+#'   data frame (optional)
 #' @param removeRows Index of which rows should be removed from child data frame
-#' (optional)
+#'   (optional)
 #'
 #' @return Merged dataframe
 #'
 #' @examples
-#' # marge sampleData2 and sampleData3
+#' # merge sampleData2 and sampleData3
 #' x <- renameODK(sampleData2)
 #' y <- renameODK(sampleData3)
 #' temp <- mergeNestedODK(parent = x, child = y, byPARENT_KEY = FALSE)
