@@ -1,12 +1,12 @@
 # odkr: Open Data Kit (ODK) R API <img src="man/figures/odkr.png" width="200" align="right" />
 
 <!-- badges: start -->
-[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Travis](https://img.shields.io/travis/validmeasures/odkr.svg?branch=master)](https://travis-ci.org/validmeasures/odkr)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/validmeasures/odkr?branch=master&svg=true)](https://ci.appveyor.com/project/validmeasures/odkr)
-[![codecov](https://codecov.io/gh/validmeasures/odkr/branch/master/graph/badge.svg)](https://codecov.io/gh/validmeasures/odkr)
-[![CodeFactor](https://www.codefactor.io/repository/github/validmeasures/odkr/badge)](https://www.codefactor.io/repository/github/validmeasures/odkr)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Travis](https://img.shields.io/travis/rapidsurveys/odkr.svg?branch=master)](https://travis-ci.org/rapidsurveys/odkr)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/rapidsurveys/odkr?branch=master&svg=true)](https://ci.appveyor.com/project/rapidsurveys/odkr)
+[![codecov](https://codecov.io/gh/rapidsurveys/odkr/branch/master/graph/badge.svg)](https://codecov.io/gh/rapidsurveys/odkr)
+[![CodeFactor](https://www.codefactor.io/repository/github/rapidsurveys/odkr/badge)](https://www.codefactor.io/repository/github/rapidsurveys/odkr)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1170514.svg)](https://doi.org/10.5281/zenodo.1170514)
 <!-- badges: end -->
 
@@ -42,10 +42,10 @@ As of **ODK Briefcase** version 1.4.4, a scriptable command line interface (CLI)
 to the Java application has been available. This package provides an R interface
 to **ODK Briefcase** via the available CLI to pull forms from a remote **ODK Aggregate 
 Server** or from a local ODK folder `/odk` collected from mobile clients. This 
-package has a function that downloads the lastest version of **ODK Briefcase** 
+package has a function that downloads the latest version of **ODK Briefcase** 
 (currently v1.8.0) and additional functions that use the CLI of **ODK Briefcase**
 to perform data extraction and data export. This package requires Java 8 installed. 
-Jave 8 can be downloaded from [here](https://java.com/en/download/).
+Java 8 can be downloaded from [here](https://java.com/en/download/).
 
 ## Requirements
 The ODK-R interface component of this package requires **Java 8** to be installed 
@@ -191,7 +191,7 @@ changed to the directory where you have previously saved **ODK Briefcase**.
 
 After the operation has been completed, you would now be able to see a folder
 named **ODK Briefcase Storage** on your `Desktop` containing the forms and
-instances from the stakholders form on the **ODK Aggregate Server**.
+instances from the stakeholders form on the **ODK Aggregate Server**.
 
 
 **2. Pull forms from a local `/odk` folder extracted from ODK Collect**
@@ -214,7 +214,7 @@ changed to the directory where you have previously saved **ODK Briefcase**.
 
 After the operation has been completed, you would now be able to see a folder
 named **ODK Briefcase Storage** on your desktop containing the forms and
-instances from the stakholders form on the **ODK Aggregate Server**.
+instances from the stakeholders form on the **ODK Aggregate Server**.
 
 
 **3. Export data from an ODK Briefcase Storage into a CSV file**
