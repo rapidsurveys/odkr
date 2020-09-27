@@ -1,6 +1,6 @@
 title: odkr
 
-url: https://validmeasures.org/odkr
+url: https://rapidsurveys.io/odkr
 
 template:
   params:
@@ -8,38 +8,37 @@ template:
     ganalytics: UA-102485058-5
 
 home:
-
   links:
   - text: Read more about Open Data Kit
     href: https://opendatakit.org
   - text: Read more about ODK Briefcase
     href: https://docs.opendatakit.org/briefcase-intro/
 
-reference:
-- title: Description
-  contents:
-  - odkr
+  reference:
+  - title: Description
+    contents:
+    - odkr
 
-- title: R-ODK interface via ODK Briefcase
-  contents:
-  - get_help
-  - get_briefcase
-  - create_sd
-  - pull_local
-  - pull_remote
-  - push_data
-  - export_data
+  - title: R-ODK interface via ODK Briefcase
+    contents:
+    - get_help
+    - get_briefcase
+    - create_sd
+    - pull_local
+    - pull_remote
+    - push_data
+    - export_data
 
-- title: Data handling post-export
-  contents:
-  - expandMultChoice
-  - expand_choice
-  - mergeNestedODK
-  - renameODK
+  - title: Data handling post-export
+    contents:
+    - expandMultChoice
+    - expand_choice
+    - mergeNestedODK
+    - renameODK
 
-- title: Sample data
-  contents:
-  - sampleData1
-  - sampleData2
-  - sampleData3
+  - title: Sample data
+    contents:
+    - sampleData1
+    - sampleData2
+    - sampleData3
 
