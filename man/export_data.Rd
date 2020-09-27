@@ -50,10 +50,10 @@ This should match directory path specified when making a call to
 \code{paste(id, "_data.csv", sep = "")}}
 
 \item{start}{Include data from submission dates after (inclusive) this start
-date in export to CSV. Date format <yyyy-MM-dd> or <yyyy/MM/dd>}
+date in export to CSV. Date format YYYY-MM-DD or YYYY/MM/DD}
 
 \item{end}{Include data from submission dates before (inclusive) this date in
-export to CSV. Date format <yyyy-MM-dd> or <yyyy/MM/dd>}
+export to CSV. Date format YYYY-MM-DD> or YYYY/MM/DD}
 
 \item{overwrite}{Overwrite existing output data in destination
 directory with the same filename; default is FALSE}

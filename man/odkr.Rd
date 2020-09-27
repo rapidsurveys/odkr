@@ -25,9 +25,8 @@ mobile clients. This package requires Java 8 installed. Java 8 can be downloaded
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/validmeasures/odkr}
-  \item \url{https://validmeasures.org/odkr}
-  \item Report bugs at \url{https://github.com/validmeasures/odkr/issues}
+  \item \url{https://github.com/rapidsurveys/odkr}
+  \item Report bugs at \url{https://github.com/rapidsurveys/odkr/issues}
 }
 
 }
@@ -36,7 +35,7 @@ Useful links:
 
 Authors:
 \itemize{
-  \item Laura Bramley \email{laura@validinternational.org} [copyright holder]
+  \item Laura Bramley [copyright holder]
 }
 
 }
