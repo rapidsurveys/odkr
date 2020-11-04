@@ -146,7 +146,7 @@ with multiple separate 0/1 columns e.g.:</h1>
 
     </div>
 
-    <pre class="usage"><span class='fu'>expandMultChoice</span>(<span class='kw'>answers</span>, choices = <span class='kw'>NULL</span>, naCode = <span class='kw'>NULL</span>, naQuestion = <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>expandMultChoice</span><span class='op'>(</span><span class='va'>answers</span>, choices <span class='op'>=</span> <span class='cn'>NULL</span>, naCode <span class='op'>=</span> <span class='cn'>NULL</span>, naQuestion <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -187,8 +187,8 @@ extra answer column (if <code>choices</code> parameter is not given))</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Expand responses in variable w7 of sampleData2</span>
-<span class='kw'>sampleData2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span>(<span class='kw'>sampleData2</span>)
-<span class='kw'>temp</span> <span class='op'>&lt;-</span> <span class='fu'>expandMultChoice</span>(<span class='kw'>sampleData2</span><span class='op'>$</span><span class='kw'>ws7</span>)
+<span class='va'>sampleData2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span><span class='op'>(</span><span class='va'>sampleData2</span><span class='op'>)</span>
+<span class='va'>temp</span> <span class='op'>&lt;-</span> <span class='fu'>expandMultChoice</span><span class='op'>(</span><span class='va'>sampleData2</span><span class='op'>$</span><span class='va'>ws7</span><span class='op'>)</span>
 
 </div></pre>
   </div>

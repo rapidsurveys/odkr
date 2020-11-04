@@ -135,7 +135,7 @@ ODK Briefcase into more usable and human readable variable names.</h1>
 ODK Briefcase into more usable and human readable variable names.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>renameODK</span>(<span class='kw'>data</span>)</pre>
+    <pre class="usage"><span class='fu'>renameODK</span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -152,13 +152,13 @@ ODK Briefcase into more usable and human readable variable names.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Rename sampleData1 dataset to remove '.' from variable names</span>
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>sampleData1</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>sampleData1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] "admin.admin1.adm1" "admin.admin1.adm2" "admin.ename"      
 #&gt;  [4] "admin.enameA"      "admin.admin2.adm3" "admin.admin2.adm4"
 #&gt;  [7] "location.loc1"     "location.loc1a"    "location.loc2"    
 #&gt; [10] "location.loc3"     "location.loc4"     "hh1"              
 #&gt; [13] "hh2"               "wcount_count"      "KEY"              
-#&gt; [16] "PARENT_KEY"       </div><div class='input'><span class='fu'>renameODK</span>(<span class='kw'>sampleData1</span>)
+#&gt; [16] "PARENT_KEY"       </div><div class='input'><span class='fu'>renameODK</span><span class='op'>(</span><span class='va'>sampleData1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;          adm1 adm2                    ename           enameA adm3 adm4 loc1
 #&gt; 1  2016-12-24    4  Eman Abdelaleem Zakaria _____ ___ ______    4    6    6
 #&gt; 2  2016-12-24    7        Hafsa Ali Mohamed    ____ ___ ____    4    4    1
@@ -362,7 +362,7 @@ ODK Briefcase into more usable and human readable variable names.</p>
 #&gt; 47            1  47         -1
 #&gt; 48            1  48         -1
 #&gt; 49            1  49         -1
-#&gt; 50            1  50         -1</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>sampleData1</span>)
+#&gt; 50            1  50         -1</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>sampleData1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] "admin.admin1.adm1" "admin.admin1.adm2" "admin.ename"      
 #&gt;  [4] "admin.enameA"      "admin.admin2.adm3" "admin.admin2.adm4"
 #&gt;  [7] "location.loc1"     "location.loc1a"    "location.loc2"    
@@ -370,7 +370,7 @@ ODK Briefcase into more usable and human readable variable names.</p>
 #&gt; [13] "hh2"               "wcount_count"      "KEY"              
 #&gt; [16] "PARENT_KEY"       </div><div class='input'>
 <span class='co'># Rename sampleData2 dataset</span>
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>sampleData2</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>sampleData2</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] "wcount.wdata.women.wage"      "wcount.wdata.women.wmarried" 
 #&gt;  [3] "wcount.wdata.women.wpregnant" "wcount.wdata.women.wedu1"    
 #&gt;  [5] "wcount.wdata.women.wedu2"     "wcount.wdata.women.wanthro"  
@@ -378,7 +378,7 @@ ODK Briefcase into more usable and human readable variable names.</p>
 #&gt;  [9] "wcount.wdata.wash.ws2"        "wcount.wdata.wash.ws3"       
 #&gt; [11] "wcount.wdata.wash.ws4"        "wcount.wdata.wash.ws5"       
 #&gt; [13] "wcount.wdata.wash.ws6"        "wcount.wdata.wash.ws7"       
-#&gt; [15] "KEY"                          "PARENT_KEY"                  </div><div class='input'><span class='fu'>renameODK</span>(<span class='kw'>sampleData2</span>)
+#&gt; [15] "KEY"                          "PARENT_KEY"                  </div><div class='input'><span class='fu'>renameODK</span><span class='op'>(</span><span class='va'>sampleData2</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    wage wmarried wpregnant wedu1 wedu2 wanthro screening ws1   ws2 ws3 ws4 ws5
 #&gt; 1    20        1         2     3     1     270         2  13     2  12  NA  NA
 #&gt; 2    35        1         2     0     9     235         2   9   2 7   1   1   2
@@ -480,7 +480,7 @@ ODK Briefcase into more usable and human readable variable names.</p>
 #&gt; 47  NA          1 2 3 7 8  47         47
 #&gt; 48  NA          1 2 3 5 7  48         48
 #&gt; 49   2          1 2 3 6 7  49         49
-#&gt; 50  NA            1 2 3 7  50         50</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>sampleData2</span>)
+#&gt; 50  NA            1 2 3 7  50         50</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>sampleData2</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] "wcount.wdata.women.wage"      "wcount.wdata.women.wmarried" 
 #&gt;  [3] "wcount.wdata.women.wpregnant" "wcount.wdata.women.wedu1"    
 #&gt;  [5] "wcount.wdata.women.wedu2"     "wcount.wdata.women.wanthro"  
@@ -490,12 +490,12 @@ ODK Briefcase into more usable and human readable variable names.</p>
 #&gt; [13] "wcount.wdata.wash.ws6"        "wcount.wdata.wash.ws7"       
 #&gt; [15] "KEY"                          "PARENT_KEY"                  </div><div class='input'>
 <span class='co'># Rename sampleData3 dataset</span>
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>sampleData3</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>sampleData3</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "wcount.wdata.ccount.child.csex"   "wcount.wdata.ccount.child.card"  
 #&gt; [3] "wcount.wdata.ccount.child.cdob"   "wcount.wdata.ccount.child.cage"  
 #&gt; [5] "wcount.wdata.ccount.illness.ill1" "wcount.wdata.ccount.illness.ill2"
 #&gt; [7] "wcount.wdata.ccount.illness.ill3" "KEY"                             
-#&gt; [9] "PARENT_KEY"                      </div><div class='input'><span class='fu'>renameODK</span>(<span class='kw'>sampleData3</span>)
+#&gt; [9] "PARENT_KEY"                      </div><div class='input'><span class='fu'>renameODK</span><span class='op'>(</span><span class='va'>sampleData3</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    csex card       cdob cage ill1 ill2 ill3 KEY PARENT_KEY
 #&gt; 1     2    1 2016-06-15    6    2    2    2   1          1
 #&gt; 2     1    1 2014-08-25   27    2    2    1   2          1
@@ -546,7 +546,7 @@ ODK Briefcase into more usable and human readable variable names.</p>
 #&gt; 47    2    4              24    2    2    1  47         65
 #&gt; 48    2    4              39    2    2    2  48         65
 #&gt; 49    2    1 2014-01-05   35    2    2    1  49         67
-#&gt; 50    2    1 2014-05-05   31    2    2    2  50         67</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>sampleData3</span>)
+#&gt; 50    2    1 2014-05-05   31    2    2    2  50         67</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>sampleData3</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "wcount.wdata.ccount.child.csex"   "wcount.wdata.ccount.child.card"  
 #&gt; [3] "wcount.wdata.ccount.child.cdob"   "wcount.wdata.ccount.child.cage"  
 #&gt; [5] "wcount.wdata.ccount.illness.ill1" "wcount.wdata.ccount.illness.ill2"
