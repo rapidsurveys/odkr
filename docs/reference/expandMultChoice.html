@@ -44,9 +44,12 @@ with multiple separate 0/1 columns e.g.: — expandMultChoice • odkr</title>
 <meta property="og:title" content="Function to recode a choose-multiple column where multiple answers are
 recorded in the same element (e.g. "ab ac ad", "ef eg eh") to a data frame
 with multiple separate 0/1 columns e.g.: — expandMultChoice" />
-<meta property="og:description" content="ab  ac  ad  ef  eg  eh
-[1,]  1   1   1   0   0   0
-[2,]  0   0   0   1   1   1" />
+<meta property="og:description" content="
+  ab  ac  ad  ef  eg  eh
+   1   1   1   0   0   0
+   0   0   0   1   1   1
+
+" />
 
 
 
@@ -109,7 +112,7 @@ with multiple separate 0/1 columns e.g.: — expandMultChoice" />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/validmeasures/odkr/">
+  <a href="https://github.com/rapidsurveys/odkr/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -130,17 +133,20 @@ with multiple separate 0/1 columns e.g.: — expandMultChoice" />
     <h1>Function to recode a choose-multiple column where multiple answers are
 recorded in the same element (e.g. "ab ac ad", "ef eg eh") to a data frame
 with multiple separate 0/1 columns e.g.:</h1>
-    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/multipleChoiceExpand.R'><code>R/multipleChoiceExpand.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/rapidsurveys/odkr/blob/master/R/multipleChoiceExpand.R'><code>R/multipleChoiceExpand.R</code></a></small>
     <div class="hidden name"><code>expandMultChoice.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>ab  ac  ad  ef  eg  eh
-[1,]  1   1   1   0   0   0
-[2,]  0   0   0   1   1   1</p>
+    
+<pre>  ab  ac  ad  ef  eg  eh
+   1   1   1   0   0   0
+   0   0   0   1   1   1
+</pre>
+
     </div>
 
-    <pre class="usage"><span class='fu'>expandMultChoice</span>(<span class='no'>answers</span>, <span class='kw'>choices</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>naCode</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>naQuestion</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>expandMultChoice</span><span class='op'>(</span><span class='va'>answers</span>, choices <span class='op'>=</span> <span class='cn'>NULL</span>, naCode <span class='op'>=</span> <span class='cn'>NULL</span>, naQuestion <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -174,15 +180,17 @@ in rows where this is false, all columns will be coded as <code>NA</code></p></t
     <p>a data frame with multiple separate 0/1 columns</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>NOTE</h2>
 
-    <p><code>naCode</code> must exist as the only answer in a column (an answer that
-contains both a valid answer and the <code>NA</code> code will not be recognized as
-<code>NA</code> - instead, the <code>NA</code> code will be output as an extra answer
-column (if <code>choices</code> parameter is not given))</p>
+    <p><code>naCode</code> must exist as the only answer in a column (an
+answer that contains both a valid answer and the <code>NA</code> code will not be
+recognized as <code>NA</code> - instead, the <code>NA</code> code will be output as an
+extra answer column (if <code>choices</code> parameter is not given))</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Expand responses in variable w7 of sampleData2</span>
-<span class='no'>sampleData2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span>(<span class='no'>sampleData2</span>)
-<span class='no'>temp</span> <span class='kw'>&lt;-</span> <span class='fu'>expandMultChoice</span>(<span class='no'>sampleData2</span>$<span class='no'>ws7</span>)</div></pre>
+<span class='va'>sampleData2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span><span class='op'>(</span><span class='va'>sampleData2</span><span class='op'>)</span>
+<span class='va'>temp</span> <span class='op'>&lt;-</span> <span class='fu'>expandMultChoice</span><span class='op'>(</span><span class='va'>sampleData2</span><span class='op'>$</span><span class='va'>ws7</span><span class='op'>)</span>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -198,7 +206,7 @@ column (if <code>choices</code> parameter is not given))</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -4,18 +4,18 @@
 #' specified destination directory and a specified file name
 #'
 #' @param target Path to directory of ODK Briefcase \code{.jar} file. Directory
-#'     path should match directory path used when calling \code{get_briefcase()}.
-#'     If ODK Briefcase \code{.jar} file was downloaded manually from
-#'     \url{https://opendatakit.org}, \code{target} should match the directory
-#'     path where \code{.jar} file has been downloaded into.
+#'   path should match directory path used when calling \code{get_briefcase()}.
+#'   If ODK Briefcase \code{.jar} file was downloaded manually from
+#'   \url{https://opendatakit.org}, \code{target} should match the directory
+#'   path where \code{.jar} file has been downloaded into.
 #' @param briefcase Filename of the downloaded ODK Briefcase \code{.jar} file.
-#'     Default is \code{odkBriefcase_latest} to match the default filename used
-#'     by \code{get_briefcase()}. If ODK Briefcase \code{.jar} file was
-#'     downloaded manually from \url{https://opendatakit.org}, filename should
-#'     match the default filename used by Open Data Kit which is usually
-#'     "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number
+#'   Default is \code{odkBriefcase_latest} to match the default filename used
+#'   by \code{get_briefcase()}. If ODK Briefcase \code{.jar} file was
+#'   downloaded manually from \url{https://opendatakit.org}, filename should
+#'   match the default filename used by Open Data Kit which is usually
+#'   "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number
 #' @param sd Logical. If TRUE, create an ODK Briefcase Storage in the path
-#'     specified by \code{to}. Default is FALSE.
+#'   specified by \code{to}. Default is FALSE.
 #' @param id Form ID of form to be pulled
 #' @param from Path to source ODK Briefcase Storage from which to extract data.
 #'   This should match directory path specified when making a call to
@@ -24,16 +24,16 @@
 #' @param filename Filename of output CSV data; default is
 #'   \code{paste(id, "_data.csv", sep = "")}
 #' @param start Include data from submission dates after (inclusive) this start
-#' date in export to CSV. Date format <yyyy-MM-dd> or <yyyy/MM/dd>
+#'   date in export to CSV. Date format YYYY-MM-DD or YYYY/MM/DD
 #' @param end Include data from submission dates before (inclusive) this date in
-#' export to CSV. Date format <yyyy-MM-dd> or <yyyy/MM/dd>
+#'   export to CSV. Date format YYYY-MM-DD> or YYYY/MM/DD
 #' @param overwrite Overwrite existing output data in destination
-#' directory with the same filename; default is FALSE
+#'   directory with the same filename; default is FALSE
 #' @param exclude Exclude media files on export; default is TRUE
 #' @param group.names Logical. Should group names be removed from column names
-#'     on export? Default TRUE.
+#'   on export? Default TRUE.
 #' @param split Logical. Should select multiple fields be split on export?
-#'     Default FALSE.
+#'   Default FALSE.
 #'
 #' @return CSV file in destination directory containing data from the pulled
 #' forms

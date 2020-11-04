@@ -106,7 +106,7 @@ question coded as a concatenated string" />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/validmeasures/odkr/">
+  <a href="https://github.com/rapidsurveys/odkr/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -126,7 +126,7 @@ question coded as a concatenated string" />
     <div class="page-header">
     <h1>Function to expand response to a more than one answer multiple choice
 question coded as a concatenated string</h1>
-    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/expand_choice.R'><code>R/expand_choice.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/rapidsurveys/odkr/blob/master/R/expand_choice.R'><code>R/expand_choice.R</code></a></small>
     <div class="hidden name"><code>expand_choice.Rd</code></div>
     </div>
 
@@ -135,15 +135,15 @@ question coded as a concatenated string</h1>
 question coded as a concatenated string</p>
     </div>
 
-    <pre class="usage"><span class='fu'>expand_choice</span>(
-  <span class='no'>df</span>,
-  <span class='no'>x</span>,
-  <span class='no'>values</span>,
-  <span class='kw'>pattern</span> <span class='kw'>=</span> <span class='st'>""</span>,
-  <span class='kw'>prefix</span> <span class='kw'>=</span> <span class='no'>x</span>,
-  <span class='kw'>labels</span> <span class='kw'>=</span> <span class='no'>values</span>,
-  <span class='kw'>sep</span> <span class='kw'>=</span> <span class='st'>"."</span>
-)</pre>
+    <pre class="usage"><span class='fu'>expand_choice</span><span class='op'>(</span>
+  <span class='va'>df</span>,
+  <span class='va'>x</span>,
+  <span class='va'>values</span>,
+  pattern <span class='op'>=</span> <span class='st'>""</span>,
+  prefix <span class='op'>=</span> <span class='va'>x</span>,
+  labels <span class='op'>=</span> <span class='va'>values</span>,
+  sep <span class='op'>=</span> <span class='st'>"."</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -185,17 +185,19 @@ names of newly created variables.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A data.frame with same rows as <code>df</code> containing columns
-  corresponding to each newly created variable.</p>
+corresponding to each newly created variable.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'>expandMultipleChoice</span>(<span class='kw'>df</span> <span class='kw'>=</span> <span class='no'>individual</span>,
-                     <span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>"mddw1"</span>,
-                     <span class='kw'>values</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span>(<span class='fl'>0</span>:<span class='fl'>18</span>),
-                     <span class='kw'>pattern</span> <span class='kw'>=</span> <span class='st'>" "</span>,
-                     <span class='kw'>prefix</span> <span class='kw'>=</span> <span class='st'>"mddw"</span>,
-                     <span class='kw'>sep</span> <span class='kw'>=</span> <span class='st'>""</span>)
-}</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>expandMultipleChoice</span><span class='op'>(</span>df <span class='op'>=</span> <span class='va'>individual</span>,
+                     x <span class='op'>=</span> <span class='st'>"mddw1"</span>,
+                     values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>18</span><span class='op'>)</span>,
+                     pattern <span class='op'>=</span> <span class='st'>" "</span>,
+                     prefix <span class='op'>=</span> <span class='st'>"mddw"</span>,
+                     sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -211,7 +213,7 @@ names of newly created variables.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -102,7 +102,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/validmeasures/odkr/">
+  <a href="https://github.com/rapidsurveys/odkr/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -121,7 +121,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
       <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/validmeasures/odkr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+      <small>Source: <a href='https://github.com/rapidsurveys/odkr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
     <div id="odkr-032" class="section level1">
@@ -133,6 +133,7 @@
 <li><p>created a <code>get_data</code> function to wrap around the <code>pull_remote</code> or <code>pull_local</code> and <code>export_data</code> functions to pull and export data from a server or locally using one function. This function also gives the option for repeat data to be exported.</p></li>
 <li><p>updated the <code>pull_remote</code> and <code>push_data</code> functions to match new CLI syntax for <code>ODK Briefcase</code></p></li>
 <li><p>change license from <code>MIT</code> to <code>GPL3</code></p></li>
+<li><p>removed hex logo as per feedback on ODK branding guidelines</p></li>
 <li><p>general package maintenance (documentation, external site)</p></li>
 <li><p>addressed issues raised by users with regard to package not installable; error arising from a wrong .Rbuildignore specification</p></li>
 </ul>
@@ -156,7 +157,7 @@
 <p>In this version, I have implemented changes to respond to package issues from <a href="https://cran.r-project.org/web/checks/check_results_odkr.html">CRAN check results</a>.</p>
 <ul>
 <li><p>The <code><a href="../reference/get_briefcase.html">get_briefcase()</a></code> function, I changed the download url for ODK Briefcase to the permanent download url provided by the developers at <a href="https://github.com/opendatakit/briefcase" class="uri">https://github.com/opendatakit/briefcase</a>. This now resolves the issue of apparent download of corrupt jar file.</p></li>
-<li><p>All briefcase-releated functions now include a check on runtime of Java availability and Java version checking for a minimum Java version of Java 8. I followed the testing script specified by CRAN in the <em>Writing R Extensions</em> manual.</p></li>
+<li><p>All briefcase-related functions now include a check on runtime of Java availability and Java version checking for a minimum Java version of Java 8. I followed the testing script specified by CRAN in the <em>Writing R Extensions</em> manual.</p></li>
 </ul>
 </div>
     <div id="odkr-013" class="section level1">
@@ -214,7 +215,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

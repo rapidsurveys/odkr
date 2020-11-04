@@ -36,7 +36,7 @@ names of newly created variables.}
 }
 \value{
 A data.frame with same rows as \code{df} containing columns
-  corresponding to each newly created variable.
+corresponding to each newly created variable.
 }
 \description{
 Function to expand response to a more than one answer multiple choice

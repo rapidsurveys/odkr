@@ -106,7 +106,7 @@ nested dataset exported from an ODK Aggregate Server." />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/validmeasures/odkr/">
+  <a href="https://github.com/rapidsurveys/odkr/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -126,7 +126,7 @@ nested dataset exported from an ODK Aggregate Server." />
     <div class="page-header">
     <h1>Retrieve parent data, matching to a nested (child) dataset by keys of a
 nested dataset exported from an ODK Aggregate Server.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/validmeasures/odkr/blob/master/R/nestedSurvey.R'><code>R/nestedSurvey.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/rapidsurveys/odkr/blob/master/R/nestedSurvey.R'><code>R/nestedSurvey.R</code></a></small>
     <div class="hidden name"><code>mergeNestedODK.Rd</code></div>
     </div>
 
@@ -135,13 +135,13 @@ nested dataset exported from an ODK Aggregate Server.</h1>
 nested dataset exported from an ODK Aggregate Server.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>mergeNestedODK</span>(
-  <span class='no'>parent</span>,
-  <span class='no'>child</span>,
-  <span class='kw'>byPARENT_KEY</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>removeCols</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>removeRows</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
-)</pre>
+    <pre class="usage"><span class='fu'>mergeNestedODK</span><span class='op'>(</span>
+  <span class='va'>parent</span>,
+  <span class='va'>child</span>,
+  byPARENT_KEY <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  removeCols <span class='op'>=</span> <span class='cn'>NULL</span>,
+  removeRows <span class='op'>=</span> <span class='cn'>NULL</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -177,9 +177,11 @@ data frame (optional)</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># merge sampleData2 and sampleData3</span>
-<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span>(<span class='no'>sampleData2</span>)
-<span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span>(<span class='no'>sampleData3</span>)
-<span class='no'>temp</span> <span class='kw'>&lt;-</span> <span class='fu'>mergeNestedODK</span>(<span class='kw'>parent</span> <span class='kw'>=</span> <span class='no'>x</span>, <span class='kw'>child</span> <span class='kw'>=</span> <span class='no'>y</span>, <span class='kw'>byPARENT_KEY</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div></pre>
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span><span class='op'>(</span><span class='va'>sampleData2</span><span class='op'>)</span>
+<span class='va'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='renameODK.html'>renameODK</a></span><span class='op'>(</span><span class='va'>sampleData3</span><span class='op'>)</span>
+<span class='va'>temp</span> <span class='op'>&lt;-</span> <span class='fu'>mergeNestedODK</span><span class='op'>(</span>parent <span class='op'>=</span> <span class='va'>x</span>, child <span class='op'>=</span> <span class='va'>y</span>, byPARENT_KEY <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -195,7 +197,7 @@ data frame (optional)</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

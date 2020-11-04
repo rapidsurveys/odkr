@@ -27,15 +27,16 @@ in rows where this is false, all columns will be coded as \code{NA}}
 a data frame with multiple separate 0/1 columns
 }
 \description{
-ab  ac  ad  ef  eg  eh
-[1,]  1   1   1   0   0   0
-[2,]  0   0   0   1   1   1
+\preformatted{  ab  ac  ad  ef  eg  eh
+   1   1   1   0   0   0
+   0   0   0   1   1   1
+}
 }
 \section{NOTE}{
- \code{naCode} must exist as the only answer in a column (an answer that
-contains both a valid answer and the \code{NA} code will not be recognized as
-\code{NA} - instead, the \code{NA} code will be output as an extra answer
-column (if \code{choices} parameter is not given))
+ \code{naCode} must exist as the only answer in a column (an
+answer that contains both a valid answer and the \code{NA} code will not be
+recognized as \code{NA} - instead, the \code{NA} code will be output as an
+extra answer column (if \code{choices} parameter is not given))
 }
 
 \examples{
