@@ -13,6 +13,8 @@ for `ODK Briefcase`
 
 * change license from `MIT` to `GPL3`
 
+* removed hex logo as per feedback on ODK branding guidelines
+
 * general package maintenance (documentation, external site)
 
 # odkr 0.3.1
