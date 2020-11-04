@@ -1,4 +1,4 @@
-# odkr: Open Data Kit (ODK) R API <img src="man/figures/odkr.png" width="200" align="right" />
+# odkr: Open Data Kit (ODK) R API
 
 <!-- badges: start -->
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
