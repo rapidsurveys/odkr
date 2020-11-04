@@ -16,6 +16,6 @@ ODK Briefcase Storage directory in the specified path
 Function to create an ODK Briefcase Storage directory
 }
 \examples{
-create_sd(path = "Desktop")
+create_sd(path = tempdir())
 
 }

@@ -148,21 +148,228 @@ child respondents.</p>
     <p>A data frame with 9 columns and 50 rows:</p><dl>
 <dt><code>wcount.wdata.ccount.child.csex</code></dt><dd><p>Child's gender</p></dd>
 <dt><code>wcount.wdata.ccount.child.card</code></dt><dd><p>Does child have an immunisation
-    card?</p></dd>
+card?</p></dd>
 <dt><code>wcount.wdata.ccount.child.cdob</code></dt><dd><p>Child's date of birth</p></dd>
 <dt><code>wcount.wdata.ccount.child.cage</code></dt><dd><p>Age of child</p></dd>
 <dt><code>wcount.wdata.ccount.illness.ill1</code></dt><dd><p>Has child had diarrhoea in the
-    past 2 weeks</p></dd>
+past 2 weeks</p></dd>
 <dt><code>wcount.wdata.ccount.illness.ill2</code></dt><dd><p>Has child had fever in the past
-    2 weeks</p></dd>
+2 weeks</p></dd>
 <dt><code>wcount.wdata.ccount.illness.ill3</code></dt><dd><p>Has child had cough in the past
-    2 weeks</p></dd>
+2 weeks</p></dd>
 <dt><code>KEY</code></dt><dd><p>Parent data identifier</p></dd>
 <dt><code>PARENT_KEY</code></dt><dd><p>Child data identifier</p></dd>
 
 </dl>
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>sampleData3</span>
+</div><div class='output co'>#&gt;    wcount.wdata.ccount.child.csex wcount.wdata.ccount.child.card
+#&gt; 1                               2                              1
+#&gt; 2                               1                              1
+#&gt; 3                               2                              4
+#&gt; 4                               2                              1
+#&gt; 5                               1                              4
+#&gt; 6                               2                              4
+#&gt; 7                               1                              1
+#&gt; 8                               2                              4
+#&gt; 9                               2                              3
+#&gt; 10                              2                              3
+#&gt; 11                              2                              1
+#&gt; 12                              2                              4
+#&gt; 13                              1                              3
+#&gt; 14                              2                              2
+#&gt; 15                              2                              1
+#&gt; 16                              1                              1
+#&gt; 17                              2                              2
+#&gt; 18                              1                              2
+#&gt; 19                              1                              1
+#&gt; 20                              1                              1
+#&gt; 21                              1                              4
+#&gt; 22                              2                              1
+#&gt; 23                              1                              1
+#&gt; 24                              2                              1
+#&gt; 25                              1                              2
+#&gt; 26                              1                              1
+#&gt; 27                              2                              1
+#&gt; 28                              2                              1
+#&gt; 29                              1                              1
+#&gt; 30                              1                              4
+#&gt; 31                              1                              4
+#&gt; 32                              1                              1
+#&gt; 33                              2                              1
+#&gt; 34                              2                              1
+#&gt; 35                              1                              1
+#&gt; 36                              1                              1
+#&gt; 37                              2                              1
+#&gt; 38                              1                              1
+#&gt; 39                              1                              2
+#&gt; 40                              2                              2
+#&gt; 41                              2                              1
+#&gt; 42                              1                              1
+#&gt; 43                              1                              1
+#&gt; 44                              2                              1
+#&gt; 45                              1                              1
+#&gt; 46                              2                              2
+#&gt; 47                              2                              4
+#&gt; 48                              2                              4
+#&gt; 49                              2                              1
+#&gt; 50                              2                              1
+#&gt;    wcount.wdata.ccount.child.cdob wcount.wdata.ccount.child.cage
+#&gt; 1                      2016-06-15                              6
+#&gt; 2                      2014-08-25                             27
+#&gt; 3                                                             16
+#&gt; 4                      2013-12-24                             36
+#&gt; 5                                                             36
+#&gt; 6                                                             39
+#&gt; 7                      2013-04-14                             44
+#&gt; 8                                                             42
+#&gt; 9                      2015-12-24                             12
+#&gt; 10                     2013-10-24                             38
+#&gt; 11                     2014-10-09                             26
+#&gt; 12                                                            36
+#&gt; 13                     2013-08-20                             40
+#&gt; 14                     2016-06-24                              6
+#&gt; 15                     2014-12-24                             24
+#&gt; 16                     2015-05-18                             19
+#&gt; 17                     2016-09-24                              2
+#&gt; 18                     2013-07-06                             41
+#&gt; 19                     2015-03-19                             21
+#&gt; 20                     2015-10-08                             14
+#&gt; 21                                                            12
+#&gt; 22                     2013-12-24                             36
+#&gt; 23                     2014-02-25                             33
+#&gt; 24                     2013-06-20                             42
+#&gt; 25                     2014-09-24                             27
+#&gt; 26                     2014-09-19                             27
+#&gt; 27                     2015-11-24                             13
+#&gt; 28                     2014-11-15                             25
+#&gt; 29                     2012-01-09                             59
+#&gt; 30                                                             3
+#&gt; 31                                                            48
+#&gt; 32                     2013-07-21                             41
+#&gt; 33                     2014-07-24                             29
+#&gt; 34                     2014-05-19                             31
+#&gt; 35                     2016-08-28                              3
+#&gt; 36                     2014-07-07                             29
+#&gt; 37                     2016-03-15                              9
+#&gt; 38                     2013-12-24                             36
+#&gt; 39                     2013-12-17                             36
+#&gt; 40                     2015-10-20                             14
+#&gt; 41                     2013-12-24                             36
+#&gt; 42                     2016-10-24                              2
+#&gt; 43                     2013-12-24                             36
+#&gt; 44                     2016-02-29                              9
+#&gt; 45                     2016-01-01                             11
+#&gt; 46                     2016-03-28                              8
+#&gt; 47                                                            24
+#&gt; 48                                                            39
+#&gt; 49                     2014-01-05                             35
+#&gt; 50                     2014-05-05                             31
+#&gt;    wcount.wdata.ccount.illness.ill1 wcount.wdata.ccount.illness.ill2
+#&gt; 1                                 2                                2
+#&gt; 2                                 2                                2
+#&gt; 3                                 1                                1
+#&gt; 4                                 2                                2
+#&gt; 5                                 2                                2
+#&gt; 6                                 2                                2
+#&gt; 7                                 2                                2
+#&gt; 8                                 2                                2
+#&gt; 9                                 2                                2
+#&gt; 10                                2                                1
+#&gt; 11                                1                                1
+#&gt; 12                                2                                2
+#&gt; 13                                2                                2
+#&gt; 14                                2                                2
+#&gt; 15                                2                                2
+#&gt; 16                                2                                2
+#&gt; 17                                2                                2
+#&gt; 18                                1                                1
+#&gt; 19                                2                                2
+#&gt; 20                                2                                2
+#&gt; 21                                2                                1
+#&gt; 22                                2                                2
+#&gt; 23                                2                                2
+#&gt; 24                                2                                2
+#&gt; 25                                2                                1
+#&gt; 26                                2                                2
+#&gt; 27                                2                                2
+#&gt; 28                                2                                2
+#&gt; 29                                2                                2
+#&gt; 30                                2                                2
+#&gt; 31                                2                                2
+#&gt; 32                                2                                2
+#&gt; 33                                2                                2
+#&gt; 34                                1                                2
+#&gt; 35                                2                                2
+#&gt; 36                                2                                2
+#&gt; 37                                2                                2
+#&gt; 38                                2                                2
+#&gt; 39                                1                                1
+#&gt; 40                                1                                2
+#&gt; 41                                2                                1
+#&gt; 42                                2                                2
+#&gt; 43                                2                                2
+#&gt; 44                                1                                2
+#&gt; 45                                2                                2
+#&gt; 46                                2                                2
+#&gt; 47                                2                                2
+#&gt; 48                                2                                2
+#&gt; 49                                2                                2
+#&gt; 50                                2                                2
+#&gt;    wcount.wdata.ccount.illness.ill3 KEY PARENT_KEY
+#&gt; 1                                 2   1          1
+#&gt; 2                                 1   2          1
+#&gt; 3                                 2   3          4
+#&gt; 4                                 2   4          7
+#&gt; 5                                 2   5          9
+#&gt; 6                                 1   6         12
+#&gt; 7                                 2   7         13
+#&gt; 8                                 2   8         14
+#&gt; 9                                 2   9         20
+#&gt; 10                                2  10         20
+#&gt; 11                                1  11         21
+#&gt; 12                                2  12         23
+#&gt; 13                                2  13         24
+#&gt; 14                                2  14         25
+#&gt; 15                                2  15         25
+#&gt; 16                                2  16         26
+#&gt; 17                                2  17         31
+#&gt; 18                                2  18         32
+#&gt; 19                                1  19         33
+#&gt; 20                                1  20         34
+#&gt; 21                                2  21         37
+#&gt; 22                                2  22         38
+#&gt; 23                                2  23         39
+#&gt; 24                                2  24         42
+#&gt; 25                                2  25         43
+#&gt; 26                                1  26         46
+#&gt; 27                                2  27         48
+#&gt; 28                                2  28         49
+#&gt; 29                                2  29         49
+#&gt; 30                                2  30         51
+#&gt; 31                                2  31         51
+#&gt; 32                                2  32         52
+#&gt; 33                                2  33         52
+#&gt; 34                                1  34         53
+#&gt; 35                                1  35         53
+#&gt; 36                                1  36         54
+#&gt; 37                                1  37         54
+#&gt; 38                                2  38         55
+#&gt; 39                                2  39         56
+#&gt; 40                                2  40         56
+#&gt; 41                                2  41         57
+#&gt; 42                                2  42         57
+#&gt; 43                                2  43         59
+#&gt; 44                                1  44         60
+#&gt; 45                                1  45         62
+#&gt; 46                                2  46         64
+#&gt; 47                                1  47         65
+#&gt; 48                                2  48         65
+#&gt; 49                                1  49         67
+#&gt; 50                                2  50         67</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

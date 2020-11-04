@@ -34,7 +34,7 @@ renameODK <- function(data) {
   #
   colNames <- stringr::str_split(names(data), "\\.")
   temp <- vector(length = length(names(data)))
-  for (i in 1:length(colNames)) {
+  for (i in seq_len(length(colNames))) {
     #
     # take only the last element from each split and write to vector
     #

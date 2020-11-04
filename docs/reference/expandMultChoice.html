@@ -44,9 +44,12 @@ with multiple separate 0/1 columns e.g.: — expandMultChoice • odkr</title>
 <meta property="og:title" content="Function to recode a choose-multiple column where multiple answers are
 recorded in the same element (e.g. "ab ac ad", "ef eg eh") to a data frame
 with multiple separate 0/1 columns e.g.: — expandMultChoice" />
-<meta property="og:description" content="ab  ac  ad  ef  eg  eh
-[1,]  1   1   1   0   0   0
-[2,]  0   0   0   1   1   1" />
+<meta property="og:description" content="
+  ab  ac  ad  ef  eg  eh
+   1   1   1   0   0   0
+   0   0   0   1   1   1
+
+" />
 
 
 
@@ -135,9 +138,12 @@ with multiple separate 0/1 columns e.g.:</h1>
     </div>
 
     <div class="ref-description">
-    <p>ab  ac  ad  ef  eg  eh
-[1,]  1   1   1   0   0   0
-[2,]  0   0   0   1   1   1</p>
+    
+<pre>  ab  ac  ad  ef  eg  eh
+   1   1   1   0   0   0
+   0   0   0   1   1   1
+</pre>
+
     </div>
 
     <pre class="usage"><span class='fu'>expandMultChoice</span>(<span class='kw'>answers</span>, choices = <span class='kw'>NULL</span>, naCode = <span class='kw'>NULL</span>, naQuestion = <span class='kw'>NULL</span>)</pre>
@@ -174,10 +180,10 @@ in rows where this is false, all columns will be coded as <code>NA</code></p></t
     <p>a data frame with multiple separate 0/1 columns</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>NOTE</h2>
 
-    <p><code>naCode</code> must exist as the only answer in a column (an answer that
-contains both a valid answer and the <code>NA</code> code will not be recognized as
-<code>NA</code> - instead, the <code>NA</code> code will be output as an extra answer
-column (if <code>choices</code> parameter is not given))</p>
+    <p><code>naCode</code> must exist as the only answer in a column (an
+answer that contains both a valid answer and the <code>NA</code> code will not be
+recognized as <code>NA</code> - instead, the <code>NA</code> code will be output as an
+extra answer column (if <code>choices</code> parameter is not given))</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Expand responses in variable w7 of sampleData2</span>

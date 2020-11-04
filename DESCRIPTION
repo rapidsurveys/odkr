@@ -5,8 +5,7 @@ Version: 0.3.2
 Authors@R: c(
     person("Ernest", "Guevarra", comment = c(ORCID = "0000-0002-4887-4415"), 
            email = "ernestgmd@gmail.com", role = c("aut", "cre", "cph")),
-    person("Laura", "Bramley", email = "laura@validinternational.org", 
-           role = c("aut", "cph")))
+    person("Laura", "Bramley", role = c("aut", "cph")))
 Description: Utility functions for working with datasets gathered using
     'Open Data Kit' ('ODK') <https://opendatakit.org/>. These include an API to 
     interface with 'ODK Briefcase', a 'Java' application for fetching and pushing 
@@ -16,7 +15,9 @@ Description: Utility functions for working with datasets gathered using
     a single dataframe from a nested 'ODK' dataset and an expand function to 
     disaggregate multiple choice answers that have been collapsed into single code 
     by 'ODK'.
+License: GPL-3
 Depends: R (>= 2.10)
+SystemRequirements: Java (>= 8)
 Imports: 
     stringr,
     Hmisc,
@@ -24,12 +25,12 @@ Imports:
     rJava
 Suggests: 
     testthat,
-    spelling
-SystemRequirements: Java (>= 8)
-License: GPL-3
+    spelling,
+    covr
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
 RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
 URL: https://github.com/rapidsurveys/odkr, https://rapidsurveys.io/odkr
 BugReports: https://github.com/rapidsurveys/odkr/issues

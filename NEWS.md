@@ -17,6 +17,9 @@ for `ODK Briefcase`
 
 * general package maintenance (documentation, external site)
 
+* addressed issues raised by users with regard to package not installable; error
+arising from a wrong .Rbuildignore specification
+
 # odkr 0.3.1
 
 This is the fourth release of `odkr` (second development release).
@@ -36,7 +39,7 @@ In this version, I have implemented changes to respond to package issues from
 the permanent download url provided by the developers at https://github.com/opendatakit/briefcase.
 This now resolves the issue of apparent download of corrupt jar file.
 
-* All briefcase-releated functions now include a check on runtime of Java availability
+* All briefcase-related functions now include a check on runtime of Java availability
 and Java version checking for a minimum Java version of Java 8. I followed the testing
 script specified by CRAN in the *Writing R Extensions* manual.
 

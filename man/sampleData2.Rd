@@ -13,17 +13,17 @@ A data frame with 16 columns and 50 rows:
 \item{\code{wcount.wdata.women.wmarried}}{Is mother married?}
 \item{\code{wcount.wdata.women.wpregnant}}{Is mother pregnant?}
 \item{\code{wcount.wdata.women.wedu1}}{Mother - number of years of formal
-    education}
+education}
 \item{\code{wcount.wdata.women.wedu2}}{Mother - highest educational attainment}
 \item{\code{wcount.wdata.women.wanthro}}{Mother's middle upper arm
-    circumference (mm)}
+circumference (mm)}
 \item{\code{wcount.wdata.women.screening}}{Has mother's MUAC and oedema been
-    measured/tested in past month}
+measured/tested in past month}
 \item{\code{wcount.wdata.wash.ws1}}{Source of drinking water}
 \item{\code{wcount.wdata.wash.ws2}}{Water treatment}
 \item{\code{wcount.wdata.wash.ws3}}{Sanitation facility}
 \item{\code{wcount.wdata.wash.ws4}}{Is sanitation facility shared with other
-    households?}
+households?}
 \item{\code{wcount.wdata.wash.ws5}}{Is sanitation facility used by public}
 \item{\code{wcount.wdata.wash.ws6}}{Sanitary disposal of child's faeces}
 \item{\code{wcount.wdata.wash.ws7}}{Episodes when handwashing is done}
@@ -38,5 +38,9 @@ sampleData2
 Sample dataset from an impact evaluation study of a mother and child nutrition
 programme in Kassala State, Sudan. This dataset contains information from
 mother respondents.
+}
+\examples{
+sampleData2
+
 }
 \keyword{datasets}

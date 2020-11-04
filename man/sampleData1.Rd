@@ -35,4 +35,8 @@ Sample dataset from an impact evaluation study of a mother and child nutrition
 programme in Kassala State, Sudan. This dataset contains cluster level data
 from the survey.
 }
+\examples{
+sampleData1
+
+}
 \keyword{datasets}

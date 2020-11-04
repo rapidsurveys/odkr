@@ -97,7 +97,7 @@
 <p><code>odkr</code> is a set of interface and utility tools for a <strong>useR</strong> working with ODK. The package currently has two classes of functions: 1) <em>data processing</em> tools; and, 2) <em>ODK-R interface</em> functions.</p>
 <p>For <em>data processing</em>, there are currently three functions included which can be used to perform typical data processing tasks associated with working with ODK-collected datasets such as renaming variables in a dataset, expansion of responses to questions that allow more than one answer and merging of nested datasets.</p>
 <p>For <em>ODK-R interface</em>, included are a set of functions that work via a command line interface with the Java application <strong>ODK Briefcase</strong> for fetching and pushing Open Data Kit (ODK) forms and their contents. It can be used to gather and aggregate data from the mobile client <strong>ODK Collect</strong> when there is no internet connectivity, when there is no <strong>ODK Aggregate Server</strong> set-up or when an <strong>ODK Aggregate Server</strong> is not preferred. Current production version of <strong>ODK Briefcase</strong> is v1.8.0 and an executable <code>.jar</code> file can be downloaded from the Open Data Kit <a href="https://opendatakit.org/use/briefcase/">website</a>.</p>
-<p>As of <strong>ODK Briefcase</strong> version 1.4.4, a scriptable command line interface (CLI) to the Java application has been available. This package provides an R interface to <strong>ODK Briefcase</strong> via the available CLI to pull forms from a remote <strong>ODK Aggregate Server</strong> or from a local ODK folder <code>/odk</code> collected from mobile clients. This package has a function that downloads the lastest version of <strong>ODK Briefcase</strong> (currently v1.8.0) and additional functions that use the CLI of <strong>ODK Briefcase</strong> to perform data extraction and data export. This package requires Java 8 installed. Jave 8 can be downloaded from <a href="https://java.com/en/download/">here</a>.</p>
+<p>As of <strong>ODK Briefcase</strong> version 1.4.4, a scriptable command line interface (CLI) to the Java application has been available. This package provides an R interface to <strong>ODK Briefcase</strong> via the available CLI to pull forms from a remote <strong>ODK Aggregate Server</strong> or from a local ODK folder <code>/odk</code> collected from mobile clients. This package has a function that downloads the latest version of <strong>ODK Briefcase</strong> (currently v1.8.0) and additional functions that use the CLI of <strong>ODK Briefcase</strong> to perform data extraction and data export. This package requires Java 8 installed. Java 8 can be downloaded from <a href="https://java.com/en/download/">here</a>.</p>
 <div id="requirements" class="section level2">
 <h2 class="hasAnchor">
 <a href="#requirements" class="anchor"></a>Requirements</h2>
@@ -112,13 +112,13 @@
 <p>Install <code>odkr</code> from CRAN:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"odkr"</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/validmeasures/odkr">odkr</a></span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/rapidsurveys/odkr">odkr</a></span>)
 </pre></div>
 <p>Install development version of <code>odkr</code> by installing devtools and then installing <code>odkr</code> package via git</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="co"># install.packages("devtools")</span>
 <span class="kw">devtools</span>::<span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"validmeasures/odkr"</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/validmeasures/odkr">odkr</a></span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/rapidsurveys/odkr">odkr</a></span>)
 </pre></div>
 </div>
 <div id="usage" class="section level2">
@@ -170,7 +170,7 @@
 <span id="cb10-5"><a href="#cb10-5"></a>            <span class="dt">username =</span> <span class="st">"validtrial"</span>,</span>
 <span id="cb10-6"><a href="#cb10-6"></a>            <span class="dt">password =</span> <span class="st">"zEF-STN-5ze-qom"</span>)</span></code></pre></div>
 <p>In this example, you will note that we are using a previously downloaded <strong>ODK Briefcase</strong> saved in the <code>Desktop</code>. The <code>target</code> specification can be changed to the directory where you have previously saved <strong>ODK Briefcase</strong>.</p>
-<p>After the operation has been completed, you would now be able to see a folder named <strong>ODK Briefcase Storage</strong> on your <code>Desktop</code> containing the forms and instances from the stakholders form on the <strong>ODK Aggregate Server</strong>.</p>
+<p>After the operation has been completed, you would now be able to see a folder named <strong>ODK Briefcase Storage</strong> on your <code>Desktop</code> containing the forms and instances from the stakeholders form on the <strong>ODK Aggregate Server</strong>.</p>
 <p><strong>2. Pull forms from a local <code>/odk</code> folder extracted from ODK Collect</strong> If you do not have an <strong>ODK Aggregate Server</strong> setup and plan to use <strong>ODK Briefcase</strong> as your form aggregator, you will have to extract/copy the <code>/odk</code> folder in your mobile client to a location in your computer (e.g., <code>~/Desktop</code>) to which you can apply the <code>pull_local</code> function to pull out the forms and instances to a local directory (e.g., <code>~/Desktop</code>) as follows:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit">
 <span class="fu"><a href="reference/pull_local.html">pull_local</a></span>(target = <span class="st">"~/Desktop"</span>,
@@ -179,7 +179,7 @@
            from = <span class="st">"~/Desktop"</span>)
 </pre></div>
 <p>In this example, you will note that we are using a previously downloaded <strong>ODK Briefcase</strong> saved in the <code>Desktop</code>. The <code>target</code> specification can be changed to the directory where you have previously saved <strong>ODK Briefcase</strong>.</p>
-<p>After the operation has been completed, you would now be able to see a folder named <strong>ODK Briefcase Storage</strong> on your desktop containing the forms and instances from the stakholders form on the <strong>ODK Aggregate Server</strong>.</p>
+<p>After the operation has been completed, you would now be able to see a folder named <strong>ODK Briefcase Storage</strong> on your desktop containing the forms and instances from the stakeholders form on the <strong>ODK Aggregate Server</strong>.</p>
 <p><strong>3. Export data from an ODK Briefcase Storage into a CSV file</strong> If you have pulled your forms from either a remote <strong>ODK Aggregate Server</strong> or a local <code>/odk</code> folder and now have an <strong>ODK Briefcase Storage</strong> in one of your local directories, you will probably want to extract the data found in these forms for use in other purposes e.g., data analysis.</p>
 <p>The <code>export_data</code> function allows you to extract data from a local <strong>ODK Briefcase Storage</strong> (e.g., found in your <code>~/Desktop</code>) containing a form <code>stakeholders</code> and save it in a local directory (e.g., <code>~/Desktop</code>) as a <code>.csv</code> file named <code>test.csv</code> as follows:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit">
@@ -217,6 +217,12 @@
 <li><small><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></small></li>
 </ul>
 </div>
+<div class="community">
+<h2>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
+</ul>
+</div>
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
@@ -228,11 +234,12 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
 <li><a href="http://www.repostatus.org/#active"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed."></a></li>
-<li><a href="https://travis-ci.org/validmeasures/odkr"><img src="https://img.shields.io/travis/validmeasures/odkr.svg?branch=master" alt="Travis"></a></li>
-<li><a href="https://ci.appveyor.com/project/validmeasures/odkr"><img src="https://ci.appveyor.com/api/projects/status/github/validmeasures/odkr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
-<li><a href="https://codecov.io/gh/validmeasures/odkr"><img src="https://codecov.io/gh/validmeasures/odkr/branch/master/graph/badge.svg" alt="codecov"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
+<li><a href="https://travis-ci.org/rapidsurveys/odkr"><img src="https://img.shields.io/travis/rapidsurveys/odkr.svg?branch=master" alt="Travis"></a></li>
+<li><a href="https://ci.appveyor.com/project/rapidsurveys/odkr"><img src="https://ci.appveyor.com/api/projects/status/github/rapidsurveys/odkr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
+<li><a href="https://codecov.io/gh/rapidsurveys/odkr"><img src="https://codecov.io/gh/rapidsurveys/odkr/branch/master/graph/badge.svg" alt="codecov"></a></li>
+<li><a href="https://www.codefactor.io/repository/github/rapidsurveys/odkr"><img src="https://www.codefactor.io/repository/github/rapidsurveys/odkr/badge" alt="CodeFactor"></a></li>
 <li><a href="https://doi.org/10.5281/zenodo.1170514"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.1170514.svg" alt="DOI"></a></li>
 </ul>
 </div>

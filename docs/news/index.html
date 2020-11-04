@@ -135,6 +135,7 @@
 <li><p>change license from <code>MIT</code> to <code>GPL3</code></p></li>
 <li><p>removed hex logo as per feedback on ODK branding guidelines</p></li>
 <li><p>general package maintenance (documentation, external site)</p></li>
+<li><p>addressed issues raised by users with regard to package not installable; error arising from a wrong .Rbuildignore specification</p></li>
 </ul>
 </div>
     <div id="odkr-031" class="section level1">
@@ -156,7 +157,7 @@
 <p>In this version, I have implemented changes to respond to package issues from <a href="https://cran.r-project.org/web/checks/check_results_odkr.html">CRAN check results</a>.</p>
 <ul>
 <li><p>The <code><a href="../reference/get_briefcase.html">get_briefcase()</a></code> function, I changed the download url for ODK Briefcase to the permanent download url provided by the developers at <a href="https://github.com/opendatakit/briefcase" class="uri">https://github.com/opendatakit/briefcase</a>. This now resolves the issue of apparent download of corrupt jar file.</p></li>
-<li><p>All briefcase-releated functions now include a check on runtime of Java availability and Java version checking for a minimum Java version of Java 8. I followed the testing script specified by CRAN in the <em>Writing R Extensions</em> manual.</p></li>
+<li><p>All briefcase-related functions now include a check on runtime of Java availability and Java version checking for a minimum Java version of Java 8. I followed the testing script specified by CRAN in the <em>Writing R Extensions</em> manual.</p></li>
 </ul>
 </div>
     <div id="odkr-013" class="section level1">

@@ -8,7 +8,6 @@ template:
     ganalytics: UA-102485058-5
 
 home:
-
   links:
   - text: Read more about Open Data Kit
     href: https://opendatakit.org
