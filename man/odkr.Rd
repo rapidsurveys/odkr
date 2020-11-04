@@ -10,9 +10,8 @@ ODK Briefcase is a Java application for fetching and pushing OpenDataKit
 (ODK) forms and their contents. It can be used to gather and aggregate data
 from the mobile client ODK Collect when there is no internet connectivity,
 when there is no ODK Aggregate Server set-up or when an ODK Aggregate
-Server is not preferred. Current production version of ODK Briefcase is
-v1.8.0 and an executable \code{.jar} file can be downloaded from the OpenDataKit
-GitHub \href{https://github.com/opendatakit/briefcase/releases}{repo}.
+Server is not preferred. ODK Briefcase executable \code{.jar} file can be
+downloaded from the OpenDataKit GitHub \href{https://github.com/getodk/briefcase/releases}{repo}.
 }
 \details{
 As of ODK Briefcase version 1.4.4, a scriptable command line interface (CLI)
@@ -26,6 +25,7 @@ mobile clients. This package requires Java 8 installed. Java 8 can be downloaded
 Useful links:
 \itemize{
   \item \url{https://github.com/rapidsurveys/odkr}
+  \item \url{https://rapidsurveys.io/odkr}
   \item Report bugs at \url{https://github.com/rapidsurveys/odkr/issues}
 }
 
