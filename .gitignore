@@ -24,7 +24,6 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 .Rproj.user
-.github
 .DS_Store
 /ODK Briefcase Storage/
 /*.csv
