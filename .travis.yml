@@ -6,6 +6,8 @@ cache: packages
 
 #before_install:
 #  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo R CMD javareconf ; fi
+before_install:
+  - sudo $(which R) CMD javareconf
 
 #before_script:
 #  - java -version
