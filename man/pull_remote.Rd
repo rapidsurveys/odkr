@@ -11,6 +11,8 @@ pull_remote(
   id = "",
   to = "",
   from = "",
+  include_incomplete = FALSE,
+  max_http_connections = NULL,
   username,
   password
 )
@@ -37,6 +39,14 @@ specified by \code{to}. Default is FALSE.}
 \item{to}{Destination directory for pulled ODK forms}
 
 \item{from}{URL of remote ODK Aggregate server to pull ODK forms data from}
+
+\item{include_incomplete}{Logical. Should incomplete forms be pulled? Default
+to FALSE}
+
+\item{max_http_connections}{Integer value for maximum simultaneous HTTP
+connections allowed. Defaults to NULL which will allow for the default 8
+simultaneous HTTP connections. Specify this parameter if more simultaneous
+connection required}
 
 \item{username}{Username for account in remote ODK Aggregate server from
 which forms are to be pulled}
