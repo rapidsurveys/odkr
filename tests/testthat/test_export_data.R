@@ -1,7 +1,18 @@
 library(odkr)
 context("Check exported data")
 
+dirPath <- tempdir()
+get_briefcase(destination = dirPath)
+
+export_data(target = dirPath,
+            id = "stakeholders",
+            to = dirPath,
+            from = dirPath,
+            filename = "test.csv",
+            overwrite = TRUE)
+
 test_that("Output CSV data exists", {
+  #testthat::skip_on_appveyor(message = "Temporary directory allocation is not persistent in Windows")
   expect_true(file.exists(paste(dirPath, "/test.csv", sep = "")))
 })
 
