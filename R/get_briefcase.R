@@ -23,7 +23,7 @@
 
 get_briefcase <- function(destination = "",
                           briefcase = "odkBriefcase_latest") {
-  
+
   ## Check if appropriate Java runtime version is available
   rJava::.jinit()
   jv <- rJava::.jcall("java/lang/System", "S", "getProperty", "java.runtime.version")
@@ -40,11 +40,14 @@ get_briefcase <- function(destination = "",
   ## Get the url for latest release download of Briefcase from GitHub
   x <- curl::curl("https://api.github.com/repos/getodk/briefcase/releases/latest")
 
+  ## Close connection to Briefcase download URL
+  on.exit(expr = close(x))
+
   y <- readLines(x, warn = FALSE)
   z <- unlist(stringr::str_split(y, pattern = ","))
   download.url <- stringr::str_extract(string = z[stringr::str_detect(z, "browser_download_url")],
                                        pattern = " ?(f|ht)tp(s?)://(.*)[.][a-z]+")
-  
+
   ## Download the latest release Briefcase from GitHub
   download.file(url = download.url,
                 destfile = paste(destination, "/", briefcase, ".jar", sep = ""),
