@@ -23,7 +23,7 @@
 #' @param max_http_connections Integer value for maximum simultaneous HTTP
 #'   connections allowed. Defaults to NULL which will allow for the default 8
 #'   simultaneous HTTP connections. Specify this parameter if more simultaneous
-#'   connection required
+#'   connections are required. Maximum value is 32.
 #' @param username Username for account in remote ODK Aggregate server from
 #'   which forms are to be pulled
 #' @param password Password for account in remote ODK Aggregate server from
@@ -96,9 +96,16 @@ pull_remote <- function(target = "",
     create_sd(path = to)
   }
 
-  ## Check value for maximum HTTP connections
-  if(is.null(max_http_connections)) {
+  ## Check that max_http_connections is numeric
+  if(!is.numeric(max_http_connections) & !is.null(max_http_connections)) {
+    warning("Value for maximum simultaneous HTTP connections (max_http_connecions) should be numeric. Setting value back to default.", call. = TRUE)
+    max_http_connections <- NULL
+  }
 
+  ## Check that max_http_connections value for maximum HTTP connections is not more than 32
+  if(max_http_connections > 32) {
+    warning("Value for maximum simultaneous HTTP connections (max_http_connecions) should not be more than 32. Setting value back to default.", call. = TRUE)
+    max_http_connections <- NULL
   }
 
   ## Create command line inputs based on required specifications
