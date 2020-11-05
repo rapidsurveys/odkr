@@ -9,7 +9,8 @@ pull_remote(target = dirPath,
             from = "https://ona.io/validtrial",
             to = dirPath,
             username = "validtrial",
-            password = "zEF-STN-5ze-qom")
+            password = "zEF-STN-5ze-qom",
+            max_http_connections = 40)
 
 #pull_local(target = dirPath,
 #           id = "stakeholders",
