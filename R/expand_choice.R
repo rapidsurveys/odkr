@@ -38,7 +38,7 @@ expand_choice <- function(df, x, values, pattern = "",
   labels <- paste(prefix, labels, sep = sep)
   temp <- stringr::str_split(df[ , x], pattern = pattern)
   result <- NULL
-  for(i in 1:length(temp)) {
+  for(i in seq_len(length(temp))) {
     for(j in values){
       result <- c(result, ifelse(j %in% temp[[i]], 1, 0))
     }
