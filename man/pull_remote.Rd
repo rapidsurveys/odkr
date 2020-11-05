@@ -46,7 +46,7 @@ to FALSE}
 \item{max_http_connections}{Integer value for maximum simultaneous HTTP
 connections allowed. Defaults to NULL which will allow for the default 8
 simultaneous HTTP connections. Specify this parameter if more simultaneous
-connection required}
+connections are required. Maximum value is 32.}
 
 \item{username}{Username for account in remote ODK Aggregate server from
 which forms are to be pulled}
