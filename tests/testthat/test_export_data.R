@@ -2,7 +2,7 @@ library(odkr)
 context("Check exported data")
 
 test_that("Output CSV data exists", {
-  testthat::skip_on_appveyor(message = "Temporary directory allocation is not persistent in Windows")
+  testthat::skip_on_appveyor()
   expect_true(file.exists(paste(dirPath, "/test.csv", sep = "")))
 })
 
