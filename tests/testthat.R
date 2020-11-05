@@ -10,7 +10,7 @@ pull_remote(target = dirPath,
             to = dirPath,
             username = "validtrial",
             password = "zEF-STN-5ze-qom",
-            max_http_connections = 40)
+            max_http_connections = 30)
 
 #pull_local(target = dirPath,
 #           id = "stakeholders",
