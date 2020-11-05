@@ -235,3 +235,8 @@ export_data(target = "~/Desktop",
             to = "~/Desktop",
             filename = "test.csv")
 ```
+
+## Disclaimer
+
+`odkr` is an independently developed R package and is not officially part of ODK and is not developed, recognised and endorsed as a product/service of ODK.
+
