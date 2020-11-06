@@ -1,10 +1,6 @@
 library(odkr)
 context("Check pull_remote output")
 
-#test_that("ODK Briefcase Storage exists", {
-#  expect_true(file.exists(paste(dirPath, "/ODK Briefcase Storage", sep = "")))
-#})
-
 test_that("Error for no target", {
   expect_error(pull_remote(sd = TRUE,
                            id = "stakeholders",
