@@ -1,9 +1,6 @@
 library(odkr)
 context("Check exported data")
 
-library(testthat)
-library(odkr)
-
 test_that("Error for no target", {
   expect_error(export_data(id = "stakeholders",
                            to = dirPath,
