@@ -4,24 +4,30 @@
 #' via ODK Briefcase
 #'
 #' @param target Path to directory of ODK Briefcase \code{.jar} file. Directory
-#'     path should match directory path used when calling \code{get_briefcase()}.
-#'     If ODK Briefcase \code{.jar} file was downloaded manually from \url{https://opendatakit.org},
-#'     \code{target} should match the directory path where \code{.jar} file has
-#'     been downloaded into.
+#'   path should match directory path used when calling \code{get_briefcase()}.
+#'   If ODK Briefcase \code{.jar} file was downloaded manually from \url{https://opendatakit.org},
+#'   \code{target} should match the directory path where \code{.jar} file has
+#'   been downloaded into.
 #' @param briefcase Filename of the downloaded ODK Briefcase \code{.jar} file.
-#'     Default is \code{odkBriefcase_latest} to match the default filename used
-#'     by \code{get_briefcase()}. If ODK Briefcase \code{.jar} file was
-#'     downloaded manually from \url{https://opendatakit.org}, filename should
-#'     match the default filename used by Open Data Kit which is usually
-#'     "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number
+#'   Default is \code{odkBriefcase_latest} to match the default filename used
+#'   by \code{get_briefcase()}. If ODK Briefcase \code{.jar} file was
+#'   downloaded manually from \url{https://opendatakit.org}, filename should
+#'   match the default filename used by Open Data Kit which is usually
+#'   "ODK Briefcase vX.Y.Z Production.jar" where vX.Y.Z is the version number
 #' @param id Form ID of form to push ODK forms data into
 #' @param from Directory containing ODK forms data to push to remote ODK aggregate
-#'     server
+#'   server
 #' @param to URL of remote ODK Aggregate server
+#' @param force_send_blank Logical. Should blank form be forced into the
+#'   Aggregate instance
+#' @param max_http_connections Integer value for maximum simultaneous HTTP
+#'   connections allowed. Defaults to NULL which will allow for the default 8
+#'   simultaneous HTTP connections. Specify this parameter if more simultaneous
+#'   connection required
 #' @param username Username for account in remote ODK Aggregate server from
-#'     which forms are to be pulled
+#'   which forms are to be pulled
 #' @param password Password for account in remote ODK Aggregate server from
-#'     which forms are to be pulled
+#'   which forms are to be pulled
 #'
 #' @return NULL
 #'
@@ -45,8 +51,15 @@
 #
 ################################################################################
 
-push_data <- function(target = "", briefcase = "odkBriefcase_latest",
-                      id = "", to = "", from = "", username, password) {
+push_data <- function(target = "",
+                      briefcase = "odkBriefcase_latest",
+                      id = "",
+                      to = "",
+                      from = "",
+                      force_send_blank = FALSE,
+                      max_http_connections = NULL,
+                      username,
+                      password) {
   ## Check if appropriate Java runtime version is available
   rJava::.jinit()
   jv <- rJava::.jcall("java/lang/System", "S", "getProperty", "java.runtime.version")
@@ -82,7 +95,11 @@ push_data <- function(target = "", briefcase = "odkBriefcase_latest",
              " --storage_directory ", to,
              " --odk_url ", from,
              " --odk_username ", username,
-             " --odk_password ", password, sep = "")
+             " --odk_password ", password,
+             if(force_send_blank) " --force_send_blank ",
+             " --max_http_connections ",
+             if(is.null(max_http_connections)) " 8" else paste(" ", max_http_connections, sep = ""),
+             sep = "")
 
   ## Execute inputs on command line
   system(z)

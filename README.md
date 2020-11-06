@@ -8,7 +8,6 @@
 [![codecov](https://codecov.io/gh/rapidsurveys/odkr/branch/master/graph/badge.svg)](https://codecov.io/gh/rapidsurveys/odkr)
 [![CodeFactor](https://www.codefactor.io/repository/github/rapidsurveys/odkr/badge)](https://www.codefactor.io/repository/github/rapidsurveys/odkr)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1170514.svg)](https://doi.org/10.5281/zenodo.1170514)
-[![CodeFactor](https://www.codefactor.io/repository/github/rapidsurveys/odkr/badge)](https://www.codefactor.io/repository/github/rapidsurveys/odkr)
 <!-- badges: end -->
 
 
@@ -236,3 +235,8 @@ export_data(target = "~/Desktop",
             to = "~/Desktop",
             filename = "test.csv")
 ```
+
+## Disclaimer
+
+`odkr` is an independently developed R package and is not officially part of ODK and is not developed, recognised and endorsed as a product/service of ODK.
+

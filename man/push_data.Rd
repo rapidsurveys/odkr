@@ -11,6 +11,8 @@ push_data(
   id = "",
   to = "",
   from = "",
+  force_send_blank = FALSE,
+  max_http_connections = NULL,
   username,
   password
 )
@@ -35,6 +37,14 @@ match the default filename used by Open Data Kit which is usually
 
 \item{from}{Directory containing ODK forms data to push to remote ODK aggregate
 server}
+
+\item{force_send_blank}{Logical. Should blank form be forced into the
+Aggregate instance}
+
+\item{max_http_connections}{Integer value for maximum simultaneous HTTP
+connections allowed. Defaults to NULL which will allow for the default 8
+simultaneous HTTP connections. Specify this parameter if more simultaneous
+connection required}
 
 \item{username}{Username for account in remote ODK Aggregate server from
 which forms are to be pulled}

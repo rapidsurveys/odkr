@@ -1,12 +1,7 @@
-# odkr 0.3.2
+# odkr 0.3.2.9000
 
 This is the fifth release of `odkr` (third development release). In this version,
 the following have been implemented:
-
-* created a `get_data` function to wrap around the `pull_remote` or `pull_local`
-and `export_data` functions to pull and export data from a server or locally
-using one function. This function also gives the option for repeat data to be 
-exported.
 
 * updated the `pull_remote` and `push_data` functions to match new CLI syntax
 for `ODK Briefcase`
@@ -20,11 +15,11 @@ for `ODK Briefcase`
 * addressed issues raised by users with regard to package not installable; error
 arising from a wrong .Rbuildignore specification
 
-# odkr 0.3.1
+# odkr 0.3.1.9000
 
 This is the fourth release of `odkr` (second development release).
 
-# odkr 0.3.0
+# odkr 0.3.0.9000
 
 This is the third release of `odkr`. This is a developmental release. `odkr` has
 been archived in CRAN (see previous release). Current plan is to continue 

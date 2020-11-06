@@ -1,10 +1,6 @@
 library(odkr)
 context("Check exported data")
 
-test_that("Output CSV data exists", {
-  expect_true(file.exists(paste(dirPath, "/test.csv", sep = "")))
-})
-
 test_that("Error for no target", {
   expect_error(export_data(id = "stakeholders",
                            to = dirPath,
