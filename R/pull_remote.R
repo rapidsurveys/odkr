@@ -96,16 +96,17 @@ pull_remote <- function(target = "",
     create_sd(path = to)
   }
 
-  ## Check that max_http_connections is numeric
-  if(!is.numeric(max_http_connections) & !is.null(max_http_connections)) {
-    warning("Value for maximum simultaneous HTTP connections (max_http_connecions) should be numeric. Setting value back to default.", call. = TRUE)
-    max_http_connections <- NULL
-  }
+  ## Check max_http_connections
+  if(!is.null(max_http_connections)) {
+    if(!is.numeric(max_http_connections)) {
+      warning("Value for maximum simultaneous HTTP connections (max_http_connecions) should be numeric. Setting value back to default.", call. = TRUE)
+      max_http_connections <- NULL
+    }
 
-  ## Check that max_http_connections value for maximum HTTP connections is not more than 32
-  if(max_http_connections > 32) {
-    warning("Value for maximum simultaneous HTTP connections (max_http_connecions) should not be more than 32. Setting value back to default.", call. = TRUE)
-    max_http_connections <- NULL
+    if(max_http_connections > 32) {
+      warning("Value for maximum simultaneous HTTP connections (max_http_connecions) should not be more than 32. Setting value back to default.", call. = TRUE)
+      max_http_connections <- NULL
+    }
   }
 
   ## Create command line inputs based on required specifications
