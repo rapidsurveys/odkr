@@ -90,7 +90,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -104,7 +104,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/rapidsurveys/odkr/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -137,6 +137,8 @@
   id <span class='op'>=</span> <span class='st'>""</span>,
   to <span class='op'>=</span> <span class='st'>""</span>,
   from <span class='op'>=</span> <span class='st'>""</span>,
+  include_incomplete <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  max_http_connections <span class='op'>=</span> <span class='cn'>NULL</span>,
   <span class='va'>username</span>,
   <span class='va'>password</span>
 <span class='op'>)</span></pre>
@@ -177,6 +179,18 @@ specified by <code>to</code>. Default is FALSE.</p></td>
     <tr>
       <th>from</th>
       <td><p>URL of remote ODK Aggregate server to pull ODK forms data from</p></td>
+    </tr>
+    <tr>
+      <th>include_incomplete</th>
+      <td><p>Logical. Should incomplete forms be pulled? Default
+to FALSE</p></td>
+    </tr>
+    <tr>
+      <th>max_http_connections</th>
+      <td><p>Integer value for maximum simultaneous HTTP
+connections allowed. Defaults to NULL which will allow for the default 8
+simultaneous HTTP connections. Specify this parameter if more simultaneous
+connections are required. Maximum value is 32.</p></td>
     </tr>
     <tr>
       <th>username</th>
