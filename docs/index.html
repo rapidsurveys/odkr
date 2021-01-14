@@ -53,7 +53,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -67,7 +67,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/rapidsurveys/odkr/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -110,14 +110,14 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>Install <code>odkr</code> from CRAN:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"odkr"</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rapidsurveys/odkr">odkr</a></span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"odkr"</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rapidsurveys/odkr">odkr</a></span><span class="op">)</span></code></pre></div>
 <p>Install development version of <code>odkr</code> by installing devtools and then installing <code>odkr</code> package via git</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="co"># install.packages("devtools")</span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"validmeasures/odkr"</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rapidsurveys/odkr">odkr</a></span><span class="op">)</span></pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rapidsurveys/odkr">odkr</a></span><span class="op">)</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
@@ -128,29 +128,29 @@
 <p><strong>1. Rename variables of an ODK-collected dataset</strong></p>
 <p>Depending on how you have designed and structured your ODK form, the standard naming of variables of the output dataset isn’t always desirable for eventual data processing and analysis. For example, for ODK forms that groups questions into modules or sets, ODK would append the grouping name as a prefix to the actual name assigned to a variable usually separated by a <code><a href="https://rdrr.io/r/base/Arithmetic.html">/</a></code> or a <code>.</code>.</p>
 <p>The <code><a href="reference/renameODK.html">renameODK()</a></code> function extracts the actual variable name assigned when designing the form by removing the prefix grouping labels. This can be done by simply applying the <code><a href="reference/renameODK.html">renameODK()</a></code> to the data.frame as follows:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="reference/renameODK.html">renameODK</a></span><span class="op">(</span><span class="va">sampleData1</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/renameODK.html">renameODK</a></span><span class="op">(</span><span class="va">sampleData1</span><span class="op">)</span></code></pre></div>
 <p><strong>2. Expand multiple answer responses</strong></p>
 <p>For survey questions that allow for multiple answers to be provided, the <code><a href="reference/expandMultChoice.html">expandMultChoice()</a></code> function recodes this into multiple columns with <code>0/1</code> coding the number of which is equivalent to the number choices that were selected by respondents. This function can be called as follows:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="co"># Expand the choices in variable ws7</span>
-<span class="fu"><a href="reference/expandMultChoice.html">expandMultChoice</a></span><span class="op">(</span>answers <span class="op">=</span> <span class="fu"><a href="reference/renameODK.html">renameODK</a></span><span class="op">(</span><span class="va">sampleData2</span><span class="op">)</span><span class="op">$</span><span class="va">ws7</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Expand the choices in variable ws7</span>
+<span class="fu"><a href="reference/expandMultChoice.html">expandMultChoice</a></span><span class="op">(</span>answers <span class="op">=</span> <span class="fu"><a href="reference/renameODK.html">renameODK</a></span><span class="op">(</span><span class="va">sampleData2</span><span class="op">)</span><span class="op">$</span><span class="va">ws7</span><span class="op">)</span></code></pre></div>
 <p><strong>3. Merge nested datasets</strong> For ODK forms with a <code>repeat</code> argument, the resulting dataset splits the data into each of the repeats. Often, these multiple datasets need to be merged to a parent dataset (usually data containing common identifiers such as cluster, household). The <code><a href="reference/mergeNestedODK.html">mergeNestedODK()</a></code> function merges together these datasets using the ODK-defined <code>KEY</code> and <code>PARENT-KEY</code> variables. The function can be called as follows:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="fu"><a href="reference/mergeNestedODK.html">mergeNestedODK</a></span><span class="op">(</span>parent <span class="op">=</span> <span class="fu"><a href="reference/renameODK.html">renameODK</a></span><span class="op">(</span><span class="va">sampleData1</span><span class="op">)</span>,
-               child <span class="op">=</span> <span class="fu"><a href="reference/renameODK.html">renameODK</a></span><span class="op">(</span><span class="va">sampleData2</span><span class="op">)</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/mergeNestedODK.html">mergeNestedODK</a></span><span class="op">(</span>parent <span class="op">=</span> <span class="fu"><a href="reference/renameODK.html">renameODK</a></span><span class="op">(</span><span class="va">sampleData1</span><span class="op">)</span>,
+               child <span class="op">=</span> <span class="fu"><a href="reference/renameODK.html">renameODK</a></span><span class="op">(</span><span class="va">sampleData2</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="odk-r-interface-functions" class="section level3">
 <h3 class="hasAnchor">
 <a href="#odk-r-interface-functions" class="anchor"></a>ODK-R interface functions</h3>
 <p>Following are the ODK interface functions in the <code>odkr</code> package. However, before these functions can be utilised, a local copy of <strong>ODK Briefcase</strong> needs to be downloaded and it would be through this local copy of <strong>ODK Briefcase</strong> that the other functions will integrate wit ODK databases.</p>
 <p>To download the latest version of <strong>ODK Briefcase</strong>, the <code><a href="reference/get_briefcase.html">get_briefcase()</a></code> function can be utilised as follows:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="fu"><a href="reference/get_briefcase.html">get_briefcase</a></span><span class="op">(</span>destination <span class="op">=</span> <span class="st">"~/Desktop"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/get_briefcase.html">get_briefcase</a></span><span class="op">(</span>destination <span class="op">=</span> <span class="st">"~/Desktop"</span><span class="op">)</span></code></pre></div>
 <p>will download the latest version of <strong>ODK Briefcase</strong> in your <code>Desktop</code> and rename it as <code>odkBriefcase_latest</code>. Specifying the destination directory for <strong>ODK Briefcase</strong> is required.</p>
 <p>If it is preferred to save the <strong>ODK Briefcase</strong> with a different filename, the following command can be issued in R:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit">
-<span class="fu"><a href="reference/get_briefcase.html">get_briefcase</a></span><span class="op">(</span>destination <span class="op">=</span> <span class="st">"~/Desktop"</span>, briefcase <span class="op">=</span> <span class="st">"odkTool"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/get_briefcase.html">get_briefcase</a></span><span class="op">(</span>destination <span class="op">=</span> <span class="st">"~/Desktop"</span>, briefcase <span class="op">=</span> <span class="st">"odkTool"</span><span class="op">)</span></code></pre></div>
 <p>This will save a local copy of <strong>ODK Briefcase</strong> in the <code>Desktop</code> and name it as <code>odkTool.jar</code>.</p>
 <p>Downloading <strong>ODK Briefcase</strong> can be done only once unless you want to update to the latest version of <strong>ODK Briefcase</strong> from a previously downloaded older version.</p>
 <p>Once you have downloaded <strong>ODK Briefcase</strong>, the following functions can be utilised to integrate with ODK databases.</p>
@@ -165,21 +165,21 @@
 <p>In this example, you will note that we are using a previously downloaded <strong>ODK Briefcase</strong> saved in the <code>Desktop</code>. The <code>target</code> specification can be changed to the directory where you have previously saved <strong>ODK Briefcase</strong>.</p>
 <p>After the operation has been completed, you would now be able to see a folder named <strong>ODK Briefcase Storage</strong> on your <code>Desktop</code> containing the forms and instances from the stakeholders form on the <strong>ODK Aggregate Server</strong>.</p>
 <p><strong>2. Pull forms from a local <code>/odk</code> folder extracted from ODK Collect</strong> If you do not have an <strong>ODK Aggregate Server</strong> setup and plan to use <strong>ODK Briefcase</strong> as your form aggregator, you will have to extract/copy the <code>/odk</code> folder in your mobile client to a location in your computer (e.g., <code>~/Desktop</code>) to which you can apply the <code>pull_local</code> function to pull out the forms and instances to a local directory (e.g., <code>~/Desktop</code>) as follows:</p>
-<div class="sourceCode" id="cb11"><pre class="downlit">
-<span class="fu"><a href="reference/pull_local.html">pull_local</a></span><span class="op">(</span>target <span class="op">=</span> <span class="st">"~/Desktop"</span>,
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/pull_local.html">pull_local</a></span><span class="op">(</span>target <span class="op">=</span> <span class="st">"~/Desktop"</span>,
            id <span class="op">=</span> <span class="st">"stakeholders"</span>,
            to <span class="op">=</span> <span class="st">"~/Desktop"</span>,
-           from <span class="op">=</span> <span class="st">"~/Desktop"</span><span class="op">)</span></pre></div>
+           from <span class="op">=</span> <span class="st">"~/Desktop"</span><span class="op">)</span></code></pre></div>
 <p>In this example, you will note that we are using a previously downloaded <strong>ODK Briefcase</strong> saved in the <code>Desktop</code>. The <code>target</code> specification can be changed to the directory where you have previously saved <strong>ODK Briefcase</strong>.</p>
 <p>After the operation has been completed, you would now be able to see a folder named <strong>ODK Briefcase Storage</strong> on your desktop containing the forms and instances from the stakeholders form on the <strong>ODK Aggregate Server</strong>.</p>
 <p><strong>3. Export data from an ODK Briefcase Storage into a CSV file</strong> If you have pulled your forms from either a remote <strong>ODK Aggregate Server</strong> or a local <code>/odk</code> folder and now have an <strong>ODK Briefcase Storage</strong> in one of your local directories, you will probably want to extract the data found in these forms for use in other purposes e.g., data analysis.</p>
 <p>The <code>export_data</code> function allows you to extract data from a local <strong>ODK Briefcase Storage</strong> (e.g., found in your <code>~/Desktop</code>) containing a form <code>stakeholders</code> and save it in a local directory (e.g., <code>~/Desktop</code>) as a <code>.csv</code> file named <code>test.csv</code> as follows:</p>
-<div class="sourceCode" id="cb12"><pre class="downlit">
-<span class="fu"><a href="reference/export_data.html">export_data</a></span><span class="op">(</span>target <span class="op">=</span> <span class="st">"~/Desktop"</span>,
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/export_data.html">export_data</a></span><span class="op">(</span>target <span class="op">=</span> <span class="st">"~/Desktop"</span>,
             id <span class="op">=</span> <span class="st">"stakeholders"</span>,
             from <span class="op">=</span> <span class="st">"~/Desktop"</span>,
             to <span class="op">=</span> <span class="st">"~/Desktop"</span>,
-            filename <span class="op">=</span> <span class="st">"test.csv"</span><span class="op">)</span></pre></div>
+            filename <span class="op">=</span> <span class="st">"test.csv"</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
 <div id="disclaimer" class="section level2">
