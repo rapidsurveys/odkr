@@ -4,6 +4,9 @@
 #' ODK Briefcase into more usable and human readable variable names.
 #'
 #' @param data Dataframe object of dataset exported from ODK Aggregate Server
+#'   or from local ODK directory
+#' @param sep Character value for separator used in variable names. Choices
+#'   are "." or "-". Default is ".".
 #'
 #' @return Data frame object with renamed variables
 #'
@@ -28,11 +31,14 @@
 #
 ################################################################################
 
-renameODK <- function(data) {
+renameODK <- function(data, sep = c(".", "-")) {
+  ##
+  sep <- match.arg(sep)
+  sep <- if (sep == ".") "\\." else sep
   #
   # take column names and split strings around "."
   #
-  colNames <- stringr::str_split(names(data), "\\.")
+  colNames <- stringr::str_split(names(data), sep)
   temp <- vector(length = length(names(data)))
   for (i in seq_len(length(colNames))) {
     #

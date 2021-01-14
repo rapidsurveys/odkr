@@ -5,10 +5,14 @@
 \title{Rename column names of data exported from an ODK Aggregate Server or from
 ODK Briefcase into more usable and human readable variable names.}
 \usage{
-renameODK(data)
+renameODK(data, sep = c(".", "-"))
 }
 \arguments{
-\item{data}{Dataframe object of dataset exported from ODK Aggregate Server}
+\item{data}{Dataframe object of dataset exported from ODK Aggregate Server
+or from local ODK directory}
+
+\item{sep}{Character value for separator used in variable names. Choices
+are "." or "-". Default is ".".}
 }
 \value{
 Data frame object with renamed variables
