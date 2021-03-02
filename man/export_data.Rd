@@ -18,7 +18,10 @@ export_data(
   overwrite = FALSE,
   exclude = TRUE,
   group.names = TRUE,
-  split = FALSE
+  split = FALSE,
+  pem = NULL,
+  pullBefore = FALSE,
+  includeGeo = FALSE
 )
 }
 \arguments{
@@ -65,6 +68,12 @@ on export? Default TRUE.}
 
 \item{split}{Logical. Should select multiple fields be split on export?
 Default FALSE.}
+
+\item{pem}{Path to pem key if using an encrypted form. Null by default.}
+
+\item{pullBefore}{Logical. If set to true, pull before export. Defult FALSE.}
+
+\item{includeGeo}{Logical. If set to true, pull geojson. Default FALSE.}
 }
 \value{
 CSV file in destination directory containing data from the pulled
