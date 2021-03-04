@@ -1,11 +1,12 @@
 Package: odkr
 Type: Package
 Title: 'Open Data Kit' ('ODK') R API
-Version: 0.3.2
+Version: 0.3.3
 Authors@R: c(
     person("Ernest", "Guevarra", comment = c(ORCID = "0000-0002-4887-4415"), 
            email = "ernestgmd@gmail.com", role = c("aut", "cre", "cph")),
-    person("Laura", "Bramley", role = c("aut", "cph")))
+    person("Laura", "Bramley", role = c("aut", "cph")),
+    person("Jeffrey W.", "Rozelle", role = ("ctb"), email = "jwrozelle@figured.io"))
 Description: Utility functions for working with datasets gathered using
     'Open Data Kit' ('ODK') <https://opendatakit.org/>. These include an API to 
     interface with 'ODK Briefcase', a 'Java' application for fetching and pushing 

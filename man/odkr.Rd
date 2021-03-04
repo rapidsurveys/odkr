@@ -38,5 +38,10 @@ Authors:
   \item Laura Bramley [copyright holder]
 }
 
+Other contributors:
+\itemize{
+  \item Jeffrey W. Rozelle \email{jwrozelle@figured.io} [contributor]
+}
+
 }
 \keyword{internal}

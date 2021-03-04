@@ -34,6 +34,9 @@
 #'   on export? Default TRUE.
 #' @param split Logical. Should select multiple fields be split on export?
 #'   Default FALSE.
+#' @param pem Path to pem key if using an encrypted form. Null by default.
+#' @param pullBefore Logical. If set to true, pull before export. Defult FALSE.
+#' @param includeGeo Logical. If set to true, pull geojson. Default FALSE.
 #'
 #' @return CSV file in destination directory containing data from the pulled
 #' forms
@@ -57,13 +60,17 @@
 #
 ################################################################################
 
-export_data <- function(target = "", briefcase = "odkBriefcase_latest",
+export_data <- function(target = "",
+                        briefcase = "odkBriefcase_latest",
                         sd = FALSE,
                         id = "", from = "", to = "",
                         filename = paste(id, "_data.csv", sep = ""),
                         start = NULL, end = NULL,
                         overwrite = FALSE, exclude = TRUE,
-                        group.names = TRUE, split = FALSE) {
+                        group.names = TRUE, split = FALSE,
+                        pem = NULL,
+                        pullBefore = FALSE,
+                        includeGeo = FALSE) {
 
   ## Check if appropriate Java runtime version is available
   rJava::.jinit()
@@ -98,21 +105,33 @@ export_data <- function(target = "", briefcase = "odkBriefcase_latest",
     create_sd(path = to)
   }
 
+  if(!is.null(pem)) {
+    if(!file.exists(pem)) {
+      stop("The pem file you specified cannot be found. Check your file path.", call. = TRUE)
+    } else {
+      message("Using the pem key provided to decrypt")
+    }
+  }
+
   ## Create command line input based on standard/required specifications
-  z <- paste("java -jar ", target, "/", briefcase, ".jar",
+  z <- paste0("java -jar ", target, "/", briefcase, ".jar",
              " --export ",
              " --form_id ", id,
              " --storage_directory ", from,
              " --export_directory ", to,
-             " --export_filename ", filename, sep = "")
+             " --export_filename ", filename)
 
   ## Add further specifications to command line inputs
-  if(!is.null(start)) z <- paste(z, " --export_start_date ", start, sep = "")
-  if(!is.null(end)) z <- paste(z, " --export_end_date ", end, sep = "")
-  if(overwrite) z <- paste(z, " --overwrite_csv_export ", sep = "")
-  if(exclude) z <- paste(z, " --exclude_media_export ", sep = "")
-  if(group.names) z <- paste(z, " --remove_group_names ", sep = "")
-  if(split) z <- paste(z, " --split_select_multiples ", sep = "")
+  if(!is.null(start)) z <- paste0(z, " --export_start_date ", start)
+  if(!is.null(end)) z <- paste0(z, " --export_end_date ", end)
+  if(overwrite) z <- paste0(z, " --overwrite_csv_export ")
+  if(exclude) z <- paste0(z, " --exclude_media_export ")
+  if(group.names) z <- paste0(z, " --remove_group_names ")
+  if(split) z <- paste0(z, " --split_select_multiples ")
+  if(!is.null(pem)) z <- paste0(z, " --pem_file ", pem)
+  if(pullBefore) z <- paste0(z, " --pull_before")
+  if(includeGeo) z <- paste0(z, " --include_geojson")
+
 
   ## Execute inputs on command line
   system(z)
