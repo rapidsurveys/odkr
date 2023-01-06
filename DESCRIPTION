@@ -31,7 +31,7 @@ Suggests:
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
 URL: https://github.com/rapidsurveys/odkr, https://rapidsurveys.io/odkr
 BugReports: https://github.com/rapidsurveys/odkr/issues

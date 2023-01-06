@@ -1,4 +1,5 @@
-# odkr (development version)
+# odkr 0.3.3.9000
+
 
 # odkr 0.3.2.9000
 
