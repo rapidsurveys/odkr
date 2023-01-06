@@ -174,7 +174,21 @@ export_data(target = "~/Desktop",
             filename = "test.csv")
 ```
 
+## Citation
+
+If you find the `odkr` package useful, please cite using the suggested citation provided by a call to the `citation` function as follows:
+
+```{r citation, echo = TRUE, eval = TRUE}
+citation("odkr")
+```
+
 ## Disclaimer
 
 `odkr` is an independently developed R package and is not officially part of ODK and is not developed, recognised and endorsed as a product/service of ODK.
+
+## Community guidelines
+
+Feedback, bug reports, and feature requests are welcome; file issues or seek support [here](https://github.com/rapidsurveys/odkr/issues). If you would like to contribute to the package, please see our [contributing guidelines](https://rapidsurveys.io/odkr/CONTRIBUTING.html).
+
+This project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 

@@ -1,16 +1,18 @@
 citHeader("To cite odkr in publications use:")
 
 citEntry(
-  entry    = "Article",
-  title    = ,
-  author   = ,
-  journal  = ,
-  year     = ,
-  volume   = ,
-  number   = ,
-  pages    = ,
-  url      = ,
+  entry    = "Manual",
+  title    = "odkr: Open Data Kit (ODK) R API",
+  author   = c(person("Ernest Guevarra"), person("Laura Bramley")),
+  year     = "2023",
+  note     = "R package version 0.3.3.9000",
+  url      = "https://rapidsurveys.io/odkr/",
+  doi      = "10.5281/zenodo.1170514",
   textVersion = paste(
-
+    "Ernest Guevarra and Laura Bramley (2023).",
+    "odkr: Open Data Kit (ODK) R API",
+    "R package version 0.3.3.9000",
+    "URL https://rapidsurveys.io/odkr/",
+    "DOI 10.5281/zenodo.1170514"
   )
 )

@@ -1,13 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://rapidsurveys.io/odkr/404.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/CONTRIBUTING.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/NEWS.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/README.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/cran-comments.html</loc>
+  </url>
+  <url>
     <loc>https://rapidsurveys.io/odkr/index.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/news/index.html</loc>
   </url>
   <url>
     <loc>https://rapidsurveys.io/odkr/reference/create_sd.html</loc>
   </url>
   <url>
     <loc>https://rapidsurveys.io/odkr/reference/expandMultChoice.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/reference/expandMultipleChoice.html</loc>
   </url>
   <url>
     <loc>https://rapidsurveys.io/odkr/reference/expand_choice.html</loc>
@@ -19,7 +52,13 @@
     <loc>https://rapidsurveys.io/odkr/reference/get_briefcase.html</loc>
   </url>
   <url>
+    <loc>https://rapidsurveys.io/odkr/reference/get_data.html</loc>
+  </url>
+  <url>
     <loc>https://rapidsurveys.io/odkr/reference/get_help.html</loc>
+  </url>
+  <url>
+    <loc>https://rapidsurveys.io/odkr/reference/index.html</loc>
   </url>
   <url>
     <loc>https://rapidsurveys.io/odkr/reference/mergeNestedODK.html</loc>

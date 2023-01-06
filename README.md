@@ -258,8 +258,45 @@ export_data(target = "~/Desktop",
             filename = "test.csv")
 ```
 
+## Citation
+
+If you find the `odkr` package useful, please cite using the suggested
+citation provided by a call to the `citation` function as follows:
+
+``` r
+citation("odkr")
+#> 
+#> To cite odkr in publications use:
+#> 
+#>   Ernest Guevarra and Laura Bramley (2023). odkr: Open Data Kit (ODK) R
+#>   API R package version 0.3.3.9000 URL https://rapidsurveys.io/odkr/
+#>   DOI 10.5281/zenodo.1170514
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Manual{,
+#>     title = {odkr: Open Data Kit (ODK) R API},
+#>     author = {{Ernest Guevarra} and {Laura Bramley}},
+#>     year = {2023},
+#>     note = {R package version 0.3.3.9000},
+#>     url = {https://rapidsurveys.io/odkr/},
+#>     doi = {10.5281/zenodo.1170514},
+#>   }
+```
+
 ## Disclaimer
 
 `odkr` is an independently developed R package and is not officially
 part of ODK and is not developed, recognised and endorsed as a
 product/service of ODK.
+
+## Community guidelines
+
+Feedback, bug reports, and feature requests are welcome; file issues or
+seek support [here](https://github.com/rapidsurveys/odkr/issues). If you
+would like to contribute to the package, please see our [contributing
+guidelines](https://rapidsurveys.io/odkr/CONTRIBUTING.html).
+
+This project is released with a [Contributor Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
