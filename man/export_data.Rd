@@ -71,7 +71,7 @@ Default FALSE.}
 
 \item{pem}{Path to pem key if using an encrypted form. Null by default.}
 
-\item{pullBefore}{Logical. If set to true, pull before export. Defult FALSE.}
+\item{pullBefore}{Logical. If set to true, pull before export. Default FALSE.}
 
 \item{includeGeo}{Logical. If set to true, pull geojson. Default FALSE.}
 }

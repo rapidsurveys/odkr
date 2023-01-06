@@ -23,3 +23,6 @@
 ^briefcase\.log$
 ^ODK Briefcase Storage$
 ^LICENSE\.md$
+^pkgdown/_pkgdown\.yml$
+^pkgdown$
+^codecov\.yml$

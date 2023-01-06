@@ -27,10 +27,10 @@ in rows where this is false, all columns will be coded as \code{NA}}
 a data frame with multiple separate 0/1 columns
 }
 \description{
-\preformatted{  ab  ac  ad  ef  eg  eh
+\if{html}{\out{<div class="sourceCode">}}\preformatted{  ab  ac  ad  ef  eg  eh
    1   1   1   0   0   0
    0   0   0   1   1   1
-}
+}\if{html}{\out{</div>}}
 }
 \section{NOTE}{
  \code{naCode} must exist as the only answer in a column (an
