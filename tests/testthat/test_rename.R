@@ -1,5 +1,4 @@
-library(odkr); library(stringr)
-context("Test renaming of ODK datasets")
+library(stringr)
 
 case <- renameODK(sampleData1)
 test <- str_split(names(sampleData1), pattern = "\\.", simplify = TRUE)[,1]

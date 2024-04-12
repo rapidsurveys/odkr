@@ -1,5 +1,5 @@
-library(odkr)
-context("Check exported data")
+
+dirPath <- tempdir()
 
 test_that("Error for no target", {
   expect_error(export_data(id = "stakeholders",
