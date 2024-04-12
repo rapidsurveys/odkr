@@ -1,6 +1,7 @@
-AppVeyor
+CMD
 Charater
 CodeFactor
+Codecov
 DD
 Kassala
 Lifecycle
@@ -13,7 +14,6 @@ PEM
 Rbuildignore
 YYYY
 ac
-codecov
 devtools
 ef
 eg

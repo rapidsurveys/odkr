@@ -2,8 +2,8 @@
 % Please edit documentation in R/odkr.R
 \docType{package}
 \name{odkr}
-\alias{odkr}
 \alias{odkr-package}
+\alias{odkr}
 \title{ODK Briefcase R API}
 \description{
 ODK Briefcase is a Java application for fetching and pushing OpenDataKit
@@ -11,15 +11,16 @@ ODK Briefcase is a Java application for fetching and pushing OpenDataKit
 from the mobile client ODK Collect when there is no internet connectivity,
 when there is no ODK Aggregate Server set-up or when an ODK Aggregate
 Server is not preferred. ODK Briefcase executable \code{.jar} file can be
-downloaded from the OpenDataKit GitHub \href{https://github.com/getodk/briefcase/releases}{repo}.
+downloaded from the OpenDataKit GitHub
+\href{https://github.com/getodk/briefcase/releases}{repo}.
 }
 \details{
 As of ODK Briefcase version 1.4.4, a scriptable command line interface (CLI)
 to the Java application has been available. This package provides an R
 interface to ODK Briefcase via the available CLI to pull forms from a remote
 ODK Aggregate Server or from a local ODK folder \code{/odk} collected from
-mobile clients. This package requires Java 8 installed. Java 8 can be downloaded
-\href{https://java.com/en/download/}{here}.
+mobile clients. This package requires Java 8 installed. Java 8 can be
+downloaded \href{https://java.com/en/download/}{here}.
 }
 \seealso{
 Useful links:
