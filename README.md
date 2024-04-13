@@ -265,19 +265,19 @@ citation provided by a call to the `citation` function as follows:
 
 ``` r
 citation("odkr")
-#> 
 #> To cite odkr in publications use:
 #> 
-#>   Ernest Guevarra and Laura Bramley (2023). odkr: Open Data Kit (ODK) R
-#>   API R package version 0.3.3.9000 URL https://rapidsurveys.io/odkr/
-#>   DOI 10.5281/zenodo.1170514
+#>   Ernest Guevarra, Laura Bramley (2024). _odkr: Open Data Kit (ODK) R
+#>   API_. doi:10.5281/zenodo.1170514
+#>   <https://doi.org/10.5281/zenodo.1170514>, R package version
+#>   0.3.3.9000, <https://rapidsurveys.io/odkr/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {odkr: Open Data Kit (ODK) R API},
 #>     author = {{Ernest Guevarra} and {Laura Bramley}},
-#>     year = {2023},
+#>     year = {2024},
 #>     note = {R package version 0.3.3.9000},
 #>     url = {https://rapidsurveys.io/odkr/},
 #>     doi = {10.5281/zenodo.1170514},

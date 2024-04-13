@@ -24,7 +24,6 @@ knitr::opts_chunk$set(
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1170514.svg)](https://doi.org/10.5281/zenodo.1170514)
 <!-- badges: end -->
 
-
 **Open Data Kit (ODK)** is a free and open-source set of tools which help organizations author, field, and manage mobile data collection solutions. ODK provides an out-of-the-box solution for users to:
 
 * Build a data collection form or survey;
