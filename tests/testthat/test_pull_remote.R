@@ -1,5 +1,5 @@
-library(odkr)
-context("Check pull_remote output")
+
+dirPath <- tempdir()
 
 test_that("Error for no target", {
   expect_error(pull_remote(sd = TRUE,

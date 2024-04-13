@@ -1,5 +1,5 @@
-library(odkr)
-context("Test output of pull_local")
+
+dirPath <- tempdir()
 
 #test_that("ODK Briefcase Storage exists", {
 #  expect_true(file.exists(paste(dirPath, "/ODK Briefcase Storage", sep = "")))

@@ -1,7 +1,6 @@
-library(odkr)
-context("Check push_data output")
 
-#dirPath <- tempdir()
+
+dirPath <- tempdir()
 #get_briefcase(destination = dirPath)
 
 test_that("Error for no target", {

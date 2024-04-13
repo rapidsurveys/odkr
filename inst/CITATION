@@ -1,0 +1,10 @@
+bibentry(
+  bibtype  = "Manual",
+  header   = "To cite odkr in publications use:",
+  title    = "odkr: Open Data Kit (ODK) R API",
+  author   = c(person("Ernest Guevarra"), person("Laura Bramley")),
+  year     = "2024",
+  note     = "R package version 0.3.3.9000",
+  url      = "https://rapidsurveys.io/odkr/",
+  doi      = "10.5281/zenodo.1170514",
+)

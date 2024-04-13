@@ -2,10 +2,36 @@ title: odkr
 
 url: https://rapidsurveys.io/odkr
 
+development:
+  mode: auto
+
 template:
-  params:
-    bootswatch: sandstone
-    ganalytics: UA-102485058-5
+  bootstrap: 5
+  bootswatch: sandstone
+  theme: haddock
+  ganalytics: UA-102485058-5
+
+navbar:
+  bg: primary
+  type: light
+  structure:
+    left:  [home, intro, reference, articles, news]
+    right: [mastodon, linkedin, github]
+  components:
+    # articles:
+    #   text: Articles
+    #   menu:
+    #   - text: "Africa CDC"
+    #     href: articles/africa-cdc.html
+    mastodon:
+      icon: "fab fa-mastodon fa-lg"
+      href: https://fosstodon.org/@katilingban
+    linkedin:
+      icon: "fab fa-linkedin fa-lg"
+      href: https://www.linkedin.com/company/katilingban
+    github:
+      icon: "fab fa-github fa-lg"
+      href: https://github.com/katilingban
 
 home:
   links:

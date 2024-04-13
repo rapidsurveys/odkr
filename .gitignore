@@ -30,3 +30,4 @@ vignettes/*.pdf
 /*.jar
 /revdep/.cache.rds
 briefcase.log
+docs

@@ -35,7 +35,7 @@
 #' @param split Logical. Should select multiple fields be split on export?
 #'   Default FALSE.
 #' @param pem Path to pem key if using an encrypted form. Null by default.
-#' @param pullBefore Logical. If set to true, pull before export. Defult FALSE.
+#' @param pullBefore Logical. If set to true, pull before export. Default FALSE.
 #' @param includeGeo Logical. If set to true, pull geojson. Default FALSE.
 #'
 #' @return CSV file in destination directory containing data from the pulled
