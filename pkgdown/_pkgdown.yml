@@ -18,11 +18,6 @@ navbar:
     left:  [home, intro, reference, articles, news]
     right: [mastodon, linkedin, github]
   components:
-    # articles:
-    #   text: Articles
-    #   menu:
-    #   - text: "Africa CDC"
-    #     href: articles/africa-cdc.html
     mastodon:
       icon: "fab fa-mastodon fa-lg"
       href: https://fosstodon.org/@katilingban
