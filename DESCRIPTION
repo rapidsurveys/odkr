@@ -33,6 +33,6 @@ Language: en-GB
 LazyData: true
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
-URL: https://github.com/rapidsurveys/odkr, https://rapidsurveys.io/odkr, https://rapidsurveys.io/odkr/
+URL: https://github.com/rapidsurveys/odkr, https://rapidsurveys.io/odkr/
 BugReports: https://github.com/rapidsurveys/odkr/issues
 Config/testthat/edition: 3
