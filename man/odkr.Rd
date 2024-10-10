@@ -26,7 +26,7 @@ downloaded \href{https://java.com/en/download/}{here}.
 Useful links:
 \itemize{
   \item \url{https://github.com/rapidsurveys/odkr}
-  \item \url{https://rapidsurveys.io/odkr,}
+  \item \url{https://rapidsurveys.io/odkr/}
   \item Report bugs at \url{https://github.com/rapidsurveys/odkr/issues}
 }
 
