@@ -3,7 +3,7 @@ title: odkr
 url: https://rapidsurveys.io/odkr
 
 development:
-  mode: devel
+  mode: release
 
 template:
   bootstrap: 5
