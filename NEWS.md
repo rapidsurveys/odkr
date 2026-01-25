@@ -1,32 +1,25 @@
-# odkr 0.3.3.9000
+# odkr 0.3.4.9000
 
-
-# odkr 0.3.2.9000
-
-This is the fifth release of `odkr` (third development release). In this version,
-the following have been implemented:
+This is a GitHub-only release of `{odkr}`.
+In this version, the following have been implemented:
 
 * updated the `pull_remote` and `push_data` functions to match new CLI syntax
 for `ODK Briefcase`
-
 * change license from `MIT` to `GPL3`
-
 * removed hex logo as per feedback on ODK branding guidelines
-
 * general package maintenance (documentation, external site)
-
 * addressed issues raised by users with regard to package not installable; error
-arising from a wrong .Rbuildignore specification
+arising from a wrong `.Rbuildignore` specification
+* other general updates and maintenance upkeep
 
 # odkr 0.3.1.9000
 
-This is the fourth release of `odkr` (second development release).
+This is a GitHub-only release of `{odkr}`.
 
 # odkr 0.3.0.9000
 
-This is the third release of `odkr`. This is a developmental release. `odkr` has
-been archived in CRAN (see previous release). Current plan is to continue 
-development of odkr outside of CRAN.
+This is a GitHub-only release of `{odkr}`.
+`{odkr}` has been archived in CRAN (see previous release). Current plan is to continue development of `{odkr}` outside of CRAN.
 
 # odkr 0.2.0
 
@@ -40,7 +33,6 @@ This now resolves the issue of apparent download of corrupt jar file.
 * All briefcase-related functions now include a check on runtime of Java availability
 and Java version checking for a minimum Java version of Java 8. I followed the testing
 script specified by CRAN in the *Writing R Extensions* manual.
-
 
 # odkr 0.1.3
 

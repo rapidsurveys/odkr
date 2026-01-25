@@ -1,0 +1,125 @@
+# --------------------------------------------
+# CITATION file created with {cffr} R package
+# See also: https://docs.ropensci.org/cffr/
+# --------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "odkr" in publications use:'
+type: software
+license: GPL-3.0-only
+title: 'odkr: ''Open Data Kit'' (''ODK'') R API'
+version: 0.3.4.9000
+doi: 10.5281/zenodo.1170514
+abstract: Utility functions for working with datasets gathered using 'Open Data Kit'
+  ('ODK') <https://opendatakit.org/>. These include an API to interface with 'ODK
+  Briefcase', a 'Java' application for fetching and pushing 'ODK' forms and their
+  contents, that allows pulling of data from either a remote 'ODK Aggregate Server'
+  or a local 'ODK' folder, a rename function to give more human readable variable
+  names for 'ODK' datasets, a merge function to create a single dataframe from a nested
+  'ODK' dataset and an expand function to disaggregate multiple choice answers that
+  have been collapsed into single code by 'ODK'.
+authors:
+- family-names: Guevarra
+  given-names: Ernest
+  email: ernestgmd@gmail.com
+  orcid: https://orcid.org/0000-0002-4887-4415
+- family-names: Bramley
+  given-names: Laura
+preferred-citation:
+  type: manual
+  title: 'odkr: Open Data Kit (ODK) R API'
+  authors:
+  - name: Ernest Guevarra
+  - name: Laura Bramley
+  year: '2026'
+  notes: R package version 0.3.4.9000
+  url: https://rapidsurveys.io/odkr/
+  doi: 10.5281/zenodo.1170514
+repository-code: https://github.com/rapidsurveys/odkr
+url: https://rapidsurveys.io/odkr/
+contact:
+- family-names: Guevarra
+  given-names: Ernest
+  email: ernestgmd@gmail.com
+  orcid: https://orcid.org/0000-0002-4887-4415
+keywords:
+- odk
+- odk-briefcase
+- open-data-kit
+references:
+- type: software
+  title: 'R: A Language and Environment for Statistical Computing'
+  notes: Depends
+  url: https://www.R-project.org/
+  authors:
+  - name: R Core Team
+  institution:
+    name: R Foundation for Statistical Computing
+    address: Vienna, Austria
+  year: '2026'
+  version: '>= 2.10'
+- type: software
+  title: stringr
+  abstract: 'stringr: Simple, Consistent Wrappers for Common String Operations'
+  notes: Imports
+  url: https://stringr.tidyverse.org
+  repository: https://CRAN.R-project.org/package=stringr
+  authors:
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@posit.co
+  year: '2026'
+  doi: 10.32614/CRAN.package.stringr
+- type: software
+  title: Hmisc
+  abstract: 'Hmisc: Harrell Miscellaneous'
+  notes: Imports
+  url: https://hbiostat.org/R/Hmisc/
+  repository: https://CRAN.R-project.org/package=Hmisc
+  authors:
+  - family-names: Harrell Jr
+    given-names: Frank E
+    email: fh@fharrell.com
+    orcid: https://orcid.org/0000-0002-8271-5493
+  year: '2026'
+  doi: 10.32614/CRAN.package.Hmisc
+- type: software
+  title: curl
+  abstract: 'curl: A Modern and Flexible Web Client for R'
+  notes: Imports
+  url: https://jeroen.r-universe.dev/curl
+  repository: https://CRAN.R-project.org/package=curl
+  authors:
+  - family-names: Ooms
+    given-names: Jeroen
+    email: jeroenooms@gmail.com
+    orcid: https://orcid.org/0000-0002-4035-0289
+  year: '2026'
+  doi: 10.32614/CRAN.package.curl
+- type: software
+  title: rJava
+  abstract: 'rJava: Low-Level R to Java Interface'
+  notes: Imports
+  url: http://www.rforge.net/rJava/
+  repository: https://CRAN.R-project.org/package=rJava
+  authors:
+  - family-names: Urbanek
+    given-names: Simon
+    email: Simon.Urbanek@r-project.org
+    orcid: https://orcid.org/0000-0003-2297-1732
+  year: '2026'
+  doi: 10.32614/CRAN.package.rJava
+- type: software
+  title: testthat
+  abstract: 'testthat: Unit Testing for R'
+  notes: Suggests
+  url: https://testthat.r-lib.org
+  repository: https://CRAN.R-project.org/package=testthat
+  authors:
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@posit.co
+  year: '2026'
+  doi: 10.32614/CRAN.package.testthat
+  version: '>= 3.0.0'
+

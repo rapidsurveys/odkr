@@ -31,9 +31,9 @@ Please note we have a [code of conduct](https://github.com/rapidsurveys/odkr/blo
 
 * From your fork open a pull request in the correct branch using the specified [Pull Request Template](https://github.com/rapidsurveys/odkr/blob/master/.github/PULL_REQUEST_TEMPLATE.md). Target this project's `development` branch. 
 
-* Update the `README.md` with details of changes to the interface particularly changes in how indicators are defined or addition of new indicators.
+* Update the `README.Rmd` with details of changes to the interface particularly changes in how indicators are defined or addition of new indicators.
 
-* Increase the version numbers in any examples files and the `README.md` to the new version that this `Pull Request` would represent. The versioning scheme we use is [SemVer](http://semver.org/).
+* Increase the version numbers in any examples files and the `README.Rmd` to the new version that this `Pull Request` would represent. The versioning scheme we use is [SemVer](http://semver.org/).
 
 * You may then request [Ernest Guevarra](mailto:ernest@guevarra.io) to merge your `Pull Request` for you.
 

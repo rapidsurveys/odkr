@@ -12,7 +12,7 @@ developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repo
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R-CMD-check](https://github.com/rapidsurveys/odkr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rapidsurveys/odkr/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/rapidsurveys/odkr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/rapidsurveys/odkr?branch=main)
+coverage](https://codecov.io/gh/rapidsurveys/odkr/graph/badge.svg)](https://app.codecov.io/gh/rapidsurveys/odkr)
 [![CodeFactor](https://www.codefactor.io/repository/github/rapidsurveys/odkr/badge)](https://www.codefactor.io/repository/github/rapidsurveys/odkr)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1170514.svg)](https://doi.org/10.5281/zenodo.1170514)
 <!-- badges: end -->
@@ -26,7 +26,7 @@ solutions. ODK provides an out-of-the-box solution for users to:
 - Aggregate the collected data on a server and extract it in useful
   formats.
 
-`odkr` is a set of interface and utility tools for a **useR** working
+`{odkr}` is a set of interface and utility tools for a **useR** working
 with ODK. The package currently has two classes of functions: 1) *data
 processing* tools; and, 2) *ODK-R interface* functions.
 
@@ -59,8 +59,8 @@ installed. Java 8 can be downloaded from
 
 ## Requirements
 
-The ODK-R interface component of this package requires **Java 8** to be
-installed in your computer. There are known
+The ODK-R interface component of this package requires **Java 8** or
+newer to be installed in your computer. There are known
 [issues](https://forum.opendatakit.org/t/odk-briefcase-not-running-with-jdk-9/10201)
 when using ODK Briefcase with **Java 9**. If you have **Java 9**
 installed, uninstall (on
@@ -70,33 +70,38 @@ and then [install](https://java.com/en/download/) **Java 8**. If issues
 persist even with **Java 8**, you may need to reconfigure **Java**. On
 the terminal, execute the following command:
 
-``` shell
+``` bash
 R CMD javareconf
 ```
 
 If reconfiguring **Java** still doesn’t solve the issue, you may need to
 specify `JAVA_HOME` by executing the following command in terminal:
 
-``` shell
+``` bash
 sudo R CMD javareconf JAVA_HOME=/usr/java/default
 ```
 
 ## Installation
 
-Install `odkr` from CRAN:
+`{odkr}` has not yet been reinstated to
+[CRAN](https://cran.r-project.org).
+
+The latest development version of `{odkr}` can be installed from the
+[RapidSurveys R Universe](https://rapidsurveys.r-universe.dev) with:
 
 ``` r
-install.packages("odkr")
-library(odkr)
+install.packages(
+  "odkr",
+  repos = c("https://rapidsurveys.r-universe.dev", "https://cloud.r-project.org")
+)
 ```
 
-Install development version of `odkr` by installing devtools and then
-installing `odkr` package via git
+or via [GitHub](https://github.com/rapidsurveys/odkr) using the `{pak}`
+package with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("validmeasures/odkr")
-library(odkr)
+# install.packages("pak")
+pak::pak("rapidsurveys/odkr")
 ```
 
 ## Usage
@@ -149,7 +154,7 @@ mergeNestedODK(parent = renameODK(sampleData1),
 
 ### ODK-R interface functions
 
-Following are the ODK interface functions in the `odkr` package.
+Following are the ODK interface functions in the `{odkr}` package.
 However, before these functions can be utilised, a local copy of **ODK
 Briefcase** needs to be downloaded and it would be through this local
 copy of **ODK Briefcase** that the other functions will integrate wit
@@ -185,15 +190,15 @@ be utilised to integrate with ODK databases.
 
 **1. Pull forms from a remote ODK Aggregate Server** If you have an
 **ODK Aggregate Server** already setup receiving form submissions from
-your survey, you can use `odkr` to pull these forms (not the data) into
-a local directory.
+your survey, you can use `{odkr}` to pull these forms (not the data)
+into a local directory.
 
 For example, you want to pull ODK form with form id `stakeholders` from
 your remote **ODK Aggregate Server** (i.e., ONA)
 `https://ona.io/validtrial/` to a local directory `~/Desktop` using your
 **ODK Aggregate Server** account with ***username*** `validtrial` and
-***password*** `zEF-STN-5ze-qom`. The `pull_remote` function from `odkr`
-can be used as follows:
+***password*** `zEF-STN-5ze-qom`. The `pull_remote` function from
+`{odkr}` can be used as follows:
 
 ``` r
 pull_remote(target = "~Desktop",
@@ -260,25 +265,25 @@ export_data(target = "~/Desktop",
 
 ## Citation
 
-If you find the `odkr` package useful, please cite using the suggested
+If you use the `{odkr}` in your work, please cite using the suggested
 citation provided by a call to the `citation` function as follows:
 
 ``` r
 citation("odkr")
 #> To cite odkr in publications use:
 #> 
-#>   Ernest Guevarra, Laura Bramley (2024). _odkr: Open Data Kit (ODK) R
+#>   Ernest Guevarra, Laura Bramley (2026). _odkr: Open Data Kit (ODK) R
 #>   API_. doi:10.5281/zenodo.1170514
 #>   <https://doi.org/10.5281/zenodo.1170514>, R package version
-#>   0.3.3.9000, <https://rapidsurveys.io/odkr/>.
+#>   0.3.4.9000, <https://rapidsurveys.io/odkr/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {odkr: Open Data Kit (ODK) R API},
 #>     author = {{Ernest Guevarra} and {Laura Bramley}},
-#>     year = {2024},
-#>     note = {R package version 0.3.3.9000},
+#>     year = {2026},
+#>     note = {R package version 0.3.4.9000},
 #>     url = {https://rapidsurveys.io/odkr/},
 #>     doi = {10.5281/zenodo.1170514},
 #>   }
@@ -286,7 +291,7 @@ citation("odkr")
 
 ## Disclaimer
 
-`odkr` is an independently developed R package and is not officially
+`{odkr}` is an independently developed R package and is not officially
 part of ODK and is not developed, recognised and endorsed as a
 product/service of ODK.
 
@@ -300,3 +305,10 @@ guidelines](https://rapidsurveys.io/odkr/CONTRIBUTING.html).
 This project is released with a [Contributor Code of
 Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
+
+ 
+
+[![This is part of the RapidSurveys project under the Oxford iHealth
+initiative of the MSc in International Health and Tropical Medicine,
+Nuffield Department of Medicine, University of
+Oxford](https://github.com/rapidsurveys/ramOPmanual/blob/main/images/rapidsurveys_footer.png?raw=true)](https://rapidsurveys.io)
