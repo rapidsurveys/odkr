@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# odkr: Open Data Kit (ODK) R API
+# odkr: Open Data Kit (ODK) R API <img src="man/figures/logo.png" width="200px" align="right" />
 
 <!-- badges: start -->
 
