@@ -6,6 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Open Data Kit (ODK) R API • odkr</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" sizes="any" href="favicon.ico">
+<link rel="manifest" href="site.webmanifest">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
@@ -13,6 +18,7 @@
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Open Data Kit (ODK) R API">
 <meta name="description" content="Utility functions for working with datasets gathered using Open Data Kit (ODK) &lt;https://opendatakit.org/&gt;. These include an API to interface with ODK Briefcase, a Java application for fetching and pushing ODK forms and their contents, that allows pulling of data from either a remote ODK Aggregate Server or a local ODK folder, a rename function to give more human readable variable names for ODK datasets, a merge function to create a single dataframe from a nested ODK dataset and an expand function to disaggregate multiple choice answers that have been collapsed into single code by ODK.">
 <meta property="og:description" content="Utility functions for working with datasets gathered using Open Data Kit (ODK) &lt;https://opendatakit.org/&gt;. These include an API to interface with ODK Briefcase, a Java application for fetching and pushing ODK forms and their contents, that allows pulling of data from either a remote ODK Aggregate Server or a local ODK folder, a rename function to give more human readable variable names for ODK datasets, a merge function to create a single dataframe from a nested ODK dataset and an expand function to disaggregate multiple choice answers that have been collapsed into single code by ODK.">
+<meta property="og:image" content="https://rapidsurveys.io/odkr/logo.png">
 <!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YPVRVVR17G"></script><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -54,8 +60,10 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="odkr-open-data-kit-odk-r-api">odkr: Open Data Kit (ODK) R API<a class="anchor" aria-label="anchor" href="#odkr-open-data-kit-odk-r-api"></a>
-</h1></div>
+<div class="page-header">
+<img src="logo.png" class="logo" alt=""><h1 id="odkr-open-data-kit-odk-r-api-">odkr: Open Data Kit (ODK) R API <a class="anchor" aria-label="anchor" href="#odkr-open-data-kit-odk-r-api-"></a>
+</h1>
+</div>
 <!-- badges: start -->
 
 <p><strong>Open Data Kit (ODK)</strong> is a free and open-source set of tools which help organizations author, field, and manage mobile data collection solutions. ODK provides an out-of-the-box solution for users to:</p>

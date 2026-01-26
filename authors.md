@@ -12,7 +12,7 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/rapidsurveys/odkr/blob/v0.3.4.9000/inst/CITATION)
+[`inst/CITATION`](https://github.com/rapidsurveys/odkr/blob/main/inst/CITATION)
 
 Ernest Guevarra, Laura Bramley (2026). *odkr: Open Data Kit (ODK) R
 API*.
